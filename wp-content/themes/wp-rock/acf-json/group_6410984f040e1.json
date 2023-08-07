@@ -215,49 +215,9 @@
             "translations": "translate"
         },
         {
-            "key": "field_64cd2098b6728",
-            "label": "Footer services menu shortcode",
-            "name": "footer_services_menu",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "translations": "translate"
-        },
-        {
             "key": "field_64cd2118b672d",
             "label": "Footer industries menu title",
             "name": "footer_industries_menu_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "translations": "translate"
-        },
-        {
-            "key": "field_64cd20afb6729",
-            "label": "Footer industries menu shortcode",
-            "name": "footer_industries_menu",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -295,26 +255,6 @@
             "translations": "translate"
         },
         {
-            "key": "field_64cd20c8b672a",
-            "label": "Footer information menu shortcode",
-            "name": "footer_info_menu",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "translations": "translate"
-        },
-        {
             "key": "field_64cd2139b672f",
             "label": "Footer contact title",
             "name": "footer_contact_title",
@@ -332,6 +272,26 @@
             "prepend": "",
             "append": "",
             "maxlength": "",
+            "translations": "translate"
+        },
+        {
+            "key": "field_64d0930cd791e",
+            "label": "Footer copyright text",
+            "name": "footer_copyright",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
             "translations": "translate"
         },
         {
@@ -432,5 +392,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691165372
+    "modified": 1691390760
 }

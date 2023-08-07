@@ -23,6 +23,12 @@ class WP_Rock_Blocks {
             'template' => '/template-parts/block-custom-classic.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'hero' => array(
+            'title' => 'Hero block',
+            'description' => '',
+            'template' => '/template-parts/block-hero.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

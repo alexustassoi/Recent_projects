@@ -1,7 +1,23 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 523:
+/***/ "./src/sass/frontend.scss":
+/*!********************************!*\
+  !*** ./src/sass/frontend.scss ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js ***!
+  \*****************************************************************/
 /***/ (function(module) {
 
 /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
@@ -436,78 +452,35 @@
 }());
 
 
-/***/ })
+/***/ }),
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-!function() {
+/***/ "./src/js/parts/helpers.js":
+/*!*********************************!*\
+  !*** ./src/js/parts/helpers.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
 "use strict";
-
-// EXTERNAL MODULE: ./node_modules/smoothscroll-polyfill/dist/smoothscroll.js
-var smoothscroll = __webpack_require__(523);
-var smoothscroll_default = /*#__PURE__*/__webpack_require__.n(smoothscroll);
-;// CONCATENATED MODULE: ./src/js/parts/helpers.js
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   anchorLinkScroll: function() { return /* binding */ anchorLinkScroll; },
+/* harmony export */   closestPolyfill: function() { return /* binding */ closestPolyfill; },
+/* harmony export */   copyToClipboard: function() { return /* binding */ copyToClipboard; },
+/* harmony export */   debounce: function() { return /* binding */ debounce; },
+/* harmony export */   equalHeights: function() { return /* binding */ equalHeights; },
+/* harmony export */   fadeIn: function() { return /* binding */ fadeIn; },
+/* harmony export */   fadeOut: function() { return /* binding */ fadeOut; },
+/* harmony export */   isInViewport: function() { return /* binding */ isInViewport; },
+/* harmony export */   throttle: function() { return /* binding */ throttle; },
+/* harmony export */   trimParagraph: function() { return /* binding */ trimParagraph; },
+/* harmony export */   validateField: function() { return /* binding */ validateField; }
+/* harmony export */ });
+/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! smoothscroll-polyfill */ "./node_modules/smoothscroll-polyfill/dist/smoothscroll.js");
+/* harmony import */ var smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0__);
 
 
 // kick off the polyfill!
-smoothscroll_default().polyfill();
+smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_0___default().polyfill();
 
 /**
  * Fade Out method
@@ -866,7 +839,21 @@ function anchorLinkScroll(elementsSelector = null, callback = null) {
         });
 }
 
-;// CONCATENATED MODULE: ./src/js/parts/popup-window.js
+
+/***/ }),
+
+/***/ "./src/js/parts/popup-window.js":
+/*!**************************************!*\
+  !*** ./src/js/parts/popup-window.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Popup; }
+/* harmony export */ });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers */ "./src/js/parts/helpers.js");
 
 
 class Popup {
@@ -912,7 +899,7 @@ class Popup {
 
             bottomMessage;
 
-            fadeOut(item);
+            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.fadeOut)(item);
             const MAIL_SENT_OK_BOX = item.querySelector('.wpcf7-mail-sent-ok');
             if (MAIL_SENT_OK_BOX) {
                 MAIL_SENT_OK_BOX.style.display = 'none';
@@ -935,7 +922,7 @@ class Popup {
         setTimeout(() => {
             this.body.classList.add('popup-opened');
             this.html.classList.add('popup-opened');
-            fadeIn(popupSelector);
+            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(popupSelector);
         }, timeOut);
     }
 
@@ -958,7 +945,7 @@ class Popup {
 
             this.body.classList.add('popup-opened');
             this.html.classList.add('popup-opened');
-            fadeIn(elHref);
+            (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.fadeIn)(elHref);
             return true;
         });
     }
@@ -998,14 +985,95 @@ class Popup {
     }
 }
 
-;// CONCATENATED MODULE: ./src/js/frontend.ts
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
+/*!****************************!*\
+  !*** ./src/js/frontend.ts ***!
+  \****************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sass_frontend_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/frontend.scss */ "./src/sass/frontend.scss");
+/* harmony import */ var _parts_popup_window__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parts/popup-window */ "./src/js/parts/popup-window.js");
 
 
 function ready() {
-  var popupInstance = new Popup();
+  var popupInstance = new _parts_popup_window__WEBPACK_IMPORTED_MODULE_1__["default"]();
   popupInstance.init();
 }
 window.document.addEventListener('DOMContentLoaded', ready);
 }();
 /******/ })()
 ;
+//# sourceMappingURL=frontend.js.map
