@@ -1,29 +1,39 @@
 %heading {
-
+    color: #0E0E0F;
+    font-family: $Nexa;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
 }
 
 %paragraph {
-
+    font-family: $SFProDisplay;
+    font-weight: 300;
+    color: #0E0E0F;
 }
 
 
 h1 {
     @extend %heading;
     font-size: 50px;
-    line-height: 100.02%;
+    position: relative;
 
-    @include min-break('1024px') {
-        font-size: 95px;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 89px;
+        top: 36px;
+        left: -100px;
+        background-color: #E41019;
     }
 }
 
 h2 {
     @extend %heading;
     font-size: 40px;
-
-    @include min-break('1024px') {
-        font-size: 74px;
-    }
 }
 
 h3 {
