@@ -1,0 +1,29 @@
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-top: 294px;
+    padding-bottom: 328px;
+
+    &__container {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 32px;
+            bottom: -118px;
+            width: 16px;
+            height: 53px;
+            z-index: 1;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCAxNyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIwLjQ5MjA4NiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi41IDQ1LjVWNDcuMzY4M0w4LjUgNTIuNUwwLjUgNDcuMzY4M0wwLjUgNDUuNUw4LjUgNTAuNjMxN0wxNi41IDQ1LjVaIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik04LjUgNTAuNVYyOC41IiBzdHJva2U9IndoaXRlIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIi8+PHBhdGggZD0iTTguNSAyMy41VjExLjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48cGF0aCBkPSJNOC41IDYuNVYwLjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48L2c+PC9zdmc+) center center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__content-wrap {
+
+    }
+}

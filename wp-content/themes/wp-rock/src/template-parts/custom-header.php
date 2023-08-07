@@ -7,16 +7,33 @@
 
 global $global_options;
 
-$logo = get_field_value( $global_options, 'logo' );
+$logo             = get_field_value($global_options, 'logo');
+$socials_repeater = get_field_value($global_options, 'socials_repeater');
 ?>
 
 <header id="site-header" class="site-header">
-    <div class="container">
+    <div class="container site-header__container">
+        <div class="site-header__socials-wrapper">
+            <?php if ($socials_repeater) { ?>
+                <div class="site-header__socials">
+                    <?php foreach ($socials_repeater as $item) {
+                        $icon = get_field_value($item, 'icon');
+                        $url  = get_field_value($item, 'url');
+                        ?>
+                        <a class="site-header__social"
+                           href="<?php echo do_shortcode($url); ?>">
+                            <img src="<?php echo do_shortcode($icon); ?>"
+                                 alt="Social icon"/>
+                        </a>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        </div>
         <div class="site-header__header-wrapper">
             <div class="site-header__logo-wrap">
-                <a href="<?php echo esc_html( get_home_url() ); ?>">
+                <a href="<?php echo esc_html(get_home_url()); ?>">
                     <img class="site-header__logo"
-                         src="<?php echo esc_attr( $logo ); ?>" alt="Logo"/>
+                         src="<?php echo esc_attr($logo); ?>" alt="Logo"/>
                 </a>
             </div>
             <div class="site-header__menu-wrapper">
@@ -24,13 +41,12 @@ $logo = get_field_value( $global_options, 'logo' );
                 wp_nav_menu(
                     array(
                         'theme_location' => 'primary_menu',
-                        'container'      => 'ul',
-                        'menu_class'     => 'site-header__menu',
+                        'container' => 'ul',
+                        'menu_class' => 'site-header__menu',
                     )
                 )
                 ?>
             </div>
         </div>
     </div>
-
 </header>

@@ -20,13 +20,19 @@ class WP_Rock_Blocks {
         'custom-classic' => array(
             'title' => 'Custom classic block',
             'description' => '',
-            'template' => '/template-parts/block-custom-classic.php',
+            'template' => 'src/template-parts/block-custom-classic.php',
             'post_types' => array( 'post', 'page' ),
         ),
         'hero' => array(
             'title' => 'Hero block',
             'description' => '',
-            'template' => '/template-parts/block-hero.php',
+            'template' => 'src/template-parts/block-hero.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'welcomes' => array(
+            'title' => 'Welcomes block',
+            'description' => '',
+            'template' => 'src/template-parts/block-welcomes.php',
             'post_types' => array( 'post', 'page' ),
         ),
     );
