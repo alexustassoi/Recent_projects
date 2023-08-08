@@ -28,22 +28,22 @@ $args = array(
 
 $query = new WP_Query($args);
 ?>
-<section class="single-post">
-    <div class="single-post__container container">
-        <h1 class="single-post__title"><?php echo do_shortcode(get_the_title()); ?></h1>
-        <div class="single-post__wrapper">
-            <div class="single-post__content">
-                <time class="single-post__date"><?php echo get_the_date('d.m.Y'); ?></time>
-                <div class="single-post__inner-text"><?php echo do_shortcode($content); ?></div>
-                <div class="single-post__buttons-wrapper">
+<section class="post-single">
+    <div class="post-single__container container">
+        <h1 class="post-single__title"><?php echo do_shortcode(get_the_title()); ?></h1>
+        <div class="post-single__wrapper">
+            <div class="post-single__content">
+                <time class="post-single__date"><?php echo get_the_date('d.m.Y'); ?></time>
+                <div class="post-single__inner-text"><?php echo do_shortcode($content); ?></div>
+                <div class="post-single__buttons-wrapper">
                     <?php
                     if (!empty($back_text)) {
-                        echo '<button onclick="history.back()" class="single-post__back arrow-link-reverse arrow-link">
+                        echo '<button onclick="history.back()" class="post-single__back arrow-link-reverse arrow-link">
                                     ' . do_shortcode($back_text) . '
                                 </button>';
                     }
                     ?>
-                    <div class="single-post__social">
+                    <div class="post-single__social">
 
                         <?php
                         if (!empty($share_text)) {
@@ -71,21 +71,21 @@ $query = new WP_Query($args);
                     </div>
                 </div>
             </div>
-            <div class="single-post__related-posts">
+            <div class="post-single__related-posts">
                 <?php
                 if ($query->have_posts()) {
                     while ($query->have_posts()) : $query->the_post();
 
                         $thumb = get_the_post_thumbnail_url() ?
-                            '<a href="' . get_the_permalink() . '" class="single-post__related-post-thumb">
+                            '<a href="' . get_the_permalink() . '" class="post-single__related-post-thumb">
                                 <img src="' . get_the_post_thumbnail_url() . '" alt="thumbnail">
                             </a>' : '';
 
-                        echo '<div class="single-post__related-post">
-                                    <time class="single-post__related-post-date">' . get_the_date('d.m.Y') . '</time>
-                                    <p class="single-post__related-post-title">' . get_the_title() . '</p>
+                        echo '<div class="post-single__related-post">
+                                    <time class="post-single__related-post-date">' . get_the_date('d.m.Y') . '</time>
+                                    <p class="post-single__related-post-title">' . get_the_title() . '</p>
                                     ' . $thumb . '
-                                    <a href="#" class="single-post__related-post-link circle-link"></a>
+                                    <a href="#" class="post-single__related-post-link circle-link"></a>
                                 </div>';
 
                     endwhile;
