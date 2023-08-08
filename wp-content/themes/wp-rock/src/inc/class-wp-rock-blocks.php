@@ -35,6 +35,30 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-welcomes.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'advantages' => array(
+            'title' => 'Advantages block',
+            'description' => '',
+            'template' => 'src/template-parts/block-advantages.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'our-offer' => array(
+            'title' => 'Our Offer block',
+            'description' => '',
+            'template' => 'src/template-parts/block-our-offer.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'our-industries' => array(
+            'title' => 'Our Industries block',
+            'description' => '',
+            'template' => 'src/template-parts/block-our-industries.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'our-directions' => array(
+            'title' => 'Our Directions block',
+            'description' => '',
+            'template' => 'src/template-parts/block-our-directions.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

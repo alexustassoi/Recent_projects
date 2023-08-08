@@ -1,0 +1,124 @@
+.our-industries {
+    padding-top: 71px;
+    padding-bottom: 90px;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        right: -950px;
+        top: 0;
+        width: 2301px;
+        height: 100%;
+        z-index: -1;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM0OSIgaGVpZ2h0PSIxMTI0IiB2aWV3Qm94PSIwIDAgMTM0OSAxMTI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMwMSAwVjExMjRINjc3Ljk5NEwzMTggNTYyTDY3Ny45OTQgMEgyMzAxWiIgZmlsbD0iI0Y4RjhGOCIvPjxtYXNrIGlkPSJtYXNrMF8wXzQxMCIgc3R5bGU9Im1hc2stdHlwZTpsdW1pbmFuY2UiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjMxOCIgeT0iMCIgd2lkdGg9IjE5ODMiIGhlaWdodD0iMTEyNCI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMzAxIDBWMTEyNEg2NzcuOTk0TDMxOCA1NjJMNjc3Ljk5NCAwSDIzMDFaIiBmaWxsPSJ3aGl0ZSIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI21hc2swXzBfNDEwKSI+PC9nPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNjAzIDExMjRIMzYxLjY5NUwwIDU2MkwzNjEuNjk1IDBINjAzTDI0MS4zMDUgNTYyTDYwMyAxMTI0WiIgZmlsbD0iI0Y4RjhGOCIvPjwvc3ZnPg==) center center no-repeat;
+        background-size: cover;
+
+    }
+
+    &__container {
+
+    }
+
+    &__title {
+        margin-bottom: 74px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc((100% - 96px) / 4);
+        margin-right: 32px;
+        margin-bottom: 32px;
+        height: 372px;
+
+        &:nth-child(4n + 4) {
+            margin-right: 0;
+        }
+
+        &:hover {
+
+            .our-industries__item-inner {
+                width: calc(100% + 38px);
+                height: 410px;
+                position: relative;
+                z-index: 1;
+                left: -19px;
+                top: -19px;
+            }
+
+            .our-industries__item-title {
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__item-inner {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 58px;
+        display: flex;
+        align-items: flex-end;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(229deg, rgba(41, 43, 46, 0.41) 0%, #292B2E 100%);
+        }
+    }
+
+    &__item-link {
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__item-title {
+        color: #FFF;
+        font-family: $Montserrat;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.1;
+        position: relative;
+        z-index: 1;
+        padding-left: 68px;
+        width: 100%;
+        padding-top: 21px;
+        padding-bottom: 30px;
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 95%;
+            height: 100%;
+            z-index: -1;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzg4IiBoZWlnaHQ9Ijg0IiB2aWV3Qm94PSIwIDAgMzg4IDg0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNLTE3Ni4wMiAwLjM5Nzk0OVY4My4wNDE5SDI5Mi4yODRMMzE4Ljc3MSA0MS43MTk5TDI5Mi4yODQgMC4zOTc5NDlILTE3Ni4wMloiIGZpbGw9IiNFNDEwMTkiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMwMS41OTggODMuMDQxOUgzNjEuMTU0TDM4Ny42NzkgNDEuNzE5OUwzNjEuMTU0IDAuMzk3OTQ5SDMwMS41OThMMzI4LjEyMiA0MS43MTk5TDMwMS41OTggODMuMDQxOVoiIGZpbGw9IiNFNDEwMTkiLz48L3N2Zz4=) 100% center no-repeat;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity .4s ease-out;
+        }
+    }
+}
