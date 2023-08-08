@@ -18,13 +18,19 @@ $founder_repeater = get_field_value($fields, 'founder_repeater');
 <section class="welcomes">
     <div class="welcomes__container container">
         <div class="welcomes__content-top">
-            <?php
-            echo ($title)
-                ? '<h1 class="welcomes__title">' . do_shortcode($title) . '</h1>'
-                : '';
+            <div class="welcomes__content-col">
+                <?php
+                echo ($title)
+                    ? '<h2 class="welcomes__title">' . do_shortcode($title) . '</h2>'
+                    : '';
 
-            if ($item_repeater) { ?>
-                <ul class="welcomes__items">
+                echo ($desc)
+                    ? '<div class="welcomes__desc">' . do_shortcode($desc) . '</div>'
+                    : '';
+                ?>
+            </div>
+            <?php if ($item_repeater) { ?>
+                <ul class="welcomes__items welcomes__content-col">
                     <?php foreach ($item_repeater as $item) {
                         $item_text = get_field_value($item, 'item_text');
                         ?>
@@ -36,7 +42,7 @@ $founder_repeater = get_field_value($fields, 'founder_repeater');
         <div class="welcomes__content-bottom">
             <?php
             echo ($button)
-                ? '<a href="' . do_shortcode($button["url"]) . '" class="welcomes__btn">' . do_shortcode($button["title"]) . '</a>'
+                ? '<a href="' . do_shortcode($button["url"]) . '" class="welcomes__btn primary">' . do_shortcode($button["title"]) . '</a>'
                 : '';
 
             if ($founder_repeater) { ?>
@@ -50,7 +56,7 @@ $founder_repeater = get_field_value($fields, 'founder_repeater');
                             <figure class="welcomes__founder-photo-wrap">
                                 <img class="welcomes__founder-photo"
                                      src="<?php echo do_shortcode($photo); ?>"
-                                     alt="Founder" />
+                                     alt="Founder"/>
                             </figure>
                             <div class="welcomes__founder-info">
                                 <div class="welcomes__founder-name">

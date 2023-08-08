@@ -97,3 +97,46 @@ body {
         }
     }
 }
+
+
+.primary {
+    cursor: pointer;
+    display: inline-flex;
+    text-align: center;
+    color: #0E0E0F;
+    font-family: $Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    padding: 15px 60px 17px 27px;
+    border: 1px solid #E41019;
+    transition: background-color 0.3s;
+    appearance: none;
+    position: relative;
+    z-index: 1;
+
+    @include max-break('1024px') {
+        font-size: 14px;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 23px;
+        height: 23px;
+        z-index: 1;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMS41IiBjeT0iMTEuNSIgcj0iMTEuNSIgZmlsbD0iI0U0MTAxOSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOSA2SDEwLjMzNDVMMTQgMTEuNUwxMC4zMzQ1IDE3SDlMMTIuNjY1NSAxMS41TDkgNloiIGZpbGw9IndoaXRlIi8+PC9zdmc+) center center no-repeat;
+        background-size: contain;
+    }
+
+    &:hover {
+        background-color: rgba(228, 16, 25, .03);
+    }
+}

@@ -1,0 +1,164 @@
+.welcomes {
+    padding-top: 65px;
+    padding-bottom: 88px;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        width: 784px;
+        height: 100%;
+        z-index: -1;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzg1IiBoZWlnaHQ9IjY2OSIgdmlld0JveD0iMCAwIDc4NSA2NjkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03ODQuMDk0IDBINDUyLjYyMUwwIDY2OUgzMzIuMzI0TDc4NC4wOTQgMFoiIGZpbGw9IiNGOEY4RjgiLz48L3N2Zz4=) center center no-repeat;
+        background-size: cover;
+    }
+
+    &__container {
+    }
+
+    &__content-top {
+        display: flex;
+        margin-bottom: 34px;
+        padding-left: 108px;
+    }
+
+    &__title {
+        margin-bottom: 41px;
+    }
+
+    &__desc {
+        color: #0E0E0F;
+        font-family: $SFProDisplay;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    &__content-col {
+        &:first-child {
+            margin-right: 76px;
+            max-width: 412px;
+        }
+    }
+
+    &__items {
+        padding-top: 25px;
+        max-width: 867px;
+
+        li {
+            position: relative;
+            z-index: 1;
+            padding-left: 25px;
+            margin-bottom: 28px;
+            color: #0E0E0F;
+            font-family: $SFProDisplay;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 1.2;
+
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                left: 0;
+                top: 0;
+                width: 11px;
+                height: 18px;
+                z-index: 1;
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxMSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMThINUwxMC43NzggOUw1IDBIMEw1Ljc3ODAxIDlMMCAxOFoiIGZpbGw9IiNFNDEwMTkiLz48L3N2Zz4=) center center no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__content-bottom {
+        display: flex;
+        align-items: center;
+        padding-left: 108px;
+    }
+
+    &__founders,
+    &__founder {
+        display: flex;
+        align-items: center;
+    }
+
+    &__founders {
+
+    }
+
+    &__founder {
+        margin-right: 50px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__founder-photo-wrap {
+        margin-right: 23px;
+        width: 220px;
+        height: 220px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__founder-photo {
+
+    }
+
+    &__founder-info {
+        padding-left: 30px;
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 10px;
+            width: 19px;
+            height: 17px;
+            z-index: 1;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE4LjYwOTQgMTcuODkzNkgxMS40ODc4TC0wLjAwMTMyMTc5IDAuODkzNTU1SDcuMTQxODhMMTguNjA5NCAxNy44OTM2WiIgZmlsbD0iI0Y0QkMyMCIvPjwvc3ZnPg==) center center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        margin-right: 228px;
+    }
+
+    &__founder-name {
+        color: #282829;
+        font-family: $Nexa;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.19;
+        margin-bottom: 12px;
+    }
+
+    &__founder-status {
+        color: #0E0E0F;
+        font-family: $SFProDisplay;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+    }
+}
