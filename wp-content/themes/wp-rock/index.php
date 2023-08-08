@@ -1,7 +1,7 @@
 <?php
 
 /**
- * General template for pages
+ * General template for pages.
  *
  * @package WP-rock
  * @since 4.4.0
@@ -30,13 +30,15 @@ $blog_link_text = (!is_null($blog_link_text)) ? $blog_link_text : 'Read more';
                     the_post();
 
                     $excerpt = get_the_excerpt() ? '<p class="post__excerpt">' . get_the_excerpt() . '</p>' : '';
+                    $thumb = get_the_post_thumbnail_url() ? '<a href="' . get_the_permalink() . '" class="post__thumb">
+                                                                <img src="' . get_the_post_thumbnail_url() . '" alt="thumbnail">
+                                                            </a>' : '';
+
 
                     echo '<div class="post">
                         <time class="post__date">' . get_the_date('d.m.Y') . '</time>
                         ' . do_shortcode($excerpt) . '
-                        <a href="' . get_the_permalink() . '" class="post__thumb">
-                            <img src="' . get_the_post_thumbnail_url() . '" alt="thumbnail">
-                        </a>
+                        ' . $thumb . '
                         <a class="post__link arrow-link" href="' . get_the_permalink() . '">
                             ' . $blog_link_text . '
                         </a>

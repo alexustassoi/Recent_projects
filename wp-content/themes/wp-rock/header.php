@@ -19,6 +19,8 @@
     <?php } ?>
     <?php wp_head(); ?>
     <?php do_action( 'wp_rock_before_close_head_tag' ); ?>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/<?php echo get_locale(); ?>/sdk.js#xfbml=1&version=v17.0" nonce="t3PzKR7k"></script>
+<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: <?php echo get_locale(); ?></script>
 </head>
 
 <?php
@@ -32,6 +34,7 @@ if ( function_exists( 'get_field' ) ) {
 ?>
 
 <body <?php body_class( $page_class ); ?>>
+
 
 <?php do_action( 'wp_rock_after_open_body_tag' ); ?>
 

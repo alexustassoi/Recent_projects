@@ -11,6 +11,7 @@
     font-family: $SFProDisplay;
     font-weight: 300;
     color: #0E0E0F;
+    font-size: 20px;
 }
 
 
@@ -19,6 +20,23 @@ h2 {
     @extend %heading;
     font-size: 50px;
     position: relative;
+
+    @include max-break('1024px') {
+        font-size: 40px;
+        padding-left: 60px;
+    }
+
+    @include max-break('768px') {
+        font-size: 32px;
+    }
+
+    @include max-break('570px') {
+        font-size: 26px;
+    }
+
+    @include max-break('470px') {
+        font-size: 22px;
+    }
 
     &:after {
         content: '';
@@ -29,53 +47,94 @@ h2 {
         top: 36px;
         left: -100px;
         background-color: #E41019;
+
+        @include max-break('1024px') {
+            width: 50px;
+            left: 0;
+            top: 28px;
+        }
+
+        @include max-break('470px') {
+            top: 16px;
+        }
     }
 }
 
-//h2 {
-//    @extend %heading;
-//    font-size: 40px;
-//}
+h2 {
+    @extend %heading;
+    font-size: 50px;
+
+    @include max-break('1024px') {
+        font-size: 40px;
+        padding-left: 60px;
+    }
+
+    @include max-break('768px') {
+        font-size: 32px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 89px;
+        top: 36px;
+        left: -100px;
+        background-color: #E41019;
+
+        @include max-break('1024px') {
+            width: 50px;
+            left: 0;
+            top: 28px;
+        }
+    }
+}
 
 h3 {
     @extend %heading;
-    font-size: 30px;
+    color: #0E0E0F;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 34px;
 
-    @include min-break('1024px') {
-        font-size: 70px;
+
+    @include max-break('768px') {
+        margin-bottom: 30px;
     }
 }
 
 h4 {
     @extend %heading;
     font-size: 25px;
-
-    @include min-break('1024px') {
-        font-size: 50px;
-        line-height: 104.02%;
-    }
 }
 
 h5 {
     @extend %heading;
     font-size: 25px;
     font-weight: 800;
-
-    @include min-break('1024px') {
-        font-size: 45px;
-    }
 }
 
 h6 {
     @extend %heading;
     font-size: 20px;
-
-    @include min-break('1024px') {
-        font-size: 40px;
-    }
 }
 
 p {
     @extend %paragraph;
+    margin-bottom: 25px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include max-break('1024px') {
+        font-size: 18px;
+    }
+
+    @include max-break('768px') {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
 }
 
