@@ -1,9 +1,11 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper from 'swiper';
+// eslint-disable-next-line import/no-unresolved
+import { Navigation } from 'swiper/modules';
 
 function initSwipers() {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const swiper = new Swiper('.js-reviews-swiper', {
-        modules: [Navigation, Pagination],
+        modules: [Navigation],
         spaceBetween: 0,
         slidesPerView: 1,
         pagination: {
@@ -33,6 +35,7 @@ function initSwipers() {
 function InitSwiperIndustry() {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const swiper = new Swiper('.js-swiper-industry', {
+        modules: [Navigation],
         spaceBetween: 16,
         slidesPerView: 1,
         breakpoints: {
