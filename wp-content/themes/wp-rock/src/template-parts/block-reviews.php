@@ -32,7 +32,7 @@ $reviews_repeater = get_field_value($fields, 'reviews_repeater');
                             $reviews_text = get_field_value($item, 'reviews_text');
                             ?>
                             <div class="reviews__swiper-slide swiper-slide">
-                                <div class="reviews__author-info">
+                                <div class="reviews__author-info desktop">
                                     <?php
                                     echo ($name)
                                         ? '<div class="reviews__author-name">' . do_shortcode($name) . '</div>'
@@ -44,11 +44,25 @@ $reviews_repeater = get_field_value($fields, 'reviews_repeater');
                                     ?>
                                 </div>
                                 <div class="reviews__content-wrap">
-                                    <?php
-                                    echo ($image)
-                                        ? '<figure class="reviews__author-image-wrap"><img src="' . do_shortcode($image) . '" alt="Author" /></figure>'
-                                        : '';
+                                    <div class="reviews__author-info-wrap">
+                                        <?php
+                                        echo ($image)
+                                            ? '<figure class="reviews__author-image-wrap"><img src="' . do_shortcode($image) . '" alt="Author" /></figure>'
+                                            : ''; ?>
 
+                                        <div class="reviews__author-info mobile">
+                                            <?php
+                                            echo ($name)
+                                                ? '<div class="reviews__author-name">' . do_shortcode($name) . '</div>'
+                                                : '';
+
+                                            echo ($status)
+                                                ? '<div class="reviews__author-status">' . do_shortcode($status) . '</div>'
+                                                : '';
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <?php
                                     echo ($reviews_text)
                                         ? '<div class="reviews__text">' . do_shortcode($reviews_text) . '</div>'
                                         : '';

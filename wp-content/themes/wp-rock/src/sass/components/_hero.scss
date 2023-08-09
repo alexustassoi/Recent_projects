@@ -5,9 +5,31 @@
     padding-top: 294px;
     padding-bottom: 328px;
 
+    @include max-break('1470px') {
+        padding-bottom: 290px;
+        padding-top: 230px;
+    }
+
+    @include max-break('1280px') {
+        padding-bottom: 230px;
+    }
+
+    @include max-break('1030px') {
+        padding-top: 180px;
+    }
+
+    @include max-break('768px') {
+        padding-bottom: 180px;
+    }
+
+    @include max-break('570px') {
+        background-position: 74%;
+    }
+
     &__container {
         position: relative;
         z-index: 1;
+        box-sizing: border-box;
 
         &:after {
             position: absolute;
@@ -20,10 +42,57 @@
             z-index: 1;
             background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCAxNyA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBvcGFjaXR5PSIwLjQ5MjA4NiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi41IDQ1LjVWNDcuMzY4M0w4LjUgNTIuNUwwLjUgNDcuMzY4M0wwLjUgNDUuNUw4LjUgNTAuNjMxN0wxNi41IDQ1LjVaIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik04LjUgNTAuNVYyOC41IiBzdHJva2U9IndoaXRlIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIi8+PHBhdGggZD0iTTguNSAyMy41VjExLjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48cGF0aCBkPSJNOC41IDYuNVYwLjUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz48L2c+PC9zdmc+) center center no-repeat;
             background-size: contain;
+
+            @include max-break('1030px') {
+                bottom: -140px;
+            }
+
+            @include max-break('768px') {
+                bottom: -120px;
+            }
         }
     }
 
     &__content-wrap {
 
+    }
+
+    &__image {
+        @include max-break('1470px') {
+            max-width: 860px;
+            height: auto;
+        }
+
+        @include max-break('1370px') {
+            max-width: 800px;
+        }
+
+        @include max-break('1280px') {
+            max-width: 650px;
+        }
+
+        @include max-break('1030px') {
+            max-width: 580px;
+        }
+
+        @include max-break('850px') {
+            max-width: 500px;
+        }
+
+        @include max-break('768px') {
+            max-width: 460px;
+        }
+
+        @include max-break('670px') {
+            max-width: 420px;
+        }
+
+        @include max-break('480px') {
+            max-width: 370px;
+        }
+
+        @include max-break('415px') {
+            max-width: 100%;
+        }
     }
 }

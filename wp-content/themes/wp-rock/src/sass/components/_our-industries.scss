@@ -5,6 +5,24 @@
     z-index: 1;
     overflow: hidden;
 
+    @include max-break('1470px') {
+        padding-bottom: 60px;
+    }
+
+    @include max-break('1280px') {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    @include max-break('1030px') {
+        padding-bottom: 35px;
+        padding-top: 40px;
+    }
+
+    @include max-break('480px') {
+        padding-bottom: 25px;
+    }
+
     &:after {
         position: absolute;
         content: '';
@@ -25,6 +43,31 @@
 
     &__title {
         margin-bottom: 74px;
+
+        @include max-break('1650px') {
+            margin-left: 101px;
+        }
+
+        @include max-break('1470px') {
+
+            margin-bottom: 60px;
+        }
+
+        @include max-break('1280px') {
+            margin-bottom: 50px;
+        }
+
+        @include max-break('1030px') {
+            margin-left: 0;
+        }
+
+        @include max-break('850px') {
+            margin-bottom: 40px;
+        }
+
+        @include max-break('480px') {
+            margin-bottom: 25px;
+        }
     }
 
     &__items {
@@ -38,8 +81,90 @@
         margin-bottom: 32px;
         height: 372px;
 
+        @include max-break('1470px') {
+            height: 325px;
+        }
+
+        @include max-break('1370px') {
+            height: 300px;
+        }
+
+        @include max-break('1280px') {
+            width: calc((100% - 64px) / 3);
+        }
+
+        @include max-break('850px') {
+            height: 260px;
+        }
+
+        @include max-break('768px') {
+            height: 235px;
+        }
+
+        @include max-break('670px') {
+            width: calc((100% - 32px) / 2);
+        }
+
+        @include max-break('480px') {
+            height: 215px;
+            width: calc((100% - 20px) / 2);
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        @include max-break('415px') {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &:nth-child(2n + 2) {
+
+            @include max-break('670px') {
+                margin-right: 0;
+            }
+        }
+
+        &:nth-child(3n + 3) {
+
+            @include max-break('1280px') {
+                margin-right: 0;
+            }
+
+            @include max-break('670px') {
+                margin-right: 32px;
+            }
+
+            @include max-break('480px') {
+                margin-right: 20px;
+            }
+
+            @include max-break('415px') {
+                margin-right: 0;
+            }
+
+            &:nth-child(2n + 2) {
+                margin-right: 0;
+            }
+        }
+
         &:nth-child(4n + 4) {
             margin-right: 0;
+
+            @include max-break('1280px') {
+                margin-right: 32px;
+            }
+
+            @include max-break('480px') {
+                margin-right: 20px;
+            }
+
+            @include max-break('415px') {
+                margin-right: 0;
+            }
+
+            &:nth-child(2n + 2) {
+                margin-right: 0;
+            }
         }
 
         &:hover {
@@ -51,6 +176,32 @@
                 z-index: 1;
                 left: -19px;
                 top: -19px;
+
+                @include max-break('1470px') {
+                    height: 355px;
+                }
+
+                @include max-break('1370px') {
+                    height: 340px;
+                }
+
+                @include max-break('850px') {
+                    width: calc(100% + 30px);
+                    height: 290px;
+                    left: -15px;
+                    top: -15px;
+                }
+
+                @include max-break('768px') {
+                    height: 265px;
+                }
+
+                @include max-break('480px') {
+                    height: 235px;
+                    width: calc(100% + 20px);
+                    left: -10px;
+                    top: -10px;
+                }
             }
 
             .our-industries__item-title {
@@ -73,6 +224,14 @@
         width: 100%;
         height: 100%;
 
+        @include max-break('1370px') {
+            padding-bottom: 40px;
+        }
+
+        @include max-break('850px') {
+            padding-bottom: 20px;
+        }
+
         &:after {
             position: absolute;
             content: '';
@@ -89,6 +248,8 @@
     &__item-link {
         position: absolute;
         z-index: 10;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
     }
@@ -106,6 +267,30 @@
         width: 100%;
         padding-top: 21px;
         padding-bottom: 30px;
+
+        @include max-break('1600px') {
+            padding-left: 40px;
+        }
+
+        @include max-break('1470px') {
+            font-size: 22px;
+        }
+
+        @include max-break('1370px') {
+            font-size: 20px;
+        }
+
+        @include max-break('850px') {
+            font-size: 16px;
+        }
+
+        @include max-break('768px') {
+            padding-left: 25px;
+        }
+
+        @include max-break('480px') {
+            font-size: 14px;
+        }
 
         &:after {
             position: absolute;

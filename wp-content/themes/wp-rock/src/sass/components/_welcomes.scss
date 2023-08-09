@@ -3,6 +3,17 @@
     padding-bottom: 88px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+
+    @include max-break('991px') {
+        padding-bottom: 60px;
+        padding-top: 55px;
+    }
+
+    @include max-break('670px') {
+        padding-bottom: 50px;
+        padding-top: 40px;
+    }
 
     &:after {
         position: absolute;
@@ -24,10 +35,26 @@
         display: flex;
         margin-bottom: 34px;
         padding-left: 108px;
+
+        @include max-break('1030px') {
+            padding-left: 0;
+        }
+
+        @include max-break('768px') {
+            flex-direction: column;
+        }
+
+        @include max-break('480px') {
+            margin-bottom: 25px;
+        }
     }
 
     &__title {
         margin-bottom: 41px;
+
+        @include max-break('768px') {
+            margin-bottom: 25px;
+        }
     }
 
     &__desc {
@@ -37,18 +64,40 @@
         font-style: normal;
         font-weight: 300;
         line-height: 1.2;
+
+        @include max-break('991px') {
+            font-size: 18px;
+        }
+
+        @include max-break('480px') {
+            font-size: 14px;
+        }
     }
 
     &__content-col {
         &:first-child {
             margin-right: 76px;
             max-width: 412px;
+
+            @include max-break('1030px') {
+                margin-right: 50px;
+            }
+
+            @include max-break('768px') {
+                margin-right: 0;
+                max-width: unset;
+                margin-bottom: 30px;
+            }
         }
     }
 
     &__items {
         padding-top: 25px;
         max-width: 867px;
+
+        @include max-break('991px') {
+            padding-top: 0;
+        }
 
         li {
             position: relative;
@@ -62,6 +111,16 @@
             font-weight: 300;
             line-height: 1.2;
 
+            @include max-break('991px') {
+                font-size: 18px;
+            }
+
+            @include max-break('480px') {
+                font-size: 14px;
+                padding-left: 18px;
+                margin-bottom: 25px;
+            }
+
             &:after {
                 position: absolute;
                 content: '';
@@ -73,6 +132,15 @@
                 z-index: 1;
                 background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxMSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMThINUwxMC43NzggOUw1IDBIMEw1Ljc3ODAxIDlMMCAxOFoiIGZpbGw9IiNFNDEwMTkiLz48L3N2Zz4=) center center no-repeat;
                 background-size: contain;
+
+                @include max-break('1280px') {
+                    top: 2px;
+                }
+
+                @include max-break('480px') {
+                    height: 13px;
+                    width: 8px;
+                }
             }
         }
     }
@@ -81,23 +149,60 @@
         display: flex;
         align-items: center;
         padding-left: 108px;
+
+        @include max-break('1030px') {
+            padding-left: 0;
+        }
+
+        @include max-break('850px') {
+            flex-direction: column-reverse;
+        }
     }
 
     &__founders,
     &__founder {
         display: flex;
         align-items: center;
+
+        @include max-break('480px') {
+            width: 100%;
+        }
     }
 
     &__founders {
 
+        @include max-break('850px') {
+            margin-bottom: 45px;
+        }
+
+        @include max-break('480px') {
+            flex-direction: column;
+        }
     }
 
     &__founder {
         margin-right: 50px;
 
+        @include max-break('1370px') {
+            margin-right: 35px;
+        }
+
+        @include max-break('570px') {
+            flex-direction: column;
+            margin-right: 70px;
+        }
+
+        @include max-break('480px') {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
         &:last-of-type {
             margin-right: 0;
+
+            @include max-break('480px') {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -105,6 +210,33 @@
         margin-right: 23px;
         width: 220px;
         height: 220px;
+
+        @include max-break('1470px') {
+            height: 180px;
+            width: 180px;
+        }
+
+        @include max-break('1370px') {
+            margin-right: 15px;
+            height: 150px;
+            width: 150px;
+        }
+
+        @include max-break('1280px') {
+            height: 122px;
+            width: 122px;
+        }
+
+        @include max-break('570px') {
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 30px;
+        }
+
+        @include max-break('480px') {
+            height: 140px;
+            width: 140px;
+        }
 
         img {
             width: 100%;
@@ -122,6 +254,12 @@
         position: relative;
         z-index: 1;
 
+        @include max-break('570px') {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         &:after {
             position: absolute;
             content: '';
@@ -133,12 +271,32 @@
             z-index: 1;
             background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTE4LjYwOTQgMTcuODkzNkgxMS40ODc4TC0wLjAwMTMyMTc5IDAuODkzNTU1SDcuMTQxODhMMTguNjA5NCAxNy44OTM2WiIgZmlsbD0iI0Y0QkMyMCIvPjwvc3ZnPg==) center center no-repeat;
             background-size: contain;
+
+            @include max-break('1280px') {
+                top: 2px;
+            }
         }
     }
 
     &__btn {
         display: flex;
         margin-right: 228px;
+
+        @include max-break('1470px') {
+            margin-right: 205px;
+        }
+
+        @include max-break('1370px') {
+            margin-right: 170px;
+        }
+
+        @include max-break('1280px') {
+            margin-right: 110px;
+        }
+
+        @include max-break('850px') {
+            margin-right: 0;
+        }
     }
 
     &__founder-name {
@@ -149,6 +307,14 @@
         font-weight: 700;
         line-height: 1.19;
         margin-bottom: 12px;
+
+        @include max-break('1470px') {
+            font-size: 22px;
+        }
+
+        @include max-break('1280px') {
+            font-size: 18px;
+        }
     }
 
     &__founder-status {

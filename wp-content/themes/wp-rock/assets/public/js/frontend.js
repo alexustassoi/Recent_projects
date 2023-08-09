@@ -23,19 +23,6 @@ function initSwipers() {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    },
-    breakpoints: {
-      300: {
-        slidesPerView: 1,
-        spaceBetween: 8
-      },
-      768: {
-        slidesPerView: 1
-      },
-      1024: {
-        slidesPerView: 1,
-        spaceBetween: 14
-      }
     }
   });
 }
