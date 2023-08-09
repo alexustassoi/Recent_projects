@@ -38,6 +38,7 @@ body {
     margin: 0 auto;
     width: 1587px;
     max-width: 100%;
+    box-sizing: border-box;
 
     @include max-break('1470px') {
         width: 1370px;

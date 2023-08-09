@@ -1,0 +1,112 @@
+.for-you {
+    padding-top: 75px;
+    padding-bottom: 85px;
+    position: relative;
+    background: #393C40;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        @media screen and (max-width: 1240px) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        max-width: 615px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: 344px 344px;
+        gap: 54px 36px ;
+        @media screen and (max-width: 1240px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr ;
+        }
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 28px;
+        z-index: 2;
+        color: #ffffff;
+    }
+
+    &__text {
+        position: relative;
+        margin-bottom: 40px;
+        z-index: 2;
+        * {
+            color: #ffffff;
+        }
+    }
+
+    &__line {
+        height: calc(100% + 160px );
+        z-index: 1;
+        width: auto;
+        position: absolute;
+        top: -75px;
+        right: 0;
+        @media screen and (max-width: 1124px) {
+            display: none;
+        }
+    }
+
+    &-card {
+        width: 344px;
+        @media screen and (max-width: 1240px) {
+            width: 100%;
+        }
+
+        &:hover {
+            .for-you-card__image {
+                transform: scale(1.1);
+            }
+            .for-you-card__arrow {
+                transform: translateX(30px);
+            }
+        }
+        &__figure {
+            height: 169px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            @media screen and (max-width: 1240px) {
+                height: 230px;
+            }
+        }
+        &__arrow {
+            position: absolute;
+            top: 0;
+            right: 61px;
+            height: 100%;
+            width: auto;
+            transition: all 0.2s ease-in-out;
+        }
+        &__image {
+            width: 100%;
+            height: 100%;
+            transition: all 0.2s ease-in-out;
+        }
+        &__title {
+            margin-top: 33px;
+            margin-bottom: 17px;
+            color: #FFF;
+            font-family: $Nexa;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 118%;
+            text-transform: uppercase;
+
+        }
+        &__description {
+            color: #FFF;
+        }
+    }
+}
