@@ -1,0 +1,32 @@
+.ask-question {
+    padding-top: 51px;
+    padding-bottom: 82px;
+
+    &__container {
+
+    }
+
+    &__content {
+        padding-left: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: #FFF;
+        max-width: 1030px;
+        font-size: 60px;
+        line-height: 1.16;
+    }
+
+    &__btn {
+        color: #FFF;
+        padding-left: 37px;
+        padding-right: 37px;
+
+        &:after {
+            display: none;
+        }
+    }
+}
