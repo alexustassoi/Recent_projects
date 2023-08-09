@@ -1,0 +1,74 @@
+.top-banner {
+    //TODO: remove margin
+    margin-top: 260px;
+    padding-top: 40px;
+    padding-bottom: 140px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: calc(min(965px, 100%)) auto;
+    position: relative;
+    @media screen and (max-width: 1480px) {
+        background-size: calc(min(500px, 100%)) auto;
+    }
+    @media screen and (max-width: 1124px) {
+        padding-top: 400px;
+        background-position: top left;
+    }
+
+    &--nopadding {
+        @media screen and (max-width: 1124px) {
+            padding-top: 40px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 167px;
+        align-items: center;
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__figure {
+        width: 100%;
+        height: auto;
+    }
+
+    &__left {
+
+    }
+
+    &__right {
+        max-width: 665px;
+        width: 100%;
+        position: relative;
+        @media screen and (max-width: 1124px) {
+
+        }
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 28px;
+        z-index: 2;
+    }
+    &__text {
+        position: relative;
+        margin-bottom: 40px;
+        z-index: 2;
+    }
+
+    &__line {
+        height: calc(100% + 180px );
+        z-index: 1;
+        width: auto;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        @media screen and (max-width: 1124px) {
+            display: none;
+        }
+    }
+}

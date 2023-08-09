@@ -59,6 +59,42 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-our-directions.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'top-banner-info' => array(
+	        'title' => 'Top banner info',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-top-banner-info.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'steps' => array(
+	        'title' => 'Steps',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-steps.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'industries-slider' => array(
+	        'title' => 'Industries slider',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-industries-slider.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'information-with-image' => array(
+	        'title' => 'Information with image',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-information-with-image.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'value-for-you' => array(
+	        'title' => 'Value For You',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-value-for-you.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'our-offer-small' => array(
+	        'title' => 'Our Offer small',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-our-offer-small.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
         'news' => array(
             'title' => 'News block',
             'description' => '',

@@ -138,3 +138,27 @@ p {
     }
 }
 
+.btn-default {
+    padding: 18px 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    color: #0E0E0F;
+    font-family: $Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 1px solid #E41019;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: 2;
+    &.white {
+        color: #FFF;
+    }
+    &:hover {
+        color: #FFFFFF;
+        background-color: #E41019;
+    }
+}
