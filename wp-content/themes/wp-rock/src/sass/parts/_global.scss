@@ -173,6 +173,10 @@ body {
     appearance: none;
     position: relative;
     z-index: 1;
+    height: 56px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 
     @include max-break('1024px') {
         font-size: 14px;

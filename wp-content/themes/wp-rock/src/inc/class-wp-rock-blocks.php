@@ -59,6 +59,24 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-our-directions.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'news' => array(
+            'title' => 'News block',
+            'description' => '',
+            'template' => 'src/template-parts/block-news.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'ask-question' => array(
+            'title' => 'Ask a question block',
+            'description' => '',
+            'template' => 'src/template-parts/block-ask-question.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'reviews' => array(
+            'title' => 'Reviews block',
+            'description' => '',
+            'template' => 'src/template-parts/block-reviews.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

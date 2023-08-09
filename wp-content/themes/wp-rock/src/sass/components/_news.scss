@@ -1,0 +1,33 @@
+.news {
+    padding-top: 74px;
+    padding-bottom: 102px;
+
+    &__container {
+    }
+
+    &__content {
+        display: flex;
+        max-width: 1495px;
+    }
+
+    &__items {
+        width: 100%;
+        flex: 1;
+
+        .blog__inner {
+            max-width: 1205px;
+        }
+    }
+
+    &__block-info {
+        width: max-content;
+        margin-left: auto;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    &__btn {
+        margin-top: 286px;
+    }
+}
