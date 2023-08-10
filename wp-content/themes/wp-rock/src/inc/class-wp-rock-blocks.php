@@ -113,6 +113,36 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-reviews.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'imprint' => array(
+	        'title' => 'Imprint block',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-imprint.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'services-hero' => array(
+            'title' => 'Services hero block',
+            'description' => '',
+            'template' => 'src/template-parts/block-services-hero.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'services-items' => array(
+            'title' => 'Services items block',
+            'description' => '',
+            'template' => 'src/template-parts/block-services-items.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'benefits' => array(
+            'title' => 'Benefits block',
+            'description' => '',
+            'template' => 'src/template-parts/block-benefits.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'opening-companies' => array(
+            'title' => 'Opening companies block',
+            'description' => '',
+            'template' => 'src/template-parts/block-opening-companies.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

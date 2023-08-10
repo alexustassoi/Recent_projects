@@ -1460,7 +1460,7 @@ function utils_elementTransitionEnd(el, callback) {
     el.addEventListener('transitionend', fireCallBack);
   }
 }
-function utils_elementOuterSize(el, size, includeMargins) {
+function elementOuterSize(el, size, includeMargins) {
   const window = ssr_window_esm_getWindow();
   if (includeMargins) {
     return el[size === 'width' ? 'offsetWidth' : 'offsetHeight'] + parseFloat(window.getComputedStyle(el, null).getPropertyValue(size === 'width' ? 'margin-right' : 'margin-top')) + parseFloat(window.getComputedStyle(el, null).getPropertyValue(size === 'width' ? 'margin-left' : 'margin-bottom'));
@@ -1957,7 +1957,7 @@ function updateSlides() {
         slide.style.webkitTransform = 'none';
       }
       if (params.roundLengths) {
-        slideSize = swiper.isHorizontal() ? utils_elementOuterSize(slide, 'width', true) : utils_elementOuterSize(slide, 'height', true);
+        slideSize = swiper.isHorizontal() ? elementOuterSize(slide, 'width', true) : elementOuterSize(slide, 'height', true);
       } else {
         // eslint-disable-next-line
         const width = getDirectionPropertyValue(slideStyles, 'width');
@@ -6134,6 +6134,17 @@ function Navigation(_ref) {
 
 
 
+;// CONCATENATED MODULE: ./node_modules/swiper/shared/classes-to-selector.mjs
+function classes_to_selector_classesToSelector(classes) {
+  if (classes === void 0) {
+    classes = '';
+  }
+  return `.${classes.trim().replace(/([\.:!+\/])/g, '\\$1') // eslint-disable-line
+  .replace(/ /g, '.')}`;
+}
+
+
+
 ;// CONCATENATED MODULE: ./node_modules/swiper/modules/pagination.mjs
 
 
@@ -6204,12 +6215,12 @@ function Pagination(_ref) {
     }
   }
   function onBulletClick(e) {
-    const bulletEl = e.target.closest(classesToSelector(swiper.params.pagination.bulletClass));
+    const bulletEl = e.target.closest(classes_to_selector_classesToSelector(swiper.params.pagination.bulletClass));
     if (!bulletEl) {
       return;
     }
     e.preventDefault();
-    const index = elementIndex(bulletEl) * swiper.params.slidesPerGroup;
+    const index = utils_elementIndex(bulletEl) * swiper.params.slidesPerGroup;
     if (swiper.params.loop) {
       if (swiper.realIndex === index) return;
       const newSlideIndex = swiper.getSlideIndexByData(index);
@@ -6277,7 +6288,7 @@ function Pagination(_ref) {
       });
       if (el.length > 1) {
         bullets.forEach(bullet => {
-          const bulletIndex = elementIndex(bullet);
+          const bulletIndex = utils_elementIndex(bullet);
           if (bulletIndex === current) {
             bullet.classList.add(...params.bulletActiveClass.split(' '));
           } else if (swiper.isElement) {
@@ -6328,10 +6339,10 @@ function Pagination(_ref) {
     }
     el.forEach((subEl, subElIndex) => {
       if (params.type === 'fraction') {
-        subEl.querySelectorAll(classesToSelector(params.currentClass)).forEach(fractionEl => {
+        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.currentClass)).forEach(fractionEl => {
           fractionEl.textContent = params.formatFractionCurrent(current + 1);
         });
-        subEl.querySelectorAll(classesToSelector(params.totalClass)).forEach(totalEl => {
+        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.totalClass)).forEach(totalEl => {
           totalEl.textContent = params.formatFractionTotal(total);
         });
       }
@@ -6350,7 +6361,7 @@ function Pagination(_ref) {
         } else {
           scaleY = scale;
         }
-        subEl.querySelectorAll(classesToSelector(params.progressbarFillClass)).forEach(progressEl => {
+        subEl.querySelectorAll(classes_to_selector_classesToSelector(params.progressbarFillClass)).forEach(progressEl => {
           progressEl.style.transform = `translate3d(0,0,0) scaleX(${scaleX}) scaleY(${scaleY})`;
           progressEl.style.transitionDuration = `${swiper.params.speed}ms`;
         });
@@ -6409,7 +6420,7 @@ function Pagination(_ref) {
         subEl.innerHTML = paginationHTML || '';
       }
       if (params.type === 'bullets') {
-        swiper.pagination.bullets.push(...subEl.querySelectorAll(classesToSelector(params.bulletClass)));
+        swiper.pagination.bullets.push(...subEl.querySelectorAll(classes_to_selector_classesToSelector(params.bulletClass)));
       }
     });
     if (params.type !== 'custom') {
@@ -6417,7 +6428,7 @@ function Pagination(_ref) {
     }
   }
   function init() {
-    swiper.params.pagination = createElementIfNotDefined(swiper, swiper.originalParams.pagination, swiper.params.pagination, {
+    swiper.params.pagination = create_element_if_not_defined_createElementIfNotDefined(swiper, swiper.originalParams.pagination, swiper.params.pagination, {
       el: 'swiper-pagination'
     });
     const params = swiper.params.pagination;
@@ -6438,7 +6449,7 @@ function Pagination(_ref) {
       // check if it belongs to another nested Swiper
       if (el.length > 1) {
         el = el.filter(subEl => {
-          if (elementParents(subEl, '.swiper')[0] !== swiper.el) return false;
+          if (utils_elementParents(subEl, '.swiper')[0] !== swiper.el) return false;
           return true;
         })[0];
       }
@@ -9982,7 +9993,7 @@ function EffectCards(_ref) {
 
 function initSwipers() {
   var swiper = new Swiper('.js-reviews-swiper', {
-    modules: [Navigation],
+    modules: [Navigation, Pagination],
     spaceBetween: 0,
     slidesPerView: 1,
     pagination: {

@@ -24,6 +24,11 @@ body {
     font-weight: 300;
     color: #0e0e0f;
 
+    &,
+    * {
+        box-sizing: border-box;
+    }
+
     &.error404 {
         overflow: hidden;
     }
@@ -204,5 +209,24 @@ body {
 
     &:hover {
         background-color: rgba(228, 16, 25, .03);
+    }
+}
+
+.privacy-policy-container {
+    padding-top: 280px;
+    padding-bottom: 140px;
+    max-width: 1280px;
+    &__title {
+        margin-bottom: 40px;
+    }
+    p {
+        line-height: 122%;
+    }
+    ul, ol {
+        margin-bottom: 25px;
+    }
+
+    li {
+        margin-bottom: 12px;
     }
 }

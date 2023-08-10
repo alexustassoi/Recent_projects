@@ -32,6 +32,7 @@ h2 {
 
     @include max-break('570px') {
         font-size: 26px;
+        padding-left: 0;
     }
 
     @include max-break('470px') {
@@ -54,8 +55,9 @@ h2 {
             top: 28px;
         }
 
-        @include max-break('470px') {
-            top: 16px;
+        @include max-break('570px') {
+            top: -10px;
+            left: 0;
         }
     }
 }
@@ -64,13 +66,24 @@ h2 {
     @extend %heading;
     font-size: 50px;
 
-    @include max-break('1030px') {
+    @include max-break('1370px') {
         font-size: 40px;
+    }
+
+    @include max-break('1030px') {
         padding-left: 60px;
     }
 
     @include max-break('768px') {
         font-size: 32px;
+    }
+
+    @include max-break('570px') {
+        padding-left: 0;
+    }
+
+    @include max-break('470px') {
+        font-size: 22px;
     }
 
     &:after {
@@ -87,6 +100,11 @@ h2 {
             width: 50px;
             left: 0;
             top: 28px;
+        }
+
+        @include max-break('570px') {
+            top: -10px;
+            left: 0;
         }
     }
 }
