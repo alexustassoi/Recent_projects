@@ -137,6 +137,12 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-opening-companies.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'contact-us' => array(
+            'title' => 'Contact us block',
+            'description' => '',
+            'template' => 'src/template-parts/block-contact-us.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks
