@@ -7,6 +7,7 @@
  */
 
 global $global_options;
+$fields = get_fields();
 
 $logo = get_field_value($global_options, 'logo');
 $logo_mini = get_field_value($global_options, 'logo_mini');
@@ -15,12 +16,12 @@ $call_to_action_link = get_field_value($global_options, 'call_to_action_link');
 $translations = pll_the_languages(array('raw' => 1));
 $current_language = pll_current_language();
 
-$main_header_class = is_front_page() ? 'main-header' : 'block-header';
-$header_background = !is_front_page() ? get_field_value($global_options, 'header_background') : '';
+$header_type = get_field_value($fields, 'header_view') ? get_field_value($fields, 'header_view') : 'block-header';
+$header_bg = $header_type === 'block-header' ? get_field_value($global_options, 'header_background') : '';
 
 ?>
 
-<header id="site-header" style="background-image: url(<?php echo $header_background; ?>)" class="site-header <?php echo $main_header_class; ?> js-toggle-active-menu">
+<header id="site-header" style="background-image: url(<?php echo $header_bg; ?>)" class="site-header <?php echo $header_type; ?> js-toggle-active-menu">
 
     <div class="container site-header__container">
         <?php
