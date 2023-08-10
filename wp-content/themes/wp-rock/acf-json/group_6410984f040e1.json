@@ -27,7 +27,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "15",
                 "class": "",
                 "id": ""
             },
@@ -42,6 +42,76 @@
             "max_size": "",
             "mime_types": "",
             "translations": "copy_once"
+        },
+        {
+            "key": "field_64d4b49ad1d54",
+            "label": "Logo mini",
+            "name": "logo_mini",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_64d4c6199fd22",
+            "label": "Header background",
+            "name": "header_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_64d4df1a395db",
+            "label": "Call to action link",
+            "name": "call_to_action_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "translations": "translate"
         },
         {
             "key": "field_642ec4a8f6aff",
@@ -504,5 +574,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691499545
+    "modified": 1691672425
 }

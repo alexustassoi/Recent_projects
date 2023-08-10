@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     height: 100vh;
     overflow-x: hidden;
