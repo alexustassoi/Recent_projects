@@ -31,7 +31,6 @@ export const menuFunctionality = () => {
         if (operationType === 'add' || operationType === 'toggle') {
             isMenuOverflowing();
         }
-
     }
 
     menuItemHasChildrenArray &&
