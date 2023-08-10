@@ -20,6 +20,11 @@ body {
     font-weight: 300;
     color: #0e0e0f;
 
+    &,
+    * {
+        box-sizing: border-box;
+    }
+
     &.error404 {
         overflow: hidden;
     }

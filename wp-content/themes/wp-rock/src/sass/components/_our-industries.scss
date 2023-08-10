@@ -143,7 +143,10 @@
             }
 
             &:nth-child(2n + 2) {
-                margin-right: 0;
+
+                @include max-break('670px') {
+                    margin-right: 0;
+                }
             }
         }
 
@@ -164,6 +167,14 @@
 
             &:nth-child(2n + 2) {
                 margin-right: 0;
+
+                @include max-break('1280px') {
+                    margin-right: 32px;
+                }
+
+                @include max-break('670px') {
+                    margin-right: 0;
+                }
             }
         }
 

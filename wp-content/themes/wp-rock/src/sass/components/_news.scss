@@ -115,6 +115,8 @@
         }
 
         &.mobile {
+            display: none;
+
             @include max-break('991px') {
                 display: flex;
                 margin-top: 0;
