@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function initSwipers() {
   var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-reviews-swiper', {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     spaceBetween: 0,
     slidesPerView: 1,
     pagination: {
