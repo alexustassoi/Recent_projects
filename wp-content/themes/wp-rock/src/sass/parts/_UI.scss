@@ -64,7 +64,7 @@ h2 {
     @extend %heading;
     font-size: 50px;
 
-    @include max-break('1024px') {
+    @include max-break('1030px') {
         font-size: 40px;
         padding-left: 60px;
     }
@@ -83,7 +83,7 @@ h2 {
         left: -100px;
         background-color: #E41019;
 
-        @include max-break('1024px') {
+        @include max-break('1030px') {
             width: 50px;
             left: 0;
             top: 28px;
@@ -138,3 +138,27 @@ p {
     }
 }
 
+.btn-default {
+    padding: 18px 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    color: #0E0E0F;
+    font-family: $Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 1px solid #E41019;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: 2;
+    &.white {
+        color: #FFF;
+    }
+    &:hover {
+        color: #FFFFFF;
+        background-color: #E41019;
+    }
+}

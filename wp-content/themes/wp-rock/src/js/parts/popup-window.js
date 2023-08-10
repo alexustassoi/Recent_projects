@@ -75,12 +75,12 @@ export default class Popup {
      */
     openPopup() {
         this.body.addEventListener('click', (event) => {
-            console.log('js-open-popup-activator', event.target.classList);
             if (
                 ![...event.target.classList].includes('js-open-popup-activator')
             ) {
                 return false;
             }
+            console.log('js-open-popup-activator', event.target.classList);
             event.preventDefault();
             const elHref =
                 event.target.nodeName === 'A'

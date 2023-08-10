@@ -17,7 +17,7 @@ $block_image = get_field_value($fields, 'block_image');
     <div class="hero__container container">
         <div class="hero__content-wrap">
             <?php echo ($block_image)
-                ? '<img width="1035" height="171" src="' . do_shortcode($block_image) . '" alt="Image" />'
+                ? '<img class="hero__image" width="1035" height="171" src="' . do_shortcode($block_image) . '" alt="Image" />'
                 : ''; ?>
         </div>
     </div>

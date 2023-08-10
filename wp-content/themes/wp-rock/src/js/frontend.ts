@@ -6,14 +6,17 @@ import { activateMobileMenu, menuFunctionality } from './components/menu-functio
 /**
  * JavaScript
  */
-// import Sliders from './components/swiper-init';
+
 import Popup from './parts/popup-window';
+import Sliders from './components/swiper-init';
 
 function ready() {
     const popupInstance = new Popup();
     popupInstance.init();
 
     const siteHeader = document.querySelector('#site-header');
+    Sliders.InitSwiperIndustry();
+    Sliders.initSwipers();
 
     // Put here your imported functions and decorators from import section above
     menuFunctionality();

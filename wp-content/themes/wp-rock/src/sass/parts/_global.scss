@@ -40,8 +40,9 @@ body {
 .container {
     padding: 0 16px;
     margin: 0 auto;
-    width: 1587px;
+    width: 1612px;
     max-width: 100%;
+    box-sizing: border-box;
 
     @include max-break('1470px') {
         width: 1370px;
@@ -177,6 +178,11 @@ body {
     appearance: none;
     position: relative;
     z-index: 1;
+    height: 56px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
 
     @include max-break('1024px') {
         font-size: 14px;

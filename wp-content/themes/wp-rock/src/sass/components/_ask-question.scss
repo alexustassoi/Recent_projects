@@ -1,0 +1,104 @@
+.ask-question {
+    padding-top: 51px;
+    padding-bottom: 82px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include max-break('991px') {
+        background-position: 62% 50%;
+    }
+
+    @include max-break('570px') {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    &__container {
+
+    }
+
+    &__content {
+        padding-left: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include max-break('1280px') {
+            padding-left: 0;
+        }
+
+        @include max-break('768px') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        max-width: 1030px;
+        font-size: 60px;
+        line-height: 1.16;
+
+        @include max-break('1470px') {
+            max-width: 870px;
+        }
+
+        @include max-break('1370px') {
+            max-width: 700px;
+            font-size: 48px;
+        }
+
+        @include max-break('1280px') {
+            font-size: 42px;
+            max-width: 615px;
+        }
+
+        @include max-break('1030px') {
+            font-size: 36px;
+            max-width: 525px;
+        }
+
+        @include max-break('850px') {
+            font-size: 30px;
+            max-width: 435px;
+        }
+
+        @include max-break('768px') {
+            margin-bottom: 30px;
+        }
+
+        @include max-break('480px') {
+            font-size: 26px;
+        }
+
+        @include max-break('375px') {
+            font-size: 24px;
+        }
+
+        &:after {
+            @include max-break('480px') {
+                top: 22px;
+            }
+
+            @include max-break('375px') {
+                top: 19px;
+            }
+        }
+    }
+
+    &__btn {
+        color: #FFF;
+        padding-left: 37px;
+        padding-right: 37px;
+
+        @include max-break('768px') {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+}

@@ -81,4 +81,5 @@ add_filter(
 function remove_windows_lsep_from_content( $content ): array|string {
     return str_replace( "\r\n", '', $content );
 }
+
 add_filter( 'the_content', 'remove_windows_lsep_from_content' );
