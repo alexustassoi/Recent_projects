@@ -113,6 +113,12 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-reviews.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'imprint' => array(
+	        'title' => 'Imprint block',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-imprint.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
         'services-hero' => array(
             'title' => 'Services hero block',
             'description' => '',

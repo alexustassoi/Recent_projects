@@ -353,6 +353,8 @@ class WP_Rock {
             array(
                 'primary_menu' => __( 'Primary Menu', 'wp-rock' ),
                 'footer_menu' => __( 'Footer Menu', 'wp-rock' ),
+                'footer_menu2' => __( 'Footer Menu 2', 'wp-rock' ),
+                'footer_menu3' => __( 'Footer Menu 3', 'wp-rock' ),
                 'footer_menu_bottom' => __( 'Footer Menu Bottom', 'wp-rock' ),
                 'mobile_menu' => __( 'Mobile menu', 'wp-rock' ),
             )

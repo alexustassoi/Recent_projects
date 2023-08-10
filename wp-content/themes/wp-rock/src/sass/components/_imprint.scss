@@ -1,0 +1,63 @@
+.imprint {
+    padding-top: 280px;
+    padding-bottom: 140px;
+    @media screen and (max-width:768px) {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    &-wrapper {
+        max-width: 819px;
+        width: 100%;
+    }
+    &-title {
+        margin-bottom: 40px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+        &__small {
+            font-family: $SFProDisplay;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            @media screen and (max-width: 991px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &-subtitle {
+        margin-bottom: 50px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-contact {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        a {
+            color: #0E0E0F;
+            font-family: $Montserrat;
+        }
+    }
+
+    &-contacts {
+        margin-bottom: 50px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+    }
+    &-management {
+        display: flex;
+        flex-direction: column;
+        &__text {
+            margin-bottom: 55px;
+            @media screen and (max-width: 991px) {
+                margin-bottom: 45px;
+            }
+        }
+        &__uppercase {
+            text-transform: uppercase;
+        }
+    }
+}
