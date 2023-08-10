@@ -7,7 +7,11 @@
 
 global $global_options;
 
-$logo = get_field_value( $global_options, 'logo' );
+$logo = get_field_value( $global_options, 'footer_logo' );
+$logo2 = get_field_value($global_options, 'footer_img_1');
+$logo3 = get_field_value($global_options, 'footer_img_2');
+$phone = get_field_value($global_options, 'phone');
+
 ?>
 <footer id="site-footer" class="site-footer">
     <div class="container">
