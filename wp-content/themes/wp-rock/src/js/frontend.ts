@@ -37,15 +37,19 @@ function ready() {
     window.document.addEventListener('scroll', (): void => {
         if (window.scrollY > 100) {
             siteHeader && siteHeader.classList.add('scrolled');
+            document.body.classList.add('padding-top');
         } else {
             siteHeader && siteHeader.classList.remove('scrolled');
+            document.body.classList.remove('padding-top');
         }
     });
 
     if (window.scrollY > 100) {
         siteHeader && siteHeader.classList.add('scrolled');
+        document.body.classList.add('padding-top');
     } else {
         siteHeader && siteHeader.classList.remove('scrolled');
+        document.body.classList.remove('padding-top');
     }
 }
 
