@@ -55,6 +55,11 @@ $blog_link_text = (!is_null($blog_link_text)) ? $blog_link_text : 'Read more';
                     }
                     ?>
                 </div>
+                <?php
+                echo ($more_news_btn)
+                    ? '<a href="' . do_shortcode($more_news_btn["url"]) . '" class="news__btn primary mobile" >' . do_shortcode($more_news_btn["title"]) . '</a>'
+                    : '';
+                ?>
             </div>
             <div class="news__block-info">
                 <?php
@@ -63,7 +68,7 @@ $blog_link_text = (!is_null($blog_link_text)) ? $blog_link_text : 'Read more';
                     : '';
 
                 echo ($more_news_btn)
-                    ? '<a href="' . do_shortcode($more_news_btn["url"]) . '" class="news__btn primary" >' . do_shortcode($more_news_btn["title"]) . '</a>'
+                    ? '<a href="' . do_shortcode($more_news_btn["url"]) . '" class="news__btn primary desktop" >' . do_shortcode($more_news_btn["title"]) . '</a>'
                     : '';
                 ?>
             </div>

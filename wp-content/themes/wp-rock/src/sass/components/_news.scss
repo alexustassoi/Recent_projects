@@ -2,12 +2,30 @@
     padding-top: 74px;
     padding-bottom: 102px;
 
+    @include max-break('1600px') {
+        padding-bottom: 70px;
+        padding-top: 50px;
+    }
+
+    @include max-break('1030px') {
+        padding-bottom: 55px;
+    }
+
+
+    @include max-break('480px') {
+        padding-bottom: 45px;
+    }
+
     &__container {
     }
 
     &__content {
         display: flex;
         max-width: 1495px;
+
+        @include max-break('991px') {
+            flex-direction: column-reverse;
+        }
     }
 
     &__items {
@@ -16,6 +34,60 @@
 
         .blog__inner {
             max-width: 1205px;
+
+            @include max-break('1600px') {
+                max-width: 1210px;
+            }
+
+            @include max-break('1470px') {
+                max-width: 1000px;
+            }
+
+            @include max-break('1370px') {
+                max-width: 920px;
+            }
+
+            @include max-break('1280px') {
+                max-width: 720px;
+            }
+
+            @include max-break('991px') {
+                max-width: unset;
+                margin-bottom: 20px;
+            }
+        }
+
+        .post__excerpt {
+
+            @include max-break('1470px') {
+                font-size: 20px;
+            }
+
+            @include max-break('1280px') {
+                font-size: 18px;
+            }
+        }
+
+        .post__date {
+            @include max-break('1470px') {
+                margin-bottom: 45px;
+            }
+        }
+
+        .post {
+            @include max-break('1470px') {
+                padding-bottom: 45px;
+            }
+
+            @include max-break('1370px') {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            @include max-break('1280px') {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
     }
 
@@ -25,9 +97,31 @@
         display: flex;
         align-items: flex-end;
         flex-direction: column;
+
+        @include max-break('991px') {
+            flex-direction: unset;
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
 
     &__btn {
         margin-top: 286px;
+
+        &.desktop {
+            @include max-break('991px') {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            @include max-break('991px') {
+                display: flex;
+                margin-top: 0;
+                width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
 }

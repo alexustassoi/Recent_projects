@@ -2,6 +2,10 @@
     padding-top: 58px;
     padding-bottom: 103px;
 
+    @include max-break('1280px') {
+        padding-bottom: 80px;
+    }
+
     @include max-break('1199px') {
         padding-bottom: 65px;
     }
