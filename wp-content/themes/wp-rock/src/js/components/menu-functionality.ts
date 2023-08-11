@@ -2,6 +2,7 @@ export const menuFunctionality = () => {
     const menuItemHasChildrenArray = document.querySelectorAll(
         '.site-header__menu > .menu-item.menu-item-has-children'
     ) as NodeListOf<HTMLElement>;
+    const siteHeader = document.querySelector('#site-header');
 
     const isMenuOverflowing = () => {
         const subMenu = document.querySelector('.menu-item-has-children.opened > .sub-menu') as HTMLElement;
@@ -25,11 +26,10 @@ export const menuFunctionality = () => {
     }
 
     function toggleSubMenuClass(operationType: string, menuItemHasChildren: HTMLElement) {
-        menuItemHasChildren.classList[operationType]('opened');
-        if (isHoverAvailable()) {
-            if (operationType === 'add') {
-                isMenuOverflowing();
-            }
+        menuItemHasChildren && menuItemHasChildren.classList[operationType]('opened');
+        siteHeader && siteHeader.classList[operationType]('opened');
+        if (operationType === 'add' || operationType === 'toggle') {
+            isMenuOverflowing();
         }
     }
 

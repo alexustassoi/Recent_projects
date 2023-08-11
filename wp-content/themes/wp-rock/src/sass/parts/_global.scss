@@ -24,10 +24,14 @@ body {
     font-weight: 300;
     color: #0e0e0f;
 
-    &,
-    * {
-        box-sizing: border-box;
+    &.padding-top {
+        padding-top: 100px;
+
+        @include max-break('1024px') {
+            padding-top: 66px;
+        }
     }
+
 
     &.error404 {
         overflow: hidden;
