@@ -3,6 +3,26 @@
     "title": "Block - List of advantages",
     "fields": [
         {
+            "key": "field_64d63857be19d",
+            "label": "Number of result",
+            "name": "number_of_result",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "translations": "translate"
+        },
+        {
             "key": "field_64d62a4d8bd0c",
             "label": "Items repeater",
             "name": "items_repeater",
@@ -62,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691757173
+    "modified": 1691760900
 }

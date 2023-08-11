@@ -4,6 +4,11 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+    min-height: 548px;
+
+    @include max-break('1370px') {
+        min-height: unset;
+    }
 
     @include max-break('670px') {
         background-size: auto 100%;

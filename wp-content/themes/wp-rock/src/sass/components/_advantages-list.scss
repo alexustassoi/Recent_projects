@@ -1,17 +1,165 @@
 .advantages-list {
     padding-top: 58px;
     padding-bottom: 113px;
+    overflow: hidden;
+
+    @include max-break('1600px') {
+        padding-bottom: 90px;
+    }
+
+    @include max-break('1440px') {
+        padding-bottom: 80px;
+    }
+
+    @include max-break('1199px') {
+        padding-bottom: 65px;
+    }
+
+    @include max-break('991px') {
+        padding-bottom: 55px;
+    }
+
+    @include max-break('850px') {
+        padding-bottom: 40px;
+    }
+
+    @include max-break('670px') {
+        padding-bottom: 30px;
+    }
+
+    @include max-break('480px') {
+        padding-bottom: 15px;
+    }
 
     &__container {
         display: flex;
+        position: relative;
+        z-index: 1;
+
+        @include max-break('850px') {
+            flex-direction: column;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: -44px;
+            top: -53px;
+            width: 432px;
+            height: 370px;
+            z-index: -1;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDMyIiBoZWlnaHQ9IjM3MCIgdmlld0JveD0iMCAwIDQzMiAzNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01NCAyNEgxOTguNjQ2TDQzMiAzNzBIMjg2LjkxNUw1NCAyNFoiIGZpbGw9IiNGOEY4RjgiLz48cGF0aCBkPSJNMjMzLjE4MSAzNDUuNUwwLjkzOTMxNiAwLjVIMTQ0LjM4TDM3Ny4wNiAzNDUuNUgyMzMuMTgxWiIgc3Ryb2tlPSIjRjRCQzIwIi8+PC9zdmc+) center center no-repeat;
+            background-size: contain;
+
+            @include max-break('1750px') {
+                left: 0;
+            }
+
+            @include max-break('1600px') {
+                left: 50px;
+            }
+
+            @include max-break('1280px') {
+                left: -70px;
+            }
+
+            @include max-break('1199px') {
+                top: -45px;
+                left: -40px;
+                width: 372px;
+                height: 310px;
+            }
+
+            @include max-break('1030px') {
+                height: 275px;
+                left: 0;
+                top: -37px;
+                width: 340px;
+            }
+
+            @include max-break('850px') {
+                left: 35%;
+                transform: translateX(-35%);
+            }
+
+            @include max-break('480px') {
+                height: 240px;
+                width: 265px;
+            }
+
+            @include max-break('375px') {
+                height: 235px;
+                width: 240px;
+            }
+        }
     }
 
     &__info {
         min-width: 481px;
+        margin-left: 103px;
+        padding-top: 18px;
+        padding-left: 15px;
+
+        @include max-break('1370px') {
+            min-width: 430px;
+        }
+
+        @include max-break('1280px') {
+            margin-left: 0;
+        }
+
+        @include max-break('850px') {
+            margin-bottom: 25px;
+            min-height: 255px;
+            display: flex;
+            justify-content: center;
+        }
+
+        @include max-break('670px') {
+            min-height: 235px;
+        }
+
+        @include max-break('480px') {
+            min-height: 200px;
+            padding-left: 0;
+            min-width: unset;
+        }
+    }
+
+    &__number-result {
+        color: #E41019;
+        font-family: $Nexa;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+
+        @include max-break('1370px') {
+            font-size: 42px;
+        }
+
+        @include max-break('991px') {
+            font-size: 38px;
+        }
+
+        @include max-break('850px') {
+            margin-left: -20px;
+        }
     }
 
     &__items {
         column-count: 2;
+        max-width: 902px;
+
+        @include max-break('1280px') {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include max-break('480px') {
+            column-count: unset;
+        }
     }
 
     &__item {
@@ -20,21 +168,48 @@
         padding-left: 30px;
         margin-bottom: 28px;
         color: #0E0E0F;
-        font-family: $SFProDisplay;
-        font-size: 20px;
+        font-family: $Montserrat;
+        font-size: 28px;
         font-style: normal;
-        font-weight: 300;
-        line-height: 1.2;
+        font-weight: 500;
+        line-height: 1.01;
         break-inside: avoid-column;
+        margin-right: 62px;
+
+        @include max-break('1600px') {
+            font-size: 24px;
+        }
+
+        @include max-break('1470px') {
+            font-size: 22px;
+        }
+
+        @include max-break('1370px') {
+            margin-right: 45px;
+            font-size: 20px;
+        }
+
+        @include max-break('1280px') {
+            margin-right: 30px;
+        }
+
+        @include max-break('1199px') {
+            font-size: 18px;
+        }
 
         @include max-break('991px') {
-            font-size: 18px;
+            font-size: 16px;
+        }
+
+        @include max-break('570px') {
+            margin-bottom: 25px;
         }
 
         @include max-break('480px') {
             font-size: 14px;
-            padding-left: 18px;
             margin-bottom: 25px;
+            margin-right: 0;
+            padding-left: 24px;
         }
 
         &:after {
@@ -42,7 +217,7 @@
             content: '';
             display: block;
             left: 0;
-            top: 0;
+            top: 3px;
             width: 20px;
             height: 20px;
             z-index: 1;
@@ -51,11 +226,22 @@
 
             @include max-break('1280px') {
                 top: 2px;
+                height: 18px;
+                width: 18px;
+            }
+
+            @include max-break('850px') {
+                top: 0;
+            }
+
+            @include max-break('670px') {
+                height: 16px;
+                width: 16px;
             }
 
             @include max-break('480px') {
-                height: 13px;
-                width: 8px;
+                height: 14px;
+                width: 14px;
             }
         }
     }
