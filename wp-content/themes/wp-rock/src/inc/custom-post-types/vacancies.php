@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom post type events
+ * Custom post type vacancies
  *
  * @package WP-rock
  * @since 4.4.0
