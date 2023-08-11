@@ -1,0 +1,135 @@
+.additional-info {
+    background: #393C40;
+    overflow: hidden;
+
+    &.is-main-img {
+
+        .additional-info__right-side-content {
+            padding-top: 80px;
+            padding-bottom: 37px;
+
+            @include max-break('1280px') {
+                padding-top: 55px;
+            }
+
+            @include max-break('850px') {
+                padding-top: 45px;
+            }
+        }
+    }
+
+    &.no-main-img {
+        .additional-info__right-side-content {
+            padding-top: 80px;
+            padding-bottom: 101px;
+        }
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__col {
+        width: 50%;
+        flex-shrink: 0;
+    }
+
+    &__left-side-with-image {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include max-break('480px') {
+            display: none;
+        }
+    }
+
+    &__left-side-image {
+        display: block;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+        width: 50vw;
+        min-width: 50vw;
+        object-position: 100% 50%;
+    }
+
+    &__right-side-content {
+        @include max-break('480px') {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        margin-bottom: 36px;
+
+        @include max-break('1030px') {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__desc {
+        color: #FFF;
+        font-family: $SFProDisplay;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.25;
+        max-width: 563px;
+
+        @include max-break('1280px') {
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+
+        @include max-break('1030px') {
+            max-width: 390px;
+            font-size: 18px;
+        }
+
+        @include max-break('991px') {
+            font-size: 16px;
+        }
+    }
+
+    &__main-image {
+        margin-left: auto;
+        margin-right: 100px;
+        max-width: 500px;
+        height: auto;
+
+        @include max-break('1370px') {
+            max-width: 415px;
+            height: auto;
+        }
+
+        @include max-break('1280px') {
+            margin-right: 50px;
+            max-width: 370px;
+        }
+
+        @include max-break('1030px') {
+            margin-right: 100px;
+            max-width: 305px;
+        }
+
+        @include max-break('850px') {
+            margin-right: 50px;
+        }
+
+        @include max-break('768px') {
+            max-width: 260px;
+        }
+
+        @include max-break('670px') {
+            max-width: 225px;
+            margin-right: 25px;
+        }
+
+        @include max-break('480px') {
+            max-width: 80%;
+            margin-right: auto;
+        }
+    }
+}
