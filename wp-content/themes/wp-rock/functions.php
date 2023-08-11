@@ -22,12 +22,3 @@ require get_template_directory() . '/src/inc/custom-accept-cookies.php';
 require get_template_directory() . '/src/inc/custom-hooks.php';
 
 add_filter( 'show_admin_bar', '__return_false' );
-
-add_filter('bcn_breadcrumb_title', 'my_breadcrumb_title_swapper', 3, 10);
-function my_breadcrumb_title_swapper($title, $type, $id)
-{
-    if(in_array('home', $type)) {
-        $title = get_option('page_on_front') ? get_the_title( get_option('page_on_front') ) : __('Home');
-    }
-    return $title;
-}

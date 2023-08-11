@@ -6,6 +6,7 @@
             "key": "field_64745a5c3c457",
             "label": "Body class",
             "name": "body_class",
+            "aria-label": "",
             "type": "text",
             "instructions": "Use this field for specify some \"body tag\" class for future styling",
             "required": 0,
@@ -15,38 +16,11 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_64d4f68495c4d",
-            "label": "Header view",
-            "name": "header_view",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "main-header": "Main header",
-                "block-header": "Block header"
-            },
-            "default_value": "block-header",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "translations": "copy_once",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -74,5 +48,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691679010
+    "modified": 1685346976
 }
