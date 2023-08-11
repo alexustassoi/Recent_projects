@@ -2,7 +2,7 @@
  * SASS
  */
 import '../sass/frontend.scss';
-import { activateMobileMenu, menuFunctionality } from './components/menu-functionality';
+import { activateMobileMenu, footerMenuAction, menuFunctionality } from './components/menu-functionality';
 /**
  * JavaScript
  */
@@ -20,6 +20,7 @@ function ready() {
 
     // Put here your imported functions and decorators from import section above
     menuFunctionality();
+    footerMenuAction();
 
     document.body.addEventListener('click', (e): void => {
         const TARGET = e.target as HTMLElement;
