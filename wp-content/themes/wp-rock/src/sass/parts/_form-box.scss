@@ -57,8 +57,61 @@
         }
     }
 
+    &__file-input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 48px;
+
+        @include max-break('480px') {
+            margin-bottom: 10px;
+            flex-direction: column;
+        }
+
+        .form-box__input-wraper {
+            width: calc((100% - 17px) / 2);
+            margin-right: 17px;
+
+            @include max-break('480px') {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__file-input {
+        display: none;
+    }
+
+    &__file-type {
+        color: rgba(14, 14, 15, .44);
+        font-family: $SFProDisplay;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.71;
+
+        @include max-break('1280px') {
+            font-size: 12px;
+        }
+    }
+
     &__label {
         padding-left: 9px;
+
+        &.form-box__cv-label,
+        &.form-box__letter-label {
+            margin-bottom: 31px;
+            padding-left: 0;
+
+            @include max-break('480px') {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__message-label {
@@ -73,10 +126,23 @@
         color: #E41019;
     }
 
+    &__linkedin-label,
+    &__website-label {
+        margin-bottom: 10px;
+    }
+
     &__input-wraper {
         display: flex;
         flex-direction: column;
         margin-bottom: 22px;
+
+        &.form-box__linkedin-input-wraper {
+            margin-bottom: 36px;
+
+            @include max-break('480px') {
+                margin-bottom: 22px;
+            }
+        }
     }
 
     &__inputs-left,
@@ -117,6 +183,39 @@
             transform: translateY(-50%);
         }
     }
+
+    &__file-label {
+        position: relative;
+        z-index: 1;
+        padding-left: 34px;
+        color: #E41019;
+        font-family: $SFProDisplay;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5;
+        cursor: pointer;
+        margin-bottom: 10px;
+
+        @include max-break('1280px') {
+            font-size: 14px;
+            padding-left: 30px;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 22px;
+            z-index: 1;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxOCAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEzLjY0NTQgMC4xOTkzOTdMMTcuNzk5MiA0LjMyNDM5QzE3LjkyODggNC40NTQxNiAxOC4wMDExIDQuNjI5NzcgMTggNC44MTI1MlYxOS45Mzc1QzE4IDIxLjA3NjYgMTcuMDcwMSAyMiAxNS45MjMxIDIySDIuMDc2OTJDMC45Mjk4NTUgMjIgMCAyMS4wNzY2IDAgMTkuOTM3NVYyLjA2MjUyQzAgMC45MjM0MTkgMC45Mjk4NTUgMi4xNzA5MmUtMDUgMi4wNzY5MiAyLjE3MDkyZS0wNUgxMy4xNTM4QzEzLjMzNzkgLTAuMDAxMDA5NTQgMTMuNTE0NyAwLjA3MDcwNTIgMTMuNjQ1NCAwLjE5OTM5N1pNMTUuOTIzMSAyMC42MjVDMTYuMzA1NCAyMC42MjUgMTYuNjE1NCAyMC4zMTcyIDE2LjYxNTQgMTkuOTM3NVY1LjUwMDAySDEzLjg0NjFDMTMuMDgxNCA1LjUwMDAyIDEyLjQ2MTUgNC44ODQ0IDEyLjQ2MTUgNC4xMjUwMlYxLjM3NTAySDIuMDc2OTJDMS42OTQ1NSAxLjM3NTAyIDEuMzg0NjEgMS42ODI4MSAxLjM4NDYxIDIuMDYyNTJWMTkuOTM3NUMxLjM4NDYxIDIwLjMxNzIgMS42OTQ1NSAyMC42MjUgMi4wNzY5MiAyMC42MjVIMTUuOTIzMVpNMTMuODQ2MSAxNi41SDE1LjIzMDdWMTcuODc1SDEzLjg0NjFWMTYuNVpNMTUuMjMwNyA5LjYyNTAxSDIuNzY5MjNWMTFIMTUuMjMwN1Y5LjYyNTAxWk0yLjc2OTIzIDEzLjA2MjVIMTUuMjMwN1YxNC40Mzc1SDIuNzY5MjNWMTMuMDYyNVpNMTIuNDYxNSAxNi41SDIuNzY5MjNWMTcuODc1SDEyLjQ2MTVWMTYuNVoiIGZpbGw9IiNFNDEwMTkiLz48L3N2Zz4=) center center no-repeat;
+            background-size: contain;
+        }
+    }
+
     .wpcf7 form.invalid .wpcf7-response-output {
         border: none;
         color: #FD3322;
@@ -297,6 +396,11 @@
         height: 82px;
         background: rgba(153, 153, 154, .0988);
         border-bottom: unset;
+
+        &.form-box__linkedin,
+        &.form-box__website {
+            height: 43px;
+        }
     }
 }
 
@@ -306,7 +410,8 @@
     &.wpcf7-form {
 
         &.invalid,
-        &.sent {
+        &.sent,
+        &.failed {
             .wpcf7-response-output {
                 border: none;
                 border-color: unset;
@@ -318,7 +423,8 @@
             }
         }
 
-        &.invalid {
+        &.invalid,
+        &.failed {
             color: #FD3322;
         }
 

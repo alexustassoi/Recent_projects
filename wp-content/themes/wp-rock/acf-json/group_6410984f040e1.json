@@ -651,6 +651,82 @@
                     "translations": "translate"
                 }
             ]
+        },
+        {
+            "key": "field_64da2acd5ed7e",
+            "label": "Single vacancies post",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64da2ae85ed7f",
+            "label": "Form title",
+            "name": "vacancies_form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "translations": "translate"
+        },
+        {
+            "key": "field_64da2af15ed80",
+            "label": "Form description",
+            "name": "vacancies_form_desc",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "translations": "translate"
+        },
+        {
+            "key": "field_64da2afb5ed81",
+            "label": "Form shortcode",
+            "name": "vacancies_form_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "translations": "translate"
         }
     ],
     "location": [
@@ -671,5 +747,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691747345
+    "modified": 1692021896
 }
