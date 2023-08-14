@@ -16,6 +16,7 @@ do_action( 'wp_rock_before_page_content' );
 	
 	<div class="container">
 		<div class="privacy-policy-container">
+			
 			<h1 class="privacy-policy-container__title"><?php echo get_the_title(); ?></h1>
 			<?php
 			if ( have_posts() ) :

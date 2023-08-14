@@ -36,3 +36,11 @@ $phone = get_field_value($global_options, 'phone');
         </div>
     </div>
 </footer>
+
+<?php
+echo esc_html( get_template_part( 'src/template-parts/components/popup-contacts', null ) );
+?>
+
+<?php
+echo esc_html( get_template_part( 'src/template-parts/components/popup-question', null ) );
+?>
