@@ -37,6 +37,28 @@ body {
         overflow: hidden;
     }
 
+    &.contact-page {
+        .contact-us__content-info {
+            margin-right: 22px;
+            min-width: 470px;
+
+            @include max-break('1370px') {
+                max-width: 436px;
+                min-width: 436px;
+            }
+
+            @include max-break('1280px') {
+                max-width: 325px;
+                min-width: 325px;
+            }
+
+            @include max-break('991px') {
+                max-width: unset;
+                min-width: unset;
+            }
+        }
+    }
+
     &.popup-opened {
         overflow: hidden;
 

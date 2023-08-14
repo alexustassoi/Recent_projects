@@ -173,6 +173,12 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-vacancies.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'full-contact-info' => array(
+            'title' => 'Full contact information block',
+            'description' => '',
+            'template' => 'src/template-parts/block-full-contact-info.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks
