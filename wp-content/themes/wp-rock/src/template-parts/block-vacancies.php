@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Block - Vacancies.
  *
@@ -9,30 +8,62 @@
 $fields = get_fields();
 $title = get_field_value($fields, 'title');
 
-$args = array(
-    'post_type' => 'vacancies',
-);
-
-$carriers_posts = new WP_Query($args);
+$vacancies_repeater = get_field_value($fields, 'vacancies_repeater');
 ?>
 <section class="vacancies">
     <div class="vacancies__container container">
         <?php
-        echo (!empty($title)) ? '<h2 class="vacancies__title">' . do_shortcode($title) . '</h2>' : '';
+        if (!empty($title)) {
+            echo '<h2 class="vacancies__title">' . do_shortcode($title) . '</h2>';
+        }
 
-        if($carriers_posts->have_posts()) {
-            foreach($carriers_posts->posts as $item) {
+        if ($vacancies_repeater) {
+            foreach ($vacancies_repeater as $item) {
 
-                var_dump($item->post_title);
-                echo '<div class="vacancies__carriers">
-                        <div class="vacancies__carriers-post">
-                            <span class="vacancies__carriers-post-title"></span>
-                            <span class="vacancies__carriers-post-map"></span>
-                            <a href="" class="vacancies__carriers-post-link"></a>
-                        </div>
-                    </div>';
+                $args = array(
+                    'cat' => pll_get_term_translations($item['category_id']),
+                    'post_type' => 'vacancies',
+                    'lang' => pll_current_language()
+                );
+
+                $query = new WP_Query($args);
+                echo '<div class="vacancies__category">';
+
+                if (!empty($item['list_title'])) {
+                    echo '<h4 class="vacancies__category-title">' . $item['list_title'] . '</h4>';
+                }
+
+                echo '<div class="vacancies__category-inner">';
+
+                if ($query->have_posts()) {
+                    while ($query->have_posts()) {
+                        $query->the_post();
+
+                        $post_fields = get_fields(get_the_ID());
+                        $post_title = get_the_title(get_the_ID());
+                        $post_link = get_permalink(get_the_ID());
+                        $location = 'Paris, France';//get_field_value($post_fields, 'location') ? get_field_value($post_fields, 'location') : '';
+
+                        echo '<div class="vacancies__category-post">
+
+                                <span class="vacancies__category-post-title">
+                                    ' . do_shortcode($post_title) . '
+                                </span>
+
+                                <span class="vacancies__category-post-location">
+                                    ' . esc_html($location) . '
+                                </span>
+
+                                <a href="' . do_shortcode($post_link) . '" class="vacancies__category-post-link circle-link"></a>
+                            </div>';
+                    }
+                }
+
+                echo '</div>';
+                echo '</div>';
             }
         }
+
 
         ?>
 

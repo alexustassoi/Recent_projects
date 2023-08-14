@@ -22,7 +22,7 @@ $labels = array(
 
 register_taxonomy(
     'vacancies-category',
-    array( 'vacancies ' ),
+    array( 'vacancies' ),
     array(
         'labels' => $labels,
         'public' => true,

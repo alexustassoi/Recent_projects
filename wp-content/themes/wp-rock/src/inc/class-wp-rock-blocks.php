@@ -168,7 +168,7 @@ class WP_Rock_Blocks {
             'post_types' => array( 'post', 'page' ),
         ),
         'vacancies' => array(
-            'title' => 'Vacancies',
+            'title' => 'Vacancies block',
             'description' => '',
             'template' => 'src/template-parts/block-vacancies.php',
             'post_types' => array( 'post', 'page' ),
@@ -177,6 +177,12 @@ class WP_Rock_Blocks {
             'title' => 'Full contact information block',
             'description' => '',
             'template' => 'src/template-parts/block-full-contact-info.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
+        'valued-individuals' => array(
+            'title' => 'Valued Individuals block',
+            'description' => '',
+            'template' => 'src/template-parts/block-valued-individuals.php',
             'post_types' => array( 'post', 'page' ),
         ),
     );
