@@ -167,6 +167,12 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-advantages-list.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'vacancies' => array(
+            'title' => 'Vacancies',
+            'description' => '',
+            'template' => 'src/template-parts/block-vacancies.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks
