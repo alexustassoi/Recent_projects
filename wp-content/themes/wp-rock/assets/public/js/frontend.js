@@ -1,6 +1,41 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/display-file-name-for-input.ts":
+/*!**********************************************************!*\
+  !*** ./src/js/components/display-file-name-for-input.ts ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function displayFileNameForInput() {
+  var fileInputs = document.querySelectorAll('.js-file-input');
+  if (fileInputs) {
+    _toConsumableArray(fileInputs).forEach(function (item) {
+      item.addEventListener('change', function (event) {
+        var targetEl = event.target;
+        var selectedFile = targetEl.files[0];
+        var parentInputWraper = targetEl.closest('.form-box__input-wraper');
+        if (!parentInputWraper) return;
+        var fileNameDisplay = parentInputWraper.querySelector('.js-file-label');
+        if (selectedFile) {
+          fileNameDisplay.textContent = selectedFile.name;
+        }
+      });
+    });
+  }
+}
+/* harmony default export */ __webpack_exports__["default"] = (displayFileNameForInput);
+
+/***/ }),
+
 /***/ "./src/js/components/menu-functionality.ts":
 /*!*************************************************!*\
   !*** ./src/js/components/menu-functionality.ts ***!
@@ -11075,6 +11110,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_menu_functionality__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu-functionality */ "./src/js/components/menu-functionality.ts");
 /* harmony import */ var _parts_popup_window__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/popup-window */ "./src/js/parts/popup-window.js");
 /* harmony import */ var _components_swiper_init__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/swiper-init */ "./src/js/components/swiper-init.ts");
+/* harmony import */ var _components_display_file_name_for_input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/display-file-name-for-input */ "./src/js/components/display-file-name-for-input.ts");
+
 
 
 
@@ -11087,6 +11124,7 @@ function ready() {
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_3__["default"].initSwipers();
   (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_1__.menuFunctionality)();
   (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_1__.footerMenuAction)();
+  (0,_components_display_file_name_for_input__WEBPACK_IMPORTED_MODULE_4__["default"])();
   document.body.addEventListener('click', function (e) {
     var _a;
     var TARGET = e.target;

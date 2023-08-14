@@ -9,6 +9,7 @@ import { activateMobileMenu, footerMenuAction, menuFunctionality } from './compo
 
 import Popup from './parts/popup-window';
 import Sliders from './components/swiper-init';
+import displayFileNameForInput from './components/display-file-name-for-input';
 
 function ready() {
     const popupInstance = new Popup();
@@ -21,6 +22,8 @@ function ready() {
     // Put here your imported functions and decorators from import section above
     menuFunctionality();
     footerMenuAction();
+
+    displayFileNameForInput();
 
     document.body.addEventListener('click', (e): void => {
         const TARGET = e.target as HTMLElement;
