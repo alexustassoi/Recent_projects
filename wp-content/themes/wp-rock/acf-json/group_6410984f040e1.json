@@ -195,66 +195,6 @@
             "translations": "translate"
         },
         {
-            "key": "field_64cd210bb672c",
-            "label": "Footer services menu title",
-            "name": "footer_services_menu_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "translations": "translate"
-        },
-        {
-            "key": "field_64cd2118b672d",
-            "label": "Footer industries menu title",
-            "name": "footer_industries_menu_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "translations": "translate"
-        },
-        {
-            "key": "field_64cd212ab672e",
-            "label": "Footer information menu title",
-            "name": "footer_info_menu_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "translations": "translate"
-        },
-        {
             "key": "field_64cd2139b672f",
             "label": "Footer contact title",
             "name": "footer_contact_title",

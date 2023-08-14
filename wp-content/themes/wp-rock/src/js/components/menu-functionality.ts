@@ -55,3 +55,16 @@ export const activateMobileMenu = () => {
 
     document.body.classList.toggle('popup-opened');
 };
+
+export const footerMenuAction = () => {
+    const footerMenuLink = document.querySelectorAll('.site-footer__menu .menu-title a');
+
+    footerMenuLink &&
+        footerMenuLink.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const parent = link.closest('.menu-title');
+                parent && parent.classList.toggle('active');
+            });
+        });
+};

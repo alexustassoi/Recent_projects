@@ -31,3 +31,15 @@ function my_breadcrumb_title_swapper($title, $type, $id)
     }
     return $title;
 }
+
+function theme_custom_display_img_menu( $title, $item, $args, $depth ) {
+    // Check if $title contains an <img> tag.
+    if ( strpos( $title, '<img' ) !== false && strpos( $title, '<span>' ) !== false ) {
+        // Replace the original img tag structure with the new one.
+        $title = str_replace('<img', '<figure><img', $title);
+        $title = str_replace('</span><img', '</span><figure><img', $title);
+        $title = str_replace('width="25px">', 'width="25px"></figure>', $title);
+    }
+    return $title;
+}
+add_filter( 'nav_menu_item_title', 'theme_custom_display_img_menu', 80, 4 );

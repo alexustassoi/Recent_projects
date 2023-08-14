@@ -1,0 +1,66 @@
+.advantages-list {
+    padding-top: 58px;
+    padding-bottom: 113px;
+
+    &__container {
+        display: flex;
+    }
+
+    &__info {
+        min-width: 481px;
+    }
+
+    &__items {
+        column-count: 2;
+    }
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        padding-left: 30px;
+        margin-bottom: 28px;
+        color: #0E0E0F;
+        font-family: $SFProDisplay;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 1.2;
+        break-inside: avoid-column;
+
+        @include max-break('991px') {
+            font-size: 18px;
+        }
+
+        @include max-break('480px') {
+            font-size: 14px;
+            padding-left: 18px;
+            margin-bottom: 25px;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            z-index: 1;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIuMTQyOSA4LjIxNDI5QzExLjk0NTYgOC4yMTQyOSAxMS43ODU3IDguMDU0MzcgMTEuNzg1NyA3Ljg1NzE0VjBIOC4yMTQyOVY3Ljg1NzE0QzguMjE0MjkgOC4wNTQzNyA4LjA1NDM3IDguMjE0MjkgNy44NTcxNCA4LjIxNDI5SDBWMTEuNzg1N0g3Ljg1NzE0QzguMDU0MzcgMTEuNzg1NyA4LjIxNDI5IDExLjk0NTYgOC4yMTQyOSAxMi4xNDI5VjIwSDExLjc4NTdWMTIuMTQyOUMxMS43ODU3IDExLjk0NTYgMTEuOTQ1NiAxMS43ODU3IDEyLjE0MjkgMTEuNzg1N0gyMFY4LjIxNDI5SDEyLjE0MjlaIiBmaWxsPSIjRTQxMDE5Ii8+PC9zdmc+) center center no-repeat;
+            background-size: contain;
+
+            @include max-break('1280px') {
+                top: 2px;
+            }
+
+            @include max-break('480px') {
+                height: 13px;
+                width: 8px;
+            }
+        }
+    }
+
+    &__text {
+
+    }
+}

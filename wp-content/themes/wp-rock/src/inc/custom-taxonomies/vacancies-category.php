@@ -6,7 +6,7 @@
  * @since 4.4.0
  */
 
-/*
+
 $labels = array(
     'name' => __( 'Category', 'wp-rock' ),
     'singular_name' => __( 'Category', 'wp-rock' ),
@@ -21,8 +21,8 @@ $labels = array(
 );
 
 register_taxonomy(
-    'events-category',
-    array( 'events' ),
+    'vacancies-category',
+    array( 'vacancies ' ),
     array(
         'labels' => $labels,
         'public' => true,
@@ -31,7 +31,6 @@ register_taxonomy(
         'show_admin_column' => true,
         'query_var' => true,
         'show_in_rest' => true,
-        'rewrite' => array( 'slug' => 'events-category' ),
+        'rewrite' => array( 'slug' => 'vacancies-category' ),
     )
 );
-*/

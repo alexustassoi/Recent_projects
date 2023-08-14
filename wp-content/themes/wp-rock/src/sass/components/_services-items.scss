@@ -23,6 +23,14 @@
         padding-bottom: 40px;
     }
 
+    &.column-default {
+        padding-bottom: 34px;
+
+        @include max-break('1600px') {
+            padding-bottom: 10px;
+        }
+    }
+
     &__container {
 
     }
@@ -56,15 +64,73 @@
     &__item {
 
         &.column-default {
-            width: calc((100% - 147px) / 4);
-            margin-top: 49px;
+            width: calc((100% - 156px) / 4);
+            margin-right: 52px;
+            margin-bottom: 62px;
 
-            &:nth-child(4n) {
-                margin-top: 0;
+            @include max-break('1280px') {
+                width: calc((100% - 70px) / 3);
+                margin-right: 35px;
             }
 
-            &:last-of-type {
-                margin-bottom: 0;
+            @include max-break('1030px') {
+                margin-bottom: 45px
+            }
+
+            @include max-break('768px') {
+                width: calc((100% - 35px) / 2);
+            }
+
+            @include max-break('480px') {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 35px
+            }
+
+            &:nth-child(2n + 2) {
+
+                @include max-break('768px') {
+                    margin-right: 0;
+                }
+            }
+
+            &:nth-child(3n + 3) {
+
+                @include max-break('1280px') {
+                    margin-right: 0;
+                }
+
+                @include max-break('768px') {
+                    margin-right: 35px;
+                }
+
+                @include max-break('480px') {
+                    margin-right: 0;
+                }
+
+                &:nth-child(2n + 2) {
+                    @include max-break('768px') {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            &:nth-child(4n + 4) {
+                margin-right: 0;
+
+                @include max-break('1280px') {
+                    margin-right: 35px;
+                }
+
+                @include max-break('480px') {
+                    margin-right: 0;
+                }
+
+                &:nth-child(2n + 2) {
+                    @include max-break('768px') {
+                        margin-right: 0;
+                    }
+                }
             }
         }
 
