@@ -27,6 +27,7 @@ $form_shortcode = get_field_value($global_options, 'vacancies_form_shortcode');
                 the_post();
 
                 $location        = get_post_meta(get_the_ID(), 'location', true);
+                $hero_desc       = get_post_meta(get_the_ID(), 'hero_desc', true);
                 $vacancy_content = get_the_content();
 
 

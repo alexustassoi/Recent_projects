@@ -32,7 +32,7 @@
         width: 100%;
         flex: 1;
 
-        .blog__inner {
+        .blog-page__inner {
             max-width: 1205px;
 
             @include max-break('1600px') {
@@ -57,7 +57,7 @@
             }
         }
 
-        .post__excerpt {
+        .post-card__excerpt {
 
             @include max-break('1470px') {
                 font-size: 20px;
@@ -68,13 +68,13 @@
             }
         }
 
-        .post__date {
+        .post-card__date {
             @include max-break('1470px') {
                 margin-bottom: 45px;
             }
         }
 
-        .post {
+        .post-card {
             @include max-break('1470px') {
                 padding-bottom: 45px;
             }
