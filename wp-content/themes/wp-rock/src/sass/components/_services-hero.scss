@@ -1,6 +1,4 @@
 .services-hero {
-    padding-top: 40px;
-    padding-bottom: 128px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -35,16 +33,18 @@
     }
 
     &__image {
-        position: absolute;
-        top: 0;
-        right: 0;
+        //position: absolute;
+        //top: 0;
+        //right: 0;
+        width: 50%;
         height: 100%;
         display: flex;
-        justify-content: flex-end;
+        flex-shrink: 0;
 
         img {
-            width: auto;
-            height: 100%;
+            width: 50vw;
+            object-fit: cover;
+            min-width: 50vw;
         }
 
         &:before ,
@@ -72,11 +72,19 @@
     }
 
     &__container {
+    }
 
+    &__content-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     &__content {
         padding-left: 101px;
+        padding-top: 40px;
+        padding-bottom: 128px;
+        flex-shrink: 0;
+        width: 50%;
 
         @include max-break('1280px') {
             padding-left: 0;
