@@ -19,5 +19,4 @@ $args = [
 
 include(locate_template('src/template-parts/template-service-hero.php', false, false, $args));
 
-?>
 

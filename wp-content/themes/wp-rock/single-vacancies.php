@@ -32,9 +32,6 @@ $form_shortcode = get_field_value($global_options, 'vacancies_form_shortcode');
                 $thumbnail_id    = get_post_thumbnail_id(get_the_ID());
                 $image_url       = wp_get_attachment_image_url($thumbnail_id, 'full');
 
-//                if ($location) {
-//                    echo '<p><strong>Location:</strong> ' . esc_html($location) . '</p>';
-//                }
                 $args = [
                     'block_title' => get_the_title(),
                     'bg_img' => $image_url,
