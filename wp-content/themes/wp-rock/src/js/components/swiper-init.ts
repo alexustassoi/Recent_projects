@@ -56,5 +56,27 @@ function InitSwiperIndustry() {
     });
 }
 
-const Sliders = { initSwipers, InitSwiperIndustry };
+function employeeReviewsSlider() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const swiper = new Swiper('.js-employee-reviews-slider', {
+        modules: [Navigation],
+        spaceBetween: 16,
+        slidesPerView: 1,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1470: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
+
+const Sliders = { initSwipers, InitSwiperIndustry, employeeReviewsSlider };
 export default Sliders;
