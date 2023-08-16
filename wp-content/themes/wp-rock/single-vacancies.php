@@ -38,15 +38,13 @@ $form_shortcode = get_field_value($global_options, 'vacancies_form_shortcode');
                 'post_desc' => $post_desc
             ];
 
-            include(locate_template('src/template-parts/template-service-hero.php', false, false));
+            include(locate_template('src/template-parts/template-service-hero.php', false, false)); ?>
 
-            echo '<div class="single-vacancy__content">' . apply_filters('the_content', $vacancy_content) . '</div>';
+            <div class="services-hero__container container">
+                <?php echo '<div class="single-vacancy__content">' . apply_filters('the_content', $vacancy_content) . '</div>'; ?>
+            </div>
+        <?php endwhile;
 
-        endwhile;
-
-        ?>
-
-        <?php
         include(locate_template('src/template-parts/template-contact-us.php', false, false));
         ?>
     </div>

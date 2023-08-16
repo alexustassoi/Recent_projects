@@ -39,11 +39,12 @@
         flex-shrink: 0;
         position: relative;
         z-index: 1;
+        padding-left: 156px;
 
         img {
-            width: 50vw;
+            width: calc(50vw - 156px);
             object-fit: cover;
-            min-width: 50vw;
+            min-width: calc(50vw - 156px);
         }
 
         &:before ,
