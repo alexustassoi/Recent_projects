@@ -185,6 +185,12 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-valued-individuals.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'employee-reviews' => array(
+            'title' => 'Employee reviews block',
+            'description' => '',
+            'template' => 'src/template-parts/block-employee-reviews.php',
+            'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

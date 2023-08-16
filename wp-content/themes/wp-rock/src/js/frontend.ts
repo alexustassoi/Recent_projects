@@ -6,7 +6,6 @@ import { activateMobileMenu, footerMenuAction, menuFunctionality } from './compo
 /**
  * JavaScript
  */
-
 import Popup from './parts/popup-window';
 import Sliders from './components/swiper-init';
 import displayFileNameForInput from './components/display-file-name-for-input';
@@ -18,6 +17,7 @@ function ready() {
     const siteHeader = document.querySelector('#site-header');
     Sliders.InitSwiperIndustry();
     Sliders.initSwipers();
+    Sliders.employeeReviewsSlider();
 
     // Put here your imported functions and decorators from import section above
     menuFunctionality();

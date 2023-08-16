@@ -32,7 +32,6 @@ body {
         }
     }
 
-
     &.error404 {
         overflow: hidden;
     }
@@ -108,7 +107,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAyMiAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNi43NzM0IDAuMDcxNDI4M0gxOC4xMzA3TDIxLjg1ODUgNS40MTA3MUwxOC4xMzA3IDEwLjc1SDE2Ljc3MzRMMjAuNTAxMiA1LjQxMDcxTDE2Ljc3MzQgMC4wNzE0MjgzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEuMDA4NSA1LjQxMDkzSDIwLjMzMTYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz4KPC9zdmc+Cg==);
-
 
     @include max-break('768px') {
         width: 40px;
@@ -190,12 +188,11 @@ body {
     }
 }
 
-
 .primary {
     cursor: pointer;
     display: inline-flex;
     text-align: center;
-    color: #0E0E0F;
+    color: #0e0e0f;
     font-family: $Montserrat;
     font-size: 16px;
     font-style: normal;
@@ -204,7 +201,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.32px;
     padding: 15px 60px 17px 27px;
-    border: 1px solid #E41019;
+    border: 1px solid #e41019;
     transition: background-color 0.3s;
     appearance: none;
     position: relative;
@@ -229,12 +226,13 @@ body {
         width: 23px;
         height: 23px;
         z-index: 1;
-        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMS41IiBjeT0iMTEuNSIgcj0iMTEuNSIgZmlsbD0iI0U0MTAxOSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOSA2SDEwLjMzNDVMMTQgMTEuNUwxMC4zMzQ1IDE3SDlMMTIuNjY1NSAxMS41TDkgNloiIGZpbGw9IndoaXRlIi8+PC9zdmc+) center center no-repeat;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMS41IiBjeT0iMTEuNSIgcj0iMTEuNSIgZmlsbD0iI0U0MTAxOSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOSA2SDEwLjMzNDVMMTQgMTEuNUwxMC4zMzQ1IDE3SDlMMTIuNjY1NSAxMS41TDkgNloiIGZpbGw9IndoaXRlIi8+PC9zdmc+)
+            center center no-repeat;
         background-size: contain;
     }
 
     &:hover {
-        background-color: rgba(228, 16, 25, .03);
+        background-color: rgba(228, 16, 25, 0.03);
     }
 }
 
@@ -248,11 +246,35 @@ body {
     p {
         line-height: 122%;
     }
-    ul, ol {
+    ul,
+    ol {
         margin-bottom: 25px;
     }
 
     li {
         margin-bottom: 12px;
     }
+}
+
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Custom track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    //border-left: 2px solid rgba(60, 64, 69, 0.1);
+    width: 2px;
+    background-color: rgba(60, 64, 69, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3c4045;
+    width: 5px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
 }

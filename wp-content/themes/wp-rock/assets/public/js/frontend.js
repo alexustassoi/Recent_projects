@@ -160,9 +160,30 @@ function InitSwiperIndustry() {
     }
   });
 }
+function employeeReviewsSlider() {
+  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-employee-reviews-slider', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
+    spaceBetween: 16,
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1470: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+}
 var Sliders = {
   initSwipers: initSwipers,
-  InitSwiperIndustry: InitSwiperIndustry
+  InitSwiperIndustry: InitSwiperIndustry,
+  employeeReviewsSlider: employeeReviewsSlider
 };
 /* harmony default export */ __webpack_exports__["default"] = (Sliders);
 
@@ -11122,6 +11143,7 @@ function ready() {
   var siteHeader = document.querySelector('#site-header');
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_3__["default"].InitSwiperIndustry();
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_3__["default"].initSwipers();
+  _components_swiper_init__WEBPACK_IMPORTED_MODULE_3__["default"].employeeReviewsSlider();
   (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_1__.menuFunctionality)();
   (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_1__.footerMenuAction)();
   (0,_components_display_file_name_for_input__WEBPACK_IMPORTED_MODULE_4__["default"])();
