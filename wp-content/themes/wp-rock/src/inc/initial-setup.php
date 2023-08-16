@@ -83,3 +83,4 @@ function remove_windows_lsep_from_content( $content ): array|string {
 }
 
 add_filter( 'the_content', 'remove_windows_lsep_from_content' );
+

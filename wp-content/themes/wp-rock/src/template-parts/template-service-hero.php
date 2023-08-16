@@ -6,17 +6,18 @@
  * @package WP-rock
  */
 
-$hero_title = (isset($args['block_title'])) ? $args['block_title'] : null;
-$hero_desc  = (isset($args['desc'])) ? $args['desc'] : null;
-$hero_img   = (isset($args['bg_img'])) ? $args['bg_img'] : null;
-$location   = (isset($args['location'])) ? $args['location'] : null;
-$post_desc  = (isset($args['post_desc'])) ? $args['post_desc'] : null;
+$hero_title    = (isset($args['block_title'])) ? $args['block_title'] : null;
+$hero_desc     = (isset($args['desc'])) ? $args['desc'] : null;
+$hero_img      = (isset($args['bg_img'])) ? $args['bg_img'] : null;
+$location      = (isset($args['location'])) ? $args['location'] : null;
+$post_desc     = (isset($args['post_desc'])) ? $args['post_desc'] : null;
+$reverse_block = (isset($args['reverse_block'])) ? $args['reverse_block'] : null;
 
 ?>
 
 <section class="services-hero">
     <div class="services-hero__container container">
-        <div class="services-hero__content-wrapper">
+        <div class="services-hero__content-wrapper <?php echo ($reverse_block) ? 'reverse' : ''; ?>">
             <?php
             if ($hero_img) {
                 echo ' <figure class="services-hero__image">
