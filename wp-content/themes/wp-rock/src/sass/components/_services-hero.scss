@@ -45,6 +45,8 @@
             object-fit: cover;
             min-width: calc(50vw - 156px);
             height: auto;
+            position: relative;
+            z-index: -1;
         }
 
         &:before ,
@@ -70,10 +72,13 @@
         }
 
         &:after {
-            z-index: 1;
+            z-index: -1;
+            right: 0;
             left: 0;
-            width: 330px;
-            display: none;
+            width: 50vw;
+            height: 100%;
+            opacity: 0.2079;
+            background: linear-gradient(119deg, #2D3034 0%, #E41019 100%);
         }
     }
 
@@ -96,6 +101,10 @@
                         right: 0;
                         left: auto;
                         transform: rotate(-180deg);
+                    }
+
+                    &:after {
+                        left: auto;
                     }
                 }
             }
