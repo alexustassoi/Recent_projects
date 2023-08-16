@@ -21,6 +21,26 @@
             "append": "",
             "maxlength": "",
             "translations": "translate"
+        },
+        {
+            "key": "field_64db356ee02b1",
+            "label": "Hero description",
+            "name": "hero_desc",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "translations": "translate"
         }
     ],
     "location": [
@@ -41,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692019262
+    "modified": 1692087691
 }
