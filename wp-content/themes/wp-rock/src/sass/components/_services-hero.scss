@@ -4,7 +4,6 @@
     background-size: cover;
     position: relative;
     min-height: 548px;
-    background: #F8F8F8;
 
     @include max-break('1370px') {
         min-height: unset;
