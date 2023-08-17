@@ -1,0 +1,67 @@
+.counters {
+    padding-top: 90px;
+    padding-bottom: 80px;
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-item {
+        padding-top: 30px;
+        padding-bottom: 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        @media screen and (max-width: 991px) {
+            padding-bottom: 40px;
+        }
+        &__icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 267px;
+            height: 229px;
+            z-index: 1;
+            @media screen and (max-width: 991px) {
+                width: 135px;
+                height: 135px;
+                left: calc(40% - 67px);
+            }
+        }
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            position: relative;
+            z-index: 2;
+        }
+        &__num {
+            color: #E41019;
+            text-align: right;
+            font-family: $Nexa;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            @media screen and (max-width: 991px) {
+                font-size: 30px;
+            }
+        }
+        &__label {
+            color: #0E0E0F;
+            text-align: right;
+            font-family: $SFProDisplay;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 125%;
+        }
+    }
+}

@@ -56,6 +56,31 @@ function InitSwiperIndustry() {
     });
 }
 
+function InitSwiperCertificates() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const swiper = new Swiper('.swiper-certificates', {
+        modules: [Navigation],
+        spaceBetween: 16,
+        slidesPerView: 1,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            991: {
+                slidesPerView: 3,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 42,
+            },
+        },
+        navigation: {
+            nextEl: '.slider-our-certificate__next',
+            prevEl: '.slider-our-certificate__prev',
+        },
+    });
+}
+
 function employeeReviewsSlider() {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const swiper = new Swiper('.js-employee-reviews-slider', {
@@ -78,5 +103,5 @@ function employeeReviewsSlider() {
     });
 }
 
-const Sliders = { initSwipers, InitSwiperIndustry, employeeReviewsSlider };
+const Sliders = { initSwipers, InitSwiperIndustry, employeeReviewsSlider, InitSwiperCertificates };
 export default Sliders;

@@ -1,0 +1,95 @@
+.history {
+    padding-top: 45px;
+    padding-bottom: 100px;
+    &-title {
+        margin-bottom: 60px;
+    }
+    &-list {
+        display: grid;
+        gap: 40px;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: 768px) {
+            gap: 10px;
+        }
+        &:before {
+            content: '';
+            width: 0;
+            height: 100%;
+            border-left: 1px dashed #E41019;
+            display: block;
+            position: absolute;
+            left: 21px;
+        }
+
+    }
+    &-item {
+        display: grid;
+        grid-template-columns: 145px 1fr;
+        gap: 30px;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        &:last-of-type {
+            .history-item__icon:last-of-type {
+                &:after {
+                    height: calc(100% + 5px);
+                    @media screen and (max-width: 768px) {
+                        height: 2000px;
+                    }
+                }
+            }
+        }
+        &__icon {
+            display: flex;
+            gap: 17px;
+            position: relative;
+            &:after {
+                content: '';
+                background-color: #ffffff;
+                width: 48px;
+                height: 54px;
+                position: absolute;
+                left: 0;
+                top: -5px;
+                z-index: 1;
+            }
+
+            svg {
+                width: 41px;
+                height: 41px;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        &__year {
+            color: #0E0E0F;
+            font-family: $Nexa;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 10px;
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+                padding-top: 14px;
+            }
+        }
+        &__text {
+            color: #0E0E0F;
+            font-family: $SFProDisplay;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 120%;
+            @media screen and (max-width: 768px) {
+                padding-left: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.employee-quote {
+    background: #393C40;
+    padding-top: 97px;
+    padding-bottom: 70px;
+    position: relative;
+    &__background {
+        position: absolute;
+        right: 800px;
+        bottom: 0;
+        z-index: 1;
+        height: 100%;
+        @media screen and (max-width: 1024px) {
+            height: 300px;
+            width: auto;
+            right: 30%;
+        }
+    }
+    &__wrap {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr 733px;
+        gap: 46px;
+        @media screen and (max-width: 1366px) {
+            grid-template-columns: 1fr 500px;
+        }
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__figure {
+        margin-bottom: -70px;
+        display: flex;
+        align-items: flex-end;
+        @media screen and (max-width: 1024px) {
+            order: 2;
+        }
+
+    }
+    &__image {
+        max-width: 464.59px;
+        width: auto;
+        height: auto;
+        @media screen and (max-width: 1024px) {
+            max-width: 300px;
+            height: 300px;
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+    &__info {
+        width: 100%;
+        max-width: 100%;
+        @media screen and (max-width: 1366px) {
+            width: 500px;
+        }
+        @media screen and (max-width: 1024px) {
+            order: 1;
+            width: 100%;
+        }
+    }
+    &__text {
+        p {
+            color: #FFF;
+            font-family: $SFProDisplay;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+    }
+    &__name {
+        color: #FFF;
+        font-family: $Nexa;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 118.75%;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        svg {
+            margin-top: 5px;
+        }
+    }
+    &__position {
+        color: #FFF;
+        font-family: $SFProDisplay;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    &__fio {
+        text-align: right;
+    }
+}

@@ -6,7 +6,12 @@ $shortcode     = get_field_value( $popup_contact, 'shortcode' );
 
 if ( $title && $shortcode ) { ?>
 	<div id="question" class="popup">
-		<div class="my_overlay js-popup-close"></div>
+		<div class="my_overlay js-popup-close">
+			<svg class="my_overlay__image" width="1048" height="794" viewBox="0 0 1048 794" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path opacity="0.0156228" fill-rule="evenodd" clip-rule="evenodd" d="M129 -22H480.665L1048 818H695.267L129 -22Z" fill="#F8F8F8"/>
+				<path d="M566.533 758.5L0.940066 -80.5H351.4L918.059 758.5H566.533Z" stroke="#F4BC20"/>
+			</svg>
+		</div>
 		<div class="popup-wrapper-inner">
 			<button class="popup-close">
 				<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">

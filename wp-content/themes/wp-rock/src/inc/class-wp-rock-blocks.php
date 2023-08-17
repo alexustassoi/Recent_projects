@@ -191,6 +191,42 @@ class WP_Rock_Blocks {
             'template' => 'src/template-parts/block-employee-reviews.php',
             'post_types' => array( 'post', 'page' ),
         ),
+        'counters' => array(
+	        'title' => 'Counters',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-counters.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'employee-quote' => array(
+	        'title' => 'Employee Quote',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-employee-quote.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'history' => array(
+	        'title' => 'History',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-history.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'our-awards' => array(
+	        'title' => 'Our awards',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-our-awards.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'our-certificates' => array(
+	        'title' => 'Our certificates',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-our-certificates.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
+        'social-responsibility' => array(
+	        'title' => 'Social responsibility',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-social-responsibility.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

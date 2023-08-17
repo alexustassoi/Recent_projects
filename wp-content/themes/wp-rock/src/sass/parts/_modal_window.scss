@@ -21,10 +21,19 @@ html {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: #292B2E;
     opacity: 0.9;
     cursor: pointer;
     display: block;
+    &__image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        width: auto;
+        height: 100%;
+        pointer-events: none;
+    }
 }
 
 .popup {

@@ -2,6 +2,7 @@
  * SASS
  */
 import '../sass/frontend.scss';
+import { Fancybox } from '@fancyapps/ui';
 import { activateMobileMenu, footerMenuAction, menuFunctionality } from './components/menu-functionality';
 /**
  * JavaScript
@@ -14,9 +15,18 @@ function ready() {
     const popupInstance = new Popup();
     popupInstance.init();
 
+    Fancybox.bind('[data-fancybox="awards"]', {
+        hideScrollbar: false,
+    });
+
+    Fancybox.bind('[data-fancybox="certificate"]', {
+        hideScrollbar: false,
+    });
+
     const siteHeader = document.querySelector('#site-header');
     Sliders.InitSwiperIndustry();
     Sliders.initSwipers();
+    Sliders.InitSwiperCertificates();
     Sliders.employeeReviewsSlider();
 
     // Put here your imported functions and decorators from import section above
