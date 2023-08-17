@@ -25,7 +25,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background-color: rgba(0,0,0,.6);
+        background-color: rgba(0, 0, 0, .6);
 
         @include max-break('670px') {
             display: block;
@@ -38,18 +38,18 @@
         flex-shrink: 0;
         position: relative;
         z-index: 1;
-        padding-left: 156px;
+        padding-left: 140px;
 
         img {
-            width: calc(50vw - 156px);
+            width: calc(50vw - 140px);
             object-fit: cover;
-            min-width: calc(50vw - 156px);
+            min-width: calc(50vw - 140px);
             height: auto;
             position: relative;
             z-index: -1;
         }
 
-        &:before ,
+        &:before,
         &:after {
             content: '';
             display: block;
@@ -64,11 +64,13 @@
 
         }
 
-        &:before{
+        &:before {
             z-index: 1;
             left: 0;
-            width: 360px;
+            width: 80%;
             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzM0cHgiIGhlaWdodD0iNTQ4cHgiIHZpZXdCb3g9IjAgMCAzMzQgNTQ4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8dGl0bGU+R3JvdXAgMjY8L3RpdGxlPiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0iQXV0by1MZWdpb25fQ2FyZWVyLTEtdmFjYW5jeSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwOTQuMDAwMDAwLCAtODUzLjAwMDAwMCkiPiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA5NC4wMDAwMDAsIDg1My4wMDAwMDApIj4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgtNSIgZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIzMzMuNTQ5MjQgMCAwIDIuMDQxNDc0NjNlLTEzIDYuNDgxMzYzNzRlLTEyIDU0Ny4yOTIxNzQgMzMzLjU0OTI0IDU0OCAxNTggMjcyLjUiPjwvcG9seWdvbj4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTExNy42NTExNzYsMCBMMjk0LDI3NCBMMTE3LjY1MTE3Niw1NDggTC0yLjI3MzczNjc1ZS0xMiw1NDggTDE3Ni4zNDg4MjQsMjc0IEwtMi4yNzM3MzY3NWUtMTIsMCBMMTE3LjY1MTE3NiwwIFoiIGlkPSJDb21iaW5lZC1TaGFwZS1Db3B5IiBmaWxsPSIjRUJFQkVCIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDcuMDAwMDAwLCAyNzQuMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC0xNDcuMDAwMDAwLCAtMjc0LjAwMDAwMCkgIj48L3BhdGg+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
+            background-size: auto 101%;
+            background-position: 0 50%;
         }
 
         &:after {
