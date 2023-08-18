@@ -13,12 +13,13 @@ $logo = get_field_value($global_options, 'logo');
 $logo_mini = get_field_value($global_options, 'logo_mini');
 $socials_repeater = get_field_value($global_options, 'socials_repeater');
 $call_to_action_link = get_field_value($global_options, 'call_to_action_link');
-$translations = pll_the_languages(array('raw' => 1));
-$current_language = pll_current_language();
 
 $header_type = get_field_value($fields, 'header_view') ? get_field_value($fields, 'header_view') : 'block-header';
 $header_bg = $header_type === 'block-header' ? get_field_value($global_options, 'header_background') : '';
 
+$class = isset($args['class']) ? $args['class'] : '';
+$translations = pll_the_languages(array('raw' => 1));
+$current_language = pll_current_language();
 ?>
 
 <header id="site-header" style="background-image: url(<?php echo $header_bg; ?>)" class="site-header <?php echo $header_type; ?> js-toggle-active-menu">
@@ -35,6 +36,35 @@ $header_bg = $header_type === 'block-header' ? get_field_value($global_options, 
                             <img src="' . do_shortcode($icon) . '" alt="Social icon"/>
                         </a>';
             }
+            echo '</div>';
+        }
+
+        if ($translations) {
+
+            $lang_name = $translations[$current_language]['name'] ?
+                '<span>' . $translations[$current_language]['name'] . '</span>' : '';
+
+            $flag = $translations[$current_language]['flag'] ?
+                '<img src="' . $translations[$current_language]['flag'] . '" alt="flag">' : '';
+
+            echo '<div class="site-header__lang-switcher mob">';
+
+            echo '<div class="site-header__lang-switcher-current">
+                                    ' . do_shortcode($flag) . '' . do_shortcode($lang_name) . '
+                                </div>';
+
+            echo '<div class="site-header__lang-switcher-langs">';
+            foreach ($translations as $slug => $language) {
+                $selected = ($slug === $current_language) ? 'selected' : '';
+                $flag_img = (!empty($language['flag'])) ? '<img src="' . $language['flag'] . '" alt="flag">' : '';
+
+                echo '<a href="' . esc_url($language['url']) . '" class="site-header__lang-switcher-link ' . $selected . '">
+                                            ' . $flag_img . '
+                                            <span>' . esc_html($language['name']) . '</span>
+                                    </a>';
+            }
+            echo '</div>';
+
             echo '</div>';
         }
         ?>
@@ -55,6 +85,7 @@ $header_bg = $header_type === 'block-header' ? get_field_value($global_options, 
                     )
                     ?>
                 </nav>
+
                 <?php
                 if ($translations) {
 
@@ -64,11 +95,11 @@ $header_bg = $header_type === 'block-header' ? get_field_value($global_options, 
                     $flag = $translations[$current_language]['flag'] ?
                         '<img src="' . $translations[$current_language]['flag'] . '" alt="flag">' : '';
 
-                    echo '<div class="site-header__lang-switcher">';
+                    echo '<div class="site-header__lang-switcher ' . $class . '">';
 
                     echo '<div class="site-header__lang-switcher-current">
-                        ' . do_shortcode($flag) . '' . do_shortcode($lang_name) . '
-                    </div>';
+                                                ' . do_shortcode($flag) . '' . do_shortcode($lang_name) . '
+                                            </div>';
 
                     echo '<div class="site-header__lang-switcher-langs">';
                     foreach ($translations as $slug => $language) {
@@ -76,9 +107,9 @@ $header_bg = $header_type === 'block-header' ? get_field_value($global_options, 
                         $flag_img = (!empty($language['flag'])) ? '<img src="' . $language['flag'] . '" alt="flag">' : '';
 
                         echo '<a href="' . esc_url($language['url']) . '" class="site-header__lang-switcher-link ' . $selected . '">
-                                    ' . $flag_img . '
-                                    <span>' . esc_html($language['name']) . '</span>
-                            </a>';
+                                                        ' . $flag_img . '
+                                                        <span>' . esc_html($language['name']) . '</span>
+                                                </a>';
                     }
                     echo '</div>';
 
@@ -94,11 +125,10 @@ $header_bg = $header_type === 'block-header' ? get_field_value($global_options, 
                     </a>
                 <?php endif; ?>
                 <button data-role="burger" class="site-header__burger js-toggle-active-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="40px" height="40px" viewBox="0 0 20 20" version="1.1">
-                        <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-212.000000, -888.000000)" fill="#e41019">
-                            <path d="M230,904 L214,904 C212.896,904 212,904.896 212,906 C212,907.104 212.896,908 214,908 L230,908 C231.104,908 232,907.104 232,906 C232,904.896 231.104,904 230,904 L230,904 Z M230,896 L214,896 C212.896,896 212,896.896 212,898 C212,899.104 212.896,900 214,900 L230,900 C231.104,900 232,899.104 232,898 C232,896.896 231.104,896 230,896 L230,896 Z M214,892 L230,892 C231.104,892 232,891.104 232,890 C232,888.896 231.104,888 230,888 L214,888 C212.896,888 212,888.896 212,890 C212,891.104 212.896,892 214,892 L214,892 Z" id="hamburger" sketch:type="MSShapeGroup">
-                            </path>
-                        </g>
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="13" y="14" width="16" height="1.68421" fill="#1B1C1F" />
+                        <rect x="13" y="19.8947" width="16" height="1.68421" fill="#1B1C1F" />
+                        <rect x="13" y="25.7895" width="16" height="1.68421" fill="#1B1C1F" />
                     </svg>
                 </button>
             </div>
