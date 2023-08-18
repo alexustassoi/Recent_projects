@@ -62,8 +62,8 @@ $slider_review = get_field_value($fields, 'slider_review');
             echo '</div>';
 
             echo '<div class="employee-reviews__buttons-wrapper mob">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev-mob"></div>
+                    <div class="swiper-button-next-mob"></div>
                 </div>';
 
             echo '</div>';

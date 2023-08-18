@@ -16,8 +16,7 @@ import displayFileNameForInput from './components/display-file-name-for-input';
 declare let jQuery: any;
 
 function ready() {
-    jQuery('body').addClass('sdfsdfs');
-
+    jQuery('.employee-reviews__slide-text').mCustomScrollbar();
     const popupInstance = new Popup();
     popupInstance.init();
 

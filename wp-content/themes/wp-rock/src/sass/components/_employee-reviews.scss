@@ -18,6 +18,8 @@
             flex-direction: column;
         }
 
+        .swiper-button-prev-mob,
+        .swiper-button-next-mob,
         .swiper-button-prev,
         .swiper-button-next {
             margin: 0;
@@ -51,6 +53,7 @@
                 background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzOSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjM1NTQ3IDBINi4xMjQ5TC0wLjAwMTY3Mjc0IDlMNi4xMjQ5IDE4SDguMzU1NDdMMi4yMjg4OSA5TDguMzU1NDcgMFoiIGZpbGw9IiMyOTJCMkUiLz4KPHBhdGggZD0iTTM4LjMwMzYgOC45OTk5MkgyLjA4OTI5IiBzdHJva2U9IiMyOTJCMkUiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz4KPC9zdmc+Cg==);
             }
         }
+        .swiper-button-next-mob,
         .swiper-button-next {
             transform: scale(-1, -1);
         }
@@ -64,7 +67,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        width: 40%;
+        width: 30%;
 
         @include max-break('1470px') {
             width: 80%;
@@ -79,6 +82,10 @@
         flex-direction: column;
         margin-right: 58px;
         height: 100%;
+
+        @include max-break('1470px') {
+            margin-right: 0;
+        }
     }
 
     &__title {
@@ -111,7 +118,7 @@
     }
 
     &__slider {
-        width: 60%;
+        flex: 1;
 
         @include max-break('1470px') {
             width: 80%;
@@ -200,8 +207,6 @@
     }
 
     &__slide-text {
-        padding-left: 50px;
-        padding-right: 50px;
         position: relative;
         height: 300px;
         overflow-y: auto;

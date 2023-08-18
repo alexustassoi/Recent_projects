@@ -82,6 +82,9 @@ function InitSwiperCertificates() {
 }
 
 function employeeReviewsSlider() {
+    const prevBtn = window.innerWidth > 1470 ? '.swiper-button-prev' : '.swiper-button-prev-mob';
+    const nextBtn = window.innerWidth > 1470 ? '.swiper-button-next' : '.swiper-button-next-mob';
+
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const swiper = new Swiper('.js-employee-reviews-slider', {
         modules: [Navigation],
@@ -97,8 +100,8 @@ function employeeReviewsSlider() {
             },
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: nextBtn,
+            prevEl: prevBtn,
         },
     });
 }
