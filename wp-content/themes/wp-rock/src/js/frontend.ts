@@ -2,16 +2,22 @@
  * SASS
  */
 import '../sass/frontend.scss';
-import { Fancybox } from '@fancyapps/ui';
-import { activateMobileMenu, footerMenuAction, menuFunctionality } from './components/menu-functionality';
+
 /**
  * JavaScript
  */
+import { Fancybox } from '@fancyapps/ui';
+import { activateMobileMenu, footerMenuAction, menuFunctionality } from './components/menu-functionality';
 import Popup from './parts/popup-window';
 import Sliders from './components/swiper-init';
 import displayFileNameForInput from './components/display-file-name-for-input';
 
+// eslint-disable-next-line
+declare let jQuery: any;
+
 function ready() {
+    jQuery('body').addClass('sdfsdfs');
+
     const popupInstance = new Popup();
     popupInstance.init();
 
@@ -44,26 +50,20 @@ function ready() {
                 activateMobileMenu();
                 break;
             default:
-                '';
+                break;
         }
     });
 
     window.document.addEventListener('scroll', (): void => {
-        if (window.scrollY > 100) {
-            siteHeader && siteHeader.classList.add('scrolled');
-            document.body.classList.add('padding-top');
-        } else {
-            siteHeader && siteHeader.classList.remove('scrolled');
-            document.body.classList.remove('padding-top');
-        }
+        const operationType = window.scrollY > 100 ? 'add' : 'remove';
+        siteHeader && siteHeader.classList[operationType]('scrolled');
+        document.body.classList[operationType]('padding-top');
     });
 
-    if (window.scrollY > 100) {
-        siteHeader && siteHeader.classList.add('scrolled');
-        document.body.classList.add('padding-top');
-    } else {
-        siteHeader && siteHeader.classList.remove('scrolled');
-        document.body.classList.remove('padding-top');
+    {
+        const operationType = window.scrollY > 100 ? 'add' : 'remove';
+        siteHeader && siteHeader.classList[operationType]('scrolled');
+        document.body.classList[operationType]('padding-top');
     }
 }
 
