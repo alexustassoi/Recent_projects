@@ -5,6 +5,12 @@
     background-size: auto 100%;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjg4IiBoZWlnaHQ9IjU1NCIgdmlld0JveD0iMCAwIDY4OCA1NTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIG9wYWNpdHk9IjAuNDExMDU1Ij4KPHBhdGggb3BhY2l0eT0iMC43NTMxODgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNTkxIDU1NEgxNzcuMTY2TDAgMjc3TDE3Ny4xNjYgMEg1OTFMNDEzLjgzNCAyNzdMNTkxIDU1NFoiIGZpbGw9IiMzOTNDNDAiLz4KPHBhdGggb3BhY2l0eT0iMC43NTMxODgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNjkxIDU1NEg2MzAuODYyTDQ1NCAyNzdMNjMwLjg2MiAwSDY5MUw1MTQuMTM4IDI3N0w2OTEgNTU0WiIgZmlsbD0iIzM5M0M0MCIvPgo8L2c+Cjwvc3ZnPgo=);
 
+    @include max-break('570px') {
+        background-size: 100% auto;
+        background-position: center top;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDMyMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIG9wYWNpdHk9IjAuNDExMDU1Ij4KPHBhdGggb3BhY2l0eT0iMC43NTMxODgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMzE5Ljg3NCA1OC42NzVWMjk3LjU5MUwxNTkuODc0IDM5OS44NzRMLTAuMTI2MjIxIDI5Ny41OTFMLTAuMTI2MjIxIDU4LjY3NUwxNTkuODc0IDE2MC45NTdMMzE5Ljg3NCA1OC42NzVaIiBmaWxsPSIjMzkzQzQwIi8+CjxwYXRoIG9wYWNpdHk9IjAuNzUzMTg4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMxOS44NzQgMC4xMjYyMjFWMzQuOTYyNUwxNTkuODc0IDEzNy40MTNMLTAuMTI2MjIxIDM0Ljk2MjVMLTAuMTI2MjIxIDAuMTI2MjIxTDE1OS44NzQgMTAyLjU3N0wzMTkuODc0IDAuMTI2MjIxWiIgZmlsbD0iIzM5M0M0MCIvPgo8L2c+Cjwvc3ZnPgo=);
+    }
+
     &__container {
         padding-top: 90px;
         padding-bottom: 90px;
@@ -17,8 +23,8 @@
         }
 
         @include max-break('1024px') {
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding-top: 60px;
+            padding-bottom: 46px;
         }
 
     }
@@ -30,7 +36,7 @@
             justify-content: space-between;
             max-width: 700px;
             width: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
     }
 
@@ -53,6 +59,18 @@
                 margin-right: 0;
             }
         }
+
+        &:first-child {
+            @include max-break('570px') {
+                margin: 0 auto;
+            }
+        }
+
+        &:not(:first-child) {
+            @include max-break('570px') {
+                display: none;
+            }
+        }
     }
 
     &__menu-wrapper {
@@ -62,6 +80,10 @@
             max-width: 700px;
             width: 100%;
             margin-bottom: 50px;
+        }
+
+        @include max-break('570px') {
+            display: none;
         }
     }
 
@@ -198,6 +220,10 @@
             max-width: 700px;
             width: 100%;
         }
+
+        @include max-break('570px') {
+            text-align: center;
+        }
     }
 
     &__contact {
@@ -213,7 +239,9 @@
         transition: color 0.3s;
 
         @include max-break('570px') {
-            margin-bottom: 40px;
+            margin-bottom: 70px;
+            font-size: 18px;
+            padding-left: 0;
         }
 
         &:hover {
@@ -231,6 +259,12 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
+
+            @include max-break('570px') {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -35px;
+            }
         }
 
         &:last-child {
@@ -244,6 +278,7 @@
         }
         &.email {
             &:after {
+                height: 15px;
                 background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDIzIDE1IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMC42NzU3ODEgMC43ODI4MzdWMi4zOUwxMS40OTkzIDguMjE3M0wyMi4zMjI4IDIuMzlWMC43ODI4MzdMMC42NzU3ODEgMC43ODI4MzdaIiBmaWxsPSIjRjRCQzIwIi8+CiAgPHBhdGggZD0iTTAuNjc1NzgxIDMuODI0MjJWMTQuNjM4SDIyLjMyMjhWMy44MjQyMkwxMS40OTkzIDkuNjgzODlMMC42NzU3ODEgMy44MjQyMloiIGZpbGw9IiNGNEJDMjAiLz4KPC9zdmc+);
             }
         }
@@ -265,7 +300,7 @@
         margin-bottom: 22px;
 
         @include max-break('570px') {
-            margin-bottom: 40px;
+            display: none;
         }
     }
 
@@ -273,6 +308,11 @@
         display: flex;
         align-items: center;
         margin-top: auto;
+
+        @include max-break('570px') {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
     }
 
     &__social {
@@ -286,6 +326,14 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+
+    &__logos-wrapper-bottom {
+        display: flex;
+    }
+
+    &__logo-img-bottom {
+        margin: 0 20px;
     }
 
     &__ps-wrapper {
@@ -322,11 +370,20 @@
         @include max-break('991px') {
             margin-top: 20px;
         }
+
+        @include max-break('570px') {
+            font-size: 12px;
+        }
     }
 
     &__ps-menu {
         display: flex;
         position: relative;
+
+        @include max-break('570px') {
+            flex-direction: column;
+            align-items: center;
+        }
 
         &:after {
             content: '';
@@ -341,6 +398,10 @@
             @include max-break('991px') {
                 bottom: -5px;
             }
+
+            @include max-break('570px') {
+                display: none;
+            }
         }
 
         .menu-item {
@@ -352,6 +413,28 @@
             text-transform: uppercase;
             margin-right: 40px;
             transition: color 0.3s;
+            position: relative;
+
+            @include max-break('570px') {
+                margin-right: 0;
+                margin-bottom: 22px;
+                font-size: 12px;
+            }
+
+            &:after {
+                content: '';
+                display: none;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #aeafb0;
+
+                @include max-break('570px') {
+                    display: block;
+                }
+            }
 
             &:hover {
                 color: #f4bc20;
@@ -359,6 +442,10 @@
 
             &:last-child {
                 margin-right: 0;
+
+                @include max-break('570px') {
+                    margin-bottom: 0;
+                }
             }
         }
 

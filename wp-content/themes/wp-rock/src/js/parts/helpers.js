@@ -326,8 +326,13 @@ export function closestPolyfill() {
  *
  * @param {string|null} elementsSelector string -- css selector (anchor links)
  * @param {Function|null} callback function     -- callback for some additional actions
+ * @param {number} offset number -- offset
  */
-export function anchorLinkScroll(elementsSelector = null, callback = null) {
+export function anchorLinkScroll(
+    elementsSelector = null,
+    callback = null,
+    offset = 0
+) {
     if (!elementsSelector) {
         throw Error(
             '"anchorLinkScroll function - "You didn\'t add correct selector for anchor links'
@@ -340,7 +345,6 @@ export function anchorLinkScroll(elementsSelector = null, callback = null) {
         [...elements].forEach((link) => {
             link.addEventListener('click', (event) => {
                 event.preventDefault();
-
                 const elHref =
                     event.target.nodeName === 'A'
                         ? event.target.getAttribute('href')
@@ -352,7 +356,7 @@ export function anchorLinkScroll(elementsSelector = null, callback = null) {
                     window.scroll({
                         behavior: 'smooth',
                         left: 0,
-                        top: ANCHOR_ELEMENT.offsetTop,
+                        top: ANCHOR_ELEMENT.offsetTop + offset,
                     });
 
                 if (callback) callback();

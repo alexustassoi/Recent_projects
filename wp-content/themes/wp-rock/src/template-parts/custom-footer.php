@@ -23,15 +23,23 @@ $socials_repeater = get_field_value($global_options, 'socials_repeater');
 <footer id="site-footer" class="site-footer">
     <div class="site-footer__container container">
         <div class="site-footer__logos-wrapper">
-            <figure class="site-footer__logo-img">
-                <img src="<?php echo esc_attr($logo); ?>" alt="Logo" />
-            </figure>
-            <figure class="site-footer__logo-img">
-                <img src="<?php echo esc_attr($logo2); ?>" alt="Logo" />
-            </figure>
-            <figure class="site-footer__logo-img">
-                <img src="<?php echo esc_attr($logo3); ?>" alt="Logo" />
-            </figure>
+            <?php
+            if ($logo) {
+                echo '<figure class="site-footer__logo-img">
+                            <img src="' . esc_attr($logo) . '" alt="Logo" />
+                        </figure>';
+            }
+            if ($logo2) {
+                echo '<figure class="site-footer__logo-img">
+                            <img src="' . esc_attr($logo2) . '" alt="Logo" />
+                        </figure>';
+            }
+            if ($logo3) {
+                echo '<figure class="site-footer__logo-img">
+                            <img src="' . esc_attr($logo3) . '" alt="Logo" />
+                        </figure>';
+            }
+            ?>
         </div>
         <div class="site-footer__menu-wrapper">
             <?php
@@ -83,7 +91,23 @@ $socials_repeater = get_field_value($global_options, 'socials_repeater');
             }
             ?>
         </div>
+        <div class="site-footer__logos-wrapper-bottom">
+            <?php
+            if ($logo2) {
+                echo '<figure class="site-footer__logo-img-bottom">
+                            <img src="' . esc_attr($logo2) . '" alt="Logo" />
+                        </figure>';
+            }
+            if ($logo3) {
+                echo '<figure class="site-footer__logo-img-bottom">
+                            <img src="' . esc_attr($logo3) . '" alt="Logo" />
+                        </figure>';
+            }
+            ?>
+        </div>
     </div>
+
+
     <div class="site-footer__ps-wrapper">
         <div class="site-footer__ps-container container">
             <?php
@@ -102,12 +126,13 @@ $socials_repeater = get_field_value($global_options, 'socials_repeater');
             ?>
         </div>
     </div>
+
 </footer>
 
 <?php
-echo esc_html( get_template_part( 'src/template-parts/components/popup-contacts', null ) );
+echo esc_html(get_template_part('src/template-parts/components/popup-contacts', null));
 ?>
 
 <?php
-echo esc_html( get_template_part( 'src/template-parts/components/popup-question', null ) );
+echo esc_html(get_template_part('src/template-parts/components/popup-question', null));
 ?>

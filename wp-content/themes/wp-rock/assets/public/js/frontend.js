@@ -65,7 +65,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   activateMobileMenu: function() { return /* binding */ activateMobileMenu; },
 /* harmony export */   footerMenuAction: function() { return /* binding */ footerMenuAction; },
-/* harmony export */   menuFunctionality: function() { return /* binding */ menuFunctionality; }
+/* harmony export */   menuFunctionality: function() { return /* binding */ menuFunctionality; },
+/* harmony export */   titleMenuAction: function() { return /* binding */ titleMenuAction; }
 /* harmony export */ });
 var menuFunctionality = function menuFunctionality() {
   var menuItemHasChildrenArray = document.querySelectorAll('.site-header__menu > .menu-item.menu-item-has-children');
@@ -122,6 +123,14 @@ var footerMenuAction = function footerMenuAction() {
       event.preventDefault();
       var parent = link.closest('.menu-title');
       parent && parent.classList.toggle('active');
+    });
+  });
+};
+var titleMenuAction = function titleMenuAction() {
+  var titleMenuLink = document.querySelectorAll('.site-header__menu .menu-title');
+  titleMenuLink && titleMenuLink.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      link && link.classList.toggle('active');
     });
   });
 };
@@ -1037,8 +1046,13 @@ function closestPolyfill() {
  *
  * @param {string|null} elementsSelector string -- css selector (anchor links)
  * @param {Function|null} callback function     -- callback for some additional actions
+ * @param {number} offset number -- offset
  */
-function anchorLinkScroll(elementsSelector = null, callback = null) {
+function anchorLinkScroll(
+    elementsSelector = null,
+    callback = null,
+    offset = 0
+) {
     if (!elementsSelector) {
         throw Error(
             '"anchorLinkScroll function - "You didn\'t add correct selector for anchor links'
@@ -1051,7 +1065,6 @@ function anchorLinkScroll(elementsSelector = null, callback = null) {
         [...elements].forEach((link) => {
             link.addEventListener('click', (event) => {
                 event.preventDefault();
-
                 const elHref =
                     event.target.nodeName === 'A'
                         ? event.target.getAttribute('href')
@@ -1063,7 +1076,7 @@ function anchorLinkScroll(elementsSelector = null, callback = null) {
                     window.scroll({
                         behavior: 'smooth',
                         left: 0,
-                        top: ANCHOR_ELEMENT.offsetTop,
+                        top: ANCHOR_ELEMENT.offsetTop + offset,
                     });
 
                 if (callback) callback();
@@ -11194,17 +11207,20 @@ function ready() {
     hideScrollbar: false
   });
   var siteHeader = document.querySelector('#site-header');
+  var addActiveItems = document.querySelectorAll('.js-toggle-active-menu');
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].InitSwiperIndustry();
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].initSwipers();
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].InitSwiperCertificates();
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].employeeReviewsSlider();
   (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_2__.menuFunctionality)();
   (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_2__.footerMenuAction)();
+  (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_2__.titleMenuAction)();
   (0,_components_display_file_name_for_input__WEBPACK_IMPORTED_MODULE_5__["default"])();
   document.body.addEventListener('click', function (e) {
     var _a;
     var TARGET = e.target;
     var ROLE = (_a = TARGET.dataset) === null || _a === void 0 ? void 0 : _a.role;
+    console.log(e.target);
     switch (ROLE) {
       case 'burger':
         (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_2__.activateMobileMenu)();

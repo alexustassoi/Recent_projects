@@ -68,3 +68,14 @@ export const footerMenuAction = () => {
             });
         });
 };
+
+export const titleMenuAction = () => {
+    const titleMenuLink = document.querySelectorAll('.site-header__menu .menu-title');
+
+    titleMenuLink &&
+        titleMenuLink.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                link && link.classList.toggle('active');
+            });
+        });
+};

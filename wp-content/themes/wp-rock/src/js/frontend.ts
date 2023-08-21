@@ -7,10 +7,16 @@ import '../sass/frontend.scss';
  * JavaScript
  */
 import { Fancybox } from '@fancyapps/ui';
-import { activateMobileMenu, footerMenuAction, menuFunctionality } from './components/menu-functionality';
+import {
+    activateMobileMenu,
+    footerMenuAction,
+    menuFunctionality,
+    titleMenuAction,
+} from './components/menu-functionality';
 import Popup from './parts/popup-window';
 import Sliders from './components/swiper-init';
 import displayFileNameForInput from './components/display-file-name-for-input';
+import { anchorLinkScroll } from './parts/helpers';
 
 // eslint-disable-next-line
 declare let jQuery: any;
@@ -29,6 +35,8 @@ function ready() {
     });
 
     const siteHeader = document.querySelector('#site-header');
+    const addActiveItems = document.querySelectorAll('.js-toggle-active-menu') as NodeList;
+
     Sliders.InitSwiperIndustry();
     Sliders.initSwipers();
     Sliders.InitSwiperCertificates();
@@ -37,12 +45,16 @@ function ready() {
     // Put here your imported functions and decorators from import section above
     menuFunctionality();
     footerMenuAction();
-
+    titleMenuAction();
+    // anchorLinkScroll('a[href^="#"]:not([href="#"])', null, -169);
     displayFileNameForInput();
 
     document.body.addEventListener('click', (e): void => {
-        const TARGET = e.target as HTMLElement;
+        const TARGET = e.target as HTMLElement | HTMLLinkElement;
         const ROLE = TARGET.dataset?.role;
+
+        console.log(e.target);
+
 
         switch (ROLE) {
             case 'burger':
