@@ -11220,7 +11220,6 @@ function ready() {
     var _a;
     var TARGET = e.target;
     var ROLE = (_a = TARGET.dataset) === null || _a === void 0 ? void 0 : _a.role;
-    console.log(e.target);
     switch (ROLE) {
       case 'burger':
         (0,_components_menu_functionality__WEBPACK_IMPORTED_MODULE_2__.activateMobileMenu)();

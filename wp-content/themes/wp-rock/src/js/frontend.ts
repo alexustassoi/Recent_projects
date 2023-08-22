@@ -46,15 +46,11 @@ function ready() {
     menuFunctionality();
     footerMenuAction();
     titleMenuAction();
-    // anchorLinkScroll('a[href^="#"]:not([href="#"])', null, -169);
     displayFileNameForInput();
 
     document.body.addEventListener('click', (e): void => {
         const TARGET = e.target as HTMLElement | HTMLLinkElement;
         const ROLE = TARGET.dataset?.role;
-
-        console.log(e.target);
-
 
         switch (ROLE) {
             case 'burger':

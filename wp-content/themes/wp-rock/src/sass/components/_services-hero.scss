@@ -1,36 +1,6 @@
 .services-hero {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
     position: relative;
-    min-height: 548px;
 
-    @include max-break('1370px') {
-        min-height: unset;
-    }
-
-    @include max-break('670px') {
-        background-size: auto 100%;
-        background-position: 64% 50%;
-        position: relative;
-        z-index: 1;
-    }
-
-    &:after {
-        position: absolute;
-        content: '';
-        display: none;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-color: rgba(0, 0, 0, .6);
-
-        @include max-break('670px') {
-            display: block;
-        }
-    }
 
     &__image {
         width: 50%;
@@ -40,6 +10,11 @@
         z-index: 1;
         padding-left: 140px;
 
+        @include max-break('1370px') {
+            width: 100%;
+            padding-left: 0;
+        }
+
         img {
             width: calc(50vw - 140px);
             object-fit: cover;
@@ -47,6 +22,11 @@
             height: auto;
             position: relative;
             z-index: -1;
+
+            @include max-break('1370px') {
+                min-width: unset;
+                width: 100%;
+            }
         }
 
         &:before,
@@ -61,12 +41,12 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 100%;
-
         }
 
         &:before {
             z-index: 1;
-            left: 0;
+            left: -1px;
+            top: 0;
             width: 80%;
             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzM0cHgiIGhlaWdodD0iNTQ4cHgiIHZpZXdCb3g9IjAgMCAzMzQgNTQ4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICA8dGl0bGU+R3JvdXAgMjY8L3RpdGxlPiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0iQXV0by1MZWdpb25fQ2FyZWVyLTEtdmFjYW5jeSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwOTQuMDAwMDAwLCAtODUzLjAwMDAwMCkiPiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA5NC4wMDAwMDAsIDg1My4wMDAwMDApIj4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgtNSIgZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIzMzMuNTQ5MjQgMCAwIDIuMDQxNDc0NjNlLTEzIDYuNDgxMzYzNzRlLTEyIDU0Ny4yOTIxNzQgMzMzLjU0OTI0IDU0OCAxNTggMjcyLjUiPjwvcG9seWdvbj4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTExNy42NTExNzYsMCBMMjk0LDI3NCBMMTE3LjY1MTE3Niw1NDggTC0yLjI3MzczNjc1ZS0xMiw1NDggTDE3Ni4zNDg4MjQsMjc0IEwtMi4yNzM3MzY3NWUtMTIsMCBMMTE3LjY1MTE3NiwwIFoiIGlkPSJDb21iaW5lZC1TaGFwZS1Db3B5IiBmaWxsPSIjRUJFQkVCIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDcuMDAwMDAwLCAyNzQuMDAwMDAwKSBzY2FsZSgtMSwgMSkgdHJhbnNsYXRlKC0xNDcuMDAwMDAwLCAtMjc0LjAwMDAwMCkgIj48L3BhdGg+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
             background-size: auto 101%;
@@ -77,27 +57,42 @@
             z-index: -1;
             right: 0;
             left: 0;
-            width: 50vw;
+            width: 100%;
             height: 100%;
             opacity: 0.2079;
-            background: linear-gradient(119deg, #2D3034 0%, #E41019 100%);
+            background: linear-gradient(119deg, #2d3034 0%, #e41019 100%);
         }
     }
 
     &__container {
+        @include max-break('1024px') {
+            padding: 0;
+        }
     }
 
     &__content-wrapper {
         display: flex;
         flex-direction: row-reverse;
 
+        @include max-break('1370px') {
+            flex-direction: column;
+        }
+
         &.reverse {
             flex-direction: row;
+
+            @include max-break('1370px') {
+                flex-direction: column;
+            }
 
             .services-hero {
                 &__image {
                     justify-content: flex-end;
                     padding-right: 156px;
+
+                    @include max-break('1024px') {
+                        padding-right: 0;
+                    }
 
                     &:before {
                         right: 0;
@@ -120,8 +115,22 @@
         flex-shrink: 0;
         width: 50%;
 
+        @include max-break('1370px') {
+            width: 100%;
+        }
+
         @include max-break('1280px') {
             padding-left: 0;
+        }
+
+        @include max-break('1370px') {
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 55px;
+        }
+
+        @include max-break('768px') {
+            padding: 30px 18px 52px;
         }
     }
 
@@ -143,18 +152,21 @@
 
         @include max-break('670px') {
             max-width: 100%;
-            color: #FFF;
         }
     }
 
     &__desc {
         max-width: 563px;
-        color: #0E0E0F;
+        color: #0e0e0f;
         font-family: $SFProDisplay;
         font-size: 24px;
         font-style: normal;
         font-weight: 300;
         line-height: 1.25;
+
+        @include max-break('1370px') {
+            max-width: 100%;
+        }
 
         @include max-break('1030px') {
             font-size: 20px;
@@ -167,7 +179,6 @@
 
         @include max-break('670px') {
             max-width: 100%;
-            color: #FFF;
             font-size: 18px;
             padding-left: 60px;
         }

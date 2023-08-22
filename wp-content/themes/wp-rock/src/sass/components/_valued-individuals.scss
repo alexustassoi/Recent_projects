@@ -3,7 +3,7 @@
     padding: 70px 0 110px;
 
     @include max-break('768px') {
-        padding: 40px;
+        padding: 64px 0 70px;
     }
 
     &__title {
@@ -15,14 +15,7 @@
         }
 
         @include max-break('470px') {
-            text-align: center;
-        }
-
-        &:after {
-            @include max-break('470px') {
-                left: 50%;
-                transform: translateX(-50%);
-            }
+            margin-bottom: 36px;
         }
     }
 
@@ -42,9 +35,6 @@
             grid-template-columns:  repeat(2, 1fr);
         }
 
-        @include max-break('470px') {
-            grid-template-columns: 1fr;
-        }
     }
 
     &__item {
@@ -56,7 +46,7 @@
 
         @include max-break('470px') {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
         }
     }
@@ -77,6 +67,10 @@
 
         @include max-break('768px') {
             font-size: 18px;
+        }
+
+        @include max-break('470px') {
+            font-size: 14px;
         }
     }
 }

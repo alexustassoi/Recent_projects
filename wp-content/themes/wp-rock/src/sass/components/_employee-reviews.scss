@@ -10,6 +10,15 @@
         padding: 50px 0 40px;
     }
 
+    @include max-break('1024px') {
+        padding: 64px 0 67px;
+    }
+
+    @include max-break('768px') {
+        background-position: center top;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMjAiIGhlaWdodD0iMjkzIiB2aWV3Qm94PSIwIDAgMzIwIDI5MyIgZmlsbD0ibm9uZSI+CiAgPHBhdGggb3BhY2l0eT0iMC4wMjc4Mzc4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMyMCAwSDE5Ny41NDlMMCAyOTIuNTQxSDEyMi44MjNMMzIwIDBaIiBmaWxsPSIjRjhGOEY4Ii8+Cjwvc3ZnPg==);
+    }
+
     &__container {
         display: flex;
         position: relative;
@@ -39,9 +48,9 @@
             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzkiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAzOSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjM1NTQ3IDBINi4xMjQ5TC0wLjAwMTY3Mjc0IDlMNi4xMjQ5IDE4SDguMzU1NDdMMi4yMjg4OSA5TDguMzU1NDcgMFoiIGZpbGw9IiNGNEJDMjAiLz4KPHBhdGggZD0iTTM4LjMwMzYgOC45OTk5MkgyLjA4OTI5IiBzdHJva2U9IiNGNEJDMjAiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz4KPC9zdmc+Cg==);
 
             @include max-break('768px') {
-                width: 40px;
-                height: 40px;
-                background-size: 21px 10px;
+                width: 56px;
+                height: 56px;
+                background-size: 20px 12px;
             }
 
             &:after {
@@ -56,6 +65,7 @@
         .swiper-button-next-mob,
         .swiper-button-next {
             transform: scale(-1, -1);
+            margin-left: 8px;
         }
 
         .swiper-button-prev {
@@ -111,7 +121,7 @@
 
             @include max-break('1470px') {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
                 margin-top: 40px;
             }
         }
@@ -214,6 +224,11 @@
         @include max-break('1570px') {
             padding-left: 10px;
             padding-right: 10px;
+        }
+
+        @include max-break('768px') {
+            padding-left: 0;
+            padding-right: 0;
         }
 
         p {
