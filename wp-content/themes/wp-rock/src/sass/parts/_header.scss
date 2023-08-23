@@ -260,6 +260,16 @@
             left: 20px;
             z-index: 21;
             max-width: 100px;
+
+            img {
+                &:first-child {
+                    display: block;
+                }
+
+                &:last-child {
+                    display: none;
+                }
+            }
         }
 
         .site-header__call-to-action {

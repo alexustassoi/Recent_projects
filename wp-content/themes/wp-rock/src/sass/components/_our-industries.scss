@@ -15,12 +15,8 @@
     }
 
     @include max-break('1030px') {
-        padding-bottom: 35px;
+        padding-bottom: 65px;
         padding-top: 40px;
-    }
-
-    @include max-break('480px') {
-        padding-bottom: 25px;
     }
 
     &:after {
@@ -37,9 +33,6 @@
 
     }
 
-    &__container {
-
-    }
 
     &__title {
         margin-bottom: 74px;
@@ -106,7 +99,7 @@
         }
 
         @include max-break('480px') {
-            height: 215px;
+            height: 280px;
             width: calc((100% - 20px) / 2);
             margin-right: 20px;
             margin-bottom: 20px;
@@ -288,19 +281,7 @@
         }
 
         @include max-break('1370px') {
-            font-size: 20px;
-        }
-
-        @include max-break('850px') {
-            font-size: 16px;
-        }
-
-        @include max-break('768px') {
-            padding-left: 25px;
-        }
-
-        @include max-break('480px') {
-            font-size: 14px;
+            font-size: 18px;
         }
 
         &:after {
@@ -316,6 +297,30 @@
             background-size: cover;
             opacity: 0;
             transition: opacity .4s ease-out;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 36px;
+            top: 25px;
+            width: 22px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIyIDIwIiBmaWxsPSJub25lIj4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMjBIOC40MTg1NEwyMiAwSDEzLjU1NTlMMCAyMFoiIGZpbGw9IiNGNEJDMjAiLz4KPC9zdmc+);
+
+            @include max-break('1600px') {
+                left: 10px;
+            }
+
+            @include max-break('1370px') {
+                height: 12px;
+                width: 16px;
+                left: 17px;
+            }
         }
     }
 }

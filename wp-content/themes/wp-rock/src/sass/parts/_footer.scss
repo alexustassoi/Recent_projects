@@ -329,7 +329,11 @@
     }
 
     &__logos-wrapper-bottom {
-        display: flex;
+        display: none;
+
+        @include max-break('570px') {
+            display: flex;
+        }
     }
 
     &__logo-img-bottom {

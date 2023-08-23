@@ -68,9 +68,59 @@
             "translations": "copy_once"
         },
         {
+            "key": "field_64e62e1b1e6ca",
+            "label": "Second image",
+            "name": "second_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "translations": "copy_once"
+        },
+        {
             "key": "field_64d223ca11487",
             "label": "Background image",
             "name": "bg_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "translations": "copy_once"
+        },
+        {
+            "key": "field_64e64391479b7",
+            "label": "Background image mob",
+            "name": "bg_img_mob",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -111,5 +161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691493709
+    "modified": 1692812204
 }

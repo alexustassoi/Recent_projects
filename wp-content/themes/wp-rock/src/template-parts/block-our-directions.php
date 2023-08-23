@@ -10,7 +10,10 @@ $fields      = get_fields();
 $block_title = get_field_value($fields, 'block_title');
 $desc        = get_field_value($fields, 'desc');
 $main_image  = get_field_value($fields, 'main_image');
+$second_image  = get_field_value($fields, 'second_image');
 $bg_img      = get_field_value($fields, 'bg_img');
+$bg_img_mob      = get_field_value($fields, 'bg_img_mob');
+
 
 ?>
 
@@ -28,9 +31,21 @@ $bg_img      = get_field_value($fields, 'bg_img');
             ?>
         </div>
         <?php
-        echo ($main_image)
-            ? '<div class="our-directions__main-image-wrap"><img width="744" height="587" src="' . do_shortcode($main_image) . '" class="our-directions__main-image" /></div>'
-            : '';
+        echo '<div class="our-directions__main-image-wrap">';
+        if ($second_image) {
+            echo '<div class="our-directions__second-image">
+                        <img src="' . do_shortcode($second_image) . '" class="our-directions__main-image" />
+                    </div>';
+        }
+
+        if ($main_image) {
+
+            echo '<div class="our-directions__main-image">
+                    <img src="' . do_shortcode($main_image) . '" class="our-directions__main-image" />
+                </div>';
+        }
+
+        echo '</div>';
         ?>
     </div>
 </section>
