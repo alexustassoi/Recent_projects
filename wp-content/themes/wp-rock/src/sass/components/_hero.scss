@@ -61,9 +61,6 @@
         }
     }
 
-    &__content-wrap {
-    }
-
     &__image {
         @include max-break('1470px') {
             max-width: 860px;
