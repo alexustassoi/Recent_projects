@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="75" height="74" viewBox="0 0 75 74" fill="none">
+  <g id="g3728">
+    <mask id="mask0_0_8210" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="75" height="74">
+      <path id="path3732" fill-rule="evenodd" clip-rule="evenodd" d="M0.296875 0L74.2969 0L74.2969 74L0.296875 74L0.296875 0Z" fill="white"></path>
+    </mask>
+    <g mask="url(#mask0_0_8210)">
+      <path id="path3738" fill-rule="evenodd" clip-rule="evenodd" d="M27.1763 29.1755C27.1763 33.4967 23.6732 37 19.3518 37C15.0305 37 11.5273 33.4967 11.5273 29.1755C11.5273 24.8542 15.0305 21.3509 19.3518 21.3509C23.6732 21.3509 27.1763 24.8542 27.1763 29.1755Z" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3742" d="M19.3516 37L55.4017 37C59.723 37 63.2262 33.4969 63.2262 29.1755C63.2262 24.8542 59.723 21.351 55.4017 21.351L26.5781 21.351" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3746" d="M40.8633 25.1812H55.4037" stroke="#F4BC20" stroke-width="2" stroke-dasharray="20 20 20 20 466.67"></path>
+      <path id="path3750" fill-rule="evenodd" clip-rule="evenodd" d="M37.1646 44.8245C37.1646 49.1459 33.6615 52.6492 29.3401 52.6492C25.0186 52.6492 21.5156 49.1459 21.5156 44.8245C21.5156 40.5033 25.0186 37 29.3401 37C33.6615 37 37.1646 40.5033 37.1646 44.8245Z" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3754" fill-rule="evenodd" clip-rule="evenodd" d="M17.0279 44.8245C17.0279 49.1459 13.5247 52.6492 9.20339 52.6492C4.88205 52.6492 1.37891 49.1459 1.37891 44.8245C1.37891 40.5033 4.88205 37 9.20339 37C13.5247 37 17.0279 40.5033 17.0279 44.8245Z" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3758" fill-rule="evenodd" clip-rule="evenodd" d="M37.1646 44.8245C37.1646 49.1459 33.6615 52.6492 29.3401 52.6492C25.0186 52.6492 21.5156 49.1459 21.5156 44.8245C21.5156 40.5033 25.0186 37 29.3401 37C33.6615 37 37.1646 40.5033 37.1646 44.8245Z" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3762" d="M36.5664 52.6489L65.3898 52.6489C69.7113 52.6489 73.2143 49.1458 73.2143 44.8243C73.2143 40.5031 69.7113 36.9999 65.3898 36.9999H29.3398" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3766" d="M16.4297 52.1431H29.3417" stroke="#F4BC20" stroke-width="2"></path>
+      <path id="path3770" d="M29.3417 36.4941H9.20312" stroke="#F4BC20" stroke-width="2"></path>
+    </g>
+  </g>
+</svg>

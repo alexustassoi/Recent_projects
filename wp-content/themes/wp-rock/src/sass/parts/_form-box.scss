@@ -12,7 +12,7 @@
     }
 
     @include max-break('480px') {
-        padding: 30px 20px;
+        padding: 33px 10px;
     }
 
     &__caption,
@@ -52,8 +52,8 @@
         }
 
         @include max-break('480px') {
-            font-size: 10px;
-            line-height: 2.4;
+            font-size: 15px;
+            line-height: 1.4;
         }
     }
 
@@ -64,7 +64,6 @@
 
         @include max-break('480px') {
             margin-bottom: 10px;
-            flex-direction: column;
         }
 
         .form-box__input-wraper {
@@ -73,7 +72,7 @@
 
             @include max-break('480px') {
                 width: 100%;
-                margin-right: 0;
+                margin-right: 23px;
             }
 
             &:last-of-type {
@@ -173,6 +172,12 @@
             z-index: 1;
             background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMS41IiBjeT0iMTEuNSIgcj0iMTEuNSIgZmlsbD0iI0U0MTAxOSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOSA2SDEwLjMzNDVMMTQgMTEuNUwxMC4zMzQ1IDE3SDlMMTIuNjY1NSAxMS41TDkgNloiIGZpbGw9IndoaXRlIi8+PC9zdmc+) center center no-repeat;
             background-size: contain;
+
+            @include max-break('670px') {
+                width: 20px;
+                height: 20px;
+                right: 10px;
+            }
         }
 
         .wpcf7-spinner {
@@ -259,7 +264,7 @@
             font-size: 15px;
             font-style: normal;
             font-weight: 300;
-            line-height: 2.4;
+            line-height: 1.4;
             position: relative;
             z-index: 1;
             padding-left: 27px;
@@ -271,7 +276,6 @@
             }
 
             @include max-break('1030px') {
-                font-size: 11px;
                 padding-left: 21px;
             }
 
@@ -280,35 +284,18 @@
 
             }
 
-            @include max-break('480px') {
-                font-size: 11px;
-                line-height: 2.18;
-            }
-
             &:before {
                 position: absolute;
                 content: '';
                 display: block;
                 left: 0;
-                top: 11px;
+                top: 1px;
                 width: 14px;
                 height: 14px;
                 z-index: 1;
                 background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNi41IiBzdHJva2U9IiM5RTlFQTIiLz48L3N2Zz4=) center center no-repeat;
                 background-size: contain;
                 cursor: pointer;
-
-                @include max-break('1280px') {
-                    top: 8px;
-                }
-
-                @include max-break('1030px') {
-                    top: 6px;
-                }
-
-                @include max-break('480px') {
-                    top: 4px;
-                }
             }
 
             a {
@@ -366,7 +353,8 @@
 
         @include max-break('480px') {
             height: 33px;
-            font-size: 12px;
+            font-size: 15px;
+            font-weight: 600;
             line-height: 2;
         }
 

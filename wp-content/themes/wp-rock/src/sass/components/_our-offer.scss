@@ -1,19 +1,15 @@
 .our-offer {
     padding-top: 80px;
     padding-bottom: 91px;
-    background: #292B2E;
+    background: #292b2e;
 
     @include max-break('1440px') {
         padding-top: 65px;
     }
 
     @include max-break('850px') {
-        padding-top: 50px;
-        padding-bottom: 60px;
-    }
-
-    &__container {
-
+        padding-top: 60px;
+        padding-bottom: 70px;
     }
 
     &__content-top {
@@ -29,7 +25,7 @@
         }
 
         @include max-break('850px') {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         @include max-break('570px') {
@@ -38,7 +34,7 @@
     }
 
     &__title {
-        color: #FFF;
+        color: #fff;
         margin-right: 60px;
         width: 100%;
         max-width: max-content;
@@ -51,7 +47,7 @@
     &__desc {
         padding-top: 22px;
         width: 100%;
-        color: #FFF;
+        color: #fff;
         font-family: $SFProDisplay;
         font-size: 26px;
         font-style: normal;
@@ -72,10 +68,6 @@
 
         @include max-break('850px') {
             font-size: 16px;
-        }
-
-        @include max-break('480px') {
-            font-size: 14px;
         }
     }
 
@@ -98,7 +90,7 @@
             width: calc((100% - 60px) / 2);
             height: 1px;
             z-index: 1;
-            background-color: #F4BC20;
+            background-color: #f4bc20;
 
             @include max-break('1199px') {
                 width: calc((100% - 30px) / 2);
@@ -128,7 +120,7 @@
         display: flex;
         align-items: center;
         padding: 16px 30px 16px 0;
-        border-bottom: 1px solid #F4BC20;
+        border-bottom: 1px solid #f4bc20;
         box-sizing: border-box;
 
         @include max-break('1199px') {
@@ -143,7 +135,7 @@
         }
 
         @include max-break('480px') {
-            padding-right: 5px;
+            padding: 11px 5px 11px 0;
         }
 
         &:nth-child(2n + 2) {
@@ -157,16 +149,16 @@
         min-width: 56px;
         width: 56px;
         height: 56px;
-        transition: all .4s ease-out;
+        transition: all 0.4s ease-out;
         margin-left: auto;
         display: flex;
         align-items: center;
         justify-content: center;
 
         @include max-break('480px') {
-            min-width: 46px;
-            width: 46px;
-            height: 46px;
+            min-width: 30px;
+            width: 30px;
+            height: 30px;
         }
 
         &:after {
@@ -179,10 +171,11 @@
             width: 46px;
             height: 46px;
             z-index: 1;
-            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iNDYiIHZpZXdCb3g9IjAgMCA0NiA0NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMyIgY3k9IjIzIiByPSIyMi41IiBzdHJva2U9IndoaXRlIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yOCAxOEgyOS4zMzQ1TDMzIDIzLjVMMjkuMzM0NSAyOUgyOEwzMS42NjU1IDIzLjVMMjggMThaIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMi41IDIzLjVIMzEuNSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==) center center no-repeat;
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iNDYiIHZpZXdCb3g9IjAgMCA0NiA0NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMyIgY3k9IjIzIiByPSIyMi41IiBzdHJva2U9IndoaXRlIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yOCAxOEgyOS4zMzQ1TDMzIDIzLjVMMjkuMzM0NSAyOUgyOEwzMS42NjU1IDIzLjVMMjggMThaIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMi41IDIzLjVIMzEuNSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==)
+                center center no-repeat;
             background-size: contain;
             cursor: pointer;
-            transition: all .4s ease-out;
+            transition: all 0.4s ease-out;
 
             @include max-break('480px') {
                 min-width: 36px;
@@ -205,7 +198,8 @@
             &:after {
                 width: 56px;
                 height: 56px;
-                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyOCIgY3k9IjI4IiByPSIyOCIgZmlsbD0iI0Y0QkMyMCIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMzMuODA4NiAyMkgzNS40NjA5TDM5Ljk5OTEgMjguNUwzNS40NjA5IDM1SDMzLjgwODZMMzguMzQ2OCAyOC41TDMzLjgwODYgMjJaIiBmaWxsPSIjMjkyQjJFIi8+PHBhdGggZD0iTTE0LjYxOSAyOC41MDAxSDM4LjE0MjkiIHN0cm9rZT0iIzI5MkIyRSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==) center center no-repeat;
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyOCIgY3k9IjI4IiByPSIyOCIgZmlsbD0iI0Y0QkMyMCIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMzMuODA4NiAyMkgzNS40NjA5TDM5Ljk5OTEgMjguNUwzNS40NjA5IDM1SDMzLjgwODZMMzguMzQ2OCAyOC41TDMzLjgwODYgMjJaIiBmaWxsPSIjMjkyQjJFIi8+PHBhdGggZD0iTTE0LjYxOSAyOC41MDAxSDM4LjE0MjkiIHN0cm9rZT0iIzI5MkIyRSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==)
+                    center center no-repeat;
                 background-size: contain;
 
                 @include max-break('480px') {
@@ -226,22 +220,18 @@
         }
 
         @include max-break('480px') {
-            min-width: 110px;
+            min-width: unset;
+            width: 40px;
             margin-right: 10px;
-        }
-
-        @include max-break('320px') {
-            min-width: 85px;
-            max-width: 85px;
+            flex-shrink: 0;
         }
     }
 
     &__item-icon {
-
     }
 
     &__item-title {
-        color: #FFF;
+        color: #fff;
         font-family: $Montserrat;
         font-size: 28px;
         font-style: normal;
@@ -264,11 +254,6 @@
 
         @include max-break('991px') {
             font-size: 16px;
-        }
-
-        @include max-break('480px') {
-            font-size: 13px;
-            line-height: 1.5;
         }
     }
 }

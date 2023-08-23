@@ -47,12 +47,14 @@ $founder_repeater = get_field_value($fields, 'founder_repeater');
 
             if ($founder_repeater) { ?>
                 <div class="welcomes__founders">
-                    <?php foreach ($founder_repeater as $founder) {
+                    <?php foreach ($founder_repeater as $key => $founder) {
+                        $even = ($key % 2) ? 'reverse' : '';
+
                         $photo  = get_field_value($founder, 'photo');
                         $name   = get_field_value($founder, 'name');
                         $status = get_field_value($founder, 'status');
                         ?>
-                        <div class="welcomes__founder">
+                        <div class="welcomes__founder <?php echo $even; ?>">
                             <figure class="welcomes__founder-photo-wrap">
                                 <img class="welcomes__founder-photo"
                                      src="<?php echo do_shortcode($photo); ?>"

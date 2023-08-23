@@ -225,6 +225,11 @@ body {
         font-size: 14px;
     }
 
+    @include max-break('670px') {
+        padding: 12px 40px 12px 16px;
+        height: 43px;
+    }
+
     &:after {
         position: absolute;
         content: '';
@@ -238,6 +243,12 @@ body {
         background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMyAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMS41IiBjeT0iMTEuNSIgcj0iMTEuNSIgZmlsbD0iI0U0MTAxOSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOSA2SDEwLjMzNDVMMTQgMTEuNUwxMC4zMzQ1IDE3SDlMMTIuNjY1NSAxMS41TDkgNloiIGZpbGw9IndoaXRlIi8+PC9zdmc+)
             center center no-repeat;
         background-size: contain;
+
+        @include max-break('670px') {
+            width: 20px;
+            height: 20px;
+            right: 10px;
+        }
     }
 
     &:hover {

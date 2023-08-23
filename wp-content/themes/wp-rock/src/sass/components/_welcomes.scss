@@ -11,8 +11,8 @@
     }
 
     @include max-break('670px') {
-        padding-bottom: 50px;
-        padding-top: 40px;
+        padding-bottom: 61px;
+        padding-top: 46px;
     }
 
     &:after {
@@ -28,8 +28,6 @@
         background-size: cover;
     }
 
-    &__container {
-    }
 
     &__content-top {
         display: flex;
@@ -45,7 +43,7 @@
         }
 
         @include max-break('480px') {
-            margin-bottom: 25px;
+            margin-bottom: 0;
         }
     }
 
@@ -53,7 +51,7 @@
         margin-bottom: 41px;
 
         @include max-break('768px') {
-            margin-bottom: 25px;
+            margin-bottom: 23px;
         }
     }
 
@@ -86,7 +84,7 @@
             @include max-break('768px') {
                 margin-right: 0;
                 max-width: unset;
-                margin-bottom: 30px;
+                margin-bottom: 24px;
             }
         }
     }
@@ -118,7 +116,7 @@
             @include max-break('480px') {
                 font-size: 14px;
                 padding-left: 18px;
-                margin-bottom: 25px;
+                margin-bottom: 19px;
             }
 
             &:after {
@@ -159,50 +157,50 @@
         }
     }
 
-    &__founders,
-    &__founder {
-        display: flex;
-        align-items: center;
-
-        @include max-break('480px') {
-            width: 100%;
-        }
-    }
 
     &__founders {
+        display: flex;
+        align-items: center;
 
         @include max-break('850px') {
             margin-bottom: 45px;
         }
 
-        @include max-break('480px') {
+        @include max-break('768px') {
             flex-direction: column;
+            margin-bottom: 31px;
         }
     }
 
     &__founder {
-        margin-right: 50px;
+        margin: 0 25px;
+        display: flex;
+        align-items: center;
 
         @include max-break('1370px') {
             margin-right: 35px;
         }
 
-        @include max-break('570px') {
-            flex-direction: column;
-            margin-right: 70px;
+        @include max-break('768px') {
+            margin: 0 0 10px 0;
+            width: 100%;
         }
 
-        @include max-break('480px') {
-            margin-right: 0;
-            margin-bottom: 30px;
+        &.reverse {
+            @include max-break('768px') {
+                flex-direction: row-reverse;
+            }
+
+            .welcomes__founder-photo-wrap {
+                @include max-break('768px') {
+                    margin-right: 0;
+                    margin-left: 15px;
+                }
+            }
         }
 
         &:last-of-type {
-            margin-right: 0;
-
-            @include max-break('480px') {
-                margin-bottom: 0;
-            }
+            margin-bottom: 0;
         }
     }
 
@@ -228,14 +226,8 @@
         }
 
         @include max-break('570px') {
-            margin-right: 0;
-            margin-bottom: 15px;
-            margin-left: 30px;
-        }
-
-        @include max-break('480px') {
-            height: 140px;
-            width: 140px;
+            width: 107px;
+            height: 107px;
         }
 
         img {
@@ -245,9 +237,6 @@
         }
     }
 
-    &__founder-photo {
-
-    }
 
     &__founder-info {
         padding-left: 30px;
@@ -257,7 +246,7 @@
         @include max-break('570px') {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
 
         &:after {
@@ -295,7 +284,7 @@
         }
 
         @include max-break('850px') {
-            margin-right: 0;
+            margin-right: auto;
         }
     }
 
@@ -326,5 +315,9 @@
         line-height: 1.5;
         letter-spacing: 0.4px;
         text-transform: uppercase;
+
+        @include max-break('570px') {
+            font-size: 13px;
+        }
     }
 }
