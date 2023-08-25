@@ -1,6 +1,7 @@
 .news {
     padding-top: 74px;
     padding-bottom: 102px;
+    background-color: #F6F6F7;
 
     @include max-break('1600px') {
         padding-bottom: 70px;
@@ -8,16 +9,10 @@
     }
 
     @include max-break('1030px') {
-        padding-bottom: 55px;
+        padding-bottom: 80px;
+        padding-top: 67px;
     }
 
-
-    @include max-break('480px') {
-        padding-bottom: 45px;
-    }
-
-    &__container {
-    }
 
     &__content {
         display: flex;
@@ -53,11 +48,12 @@
 
             @include max-break('991px') {
                 max-width: unset;
-                margin-bottom: 20px;
+                margin-bottom: 28px;
             }
         }
 
         .post-card__excerpt {
+            margin-bottom: 19px;
 
             @include max-break('1470px') {
                 font-size: 20px;
@@ -71,6 +67,10 @@
         .post-card__date {
             @include max-break('1470px') {
                 margin-bottom: 45px;
+            }
+
+            @include max-break('670px') {
+                margin-bottom: 19px;
             }
         }
 
@@ -87,6 +87,7 @@
             @include max-break('1280px') {
                 padding-left: 20px;
                 padding-right: 20px;
+                padding-bottom: 28px;
             }
         }
     }
@@ -101,7 +102,7 @@
         @include max-break('991px') {
             flex-direction: unset;
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 26px;
         }
     }
 

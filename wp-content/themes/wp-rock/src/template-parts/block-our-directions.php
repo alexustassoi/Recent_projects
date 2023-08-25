@@ -17,7 +17,9 @@ $bg_img_mob      = get_field_value($fields, 'bg_img_mob');
 
 ?>
 
-<section class="our-directions" style="background-image: url(<?php echo ($bg_img) ? do_shortcode($bg_img) : 'none'; ?>)">
+<section class="our-directions">
+    <img class="our-directions__bg" src="<?php echo $bg_img; ?>" alt="bg">
+    <img class="our-directions__bg mob" src="<?php echo $bg_img_mob; ?>" alt="bg">
     <div class="our-directions__container container">
         <div class="our-directions__top-content">
             <?php
