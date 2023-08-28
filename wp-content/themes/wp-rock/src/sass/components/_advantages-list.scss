@@ -29,6 +29,7 @@
 
     @include max-break('480px') {
         padding-bottom: 15px;
+        padding-top: 30px;
     }
 
     &__container {
@@ -207,7 +208,7 @@
 
         @include max-break('480px') {
             font-size: 14px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             margin-right: 0;
             padding-left: 24px;
         }

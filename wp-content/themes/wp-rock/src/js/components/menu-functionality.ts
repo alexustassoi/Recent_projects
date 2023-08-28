@@ -75,6 +75,7 @@ export const titleMenuAction = () => {
     titleMenuLink &&
         titleMenuLink.forEach((link) => {
             link.addEventListener('click', (event) => {
+                event.stopPropagation();
                 link && link.classList.toggle('active');
             });
         });

@@ -15,7 +15,10 @@ $bg_img      = get_field_value($fields, 'bg_img');
 
 ?>
 
-<section class="ask-question" style="background-image: url(<?php echo ($bg_img) ? do_shortcode($bg_img) : 'none'; ?>)">
+<section class="ask-question">
+    <figure class="ask-question__img">
+        <img src="<?php echo do_shortcode($bg_img); ?>" alt="img">
+    </figure>
     <div class="ask-question__container container">
         <div class="ask-question__content">
             <?php

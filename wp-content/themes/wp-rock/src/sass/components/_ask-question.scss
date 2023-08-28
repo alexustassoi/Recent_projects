@@ -1,21 +1,97 @@
 .ask-question {
     padding-top: 51px;
     padding-bottom: 82px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    background-color: #393d43;
 
     @include max-break('991px') {
         background-position: 62% 50%;
     }
 
-    @include max-break('570px') {
-        padding-bottom: 50px;
-        padding-top: 50px;
+    @include max-break('670px') {
+        padding-bottom: 191px;
+        padding-top: 40px;
     }
 
-    &__container {
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 30%;
+        width: 341px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQxIiBoZWlnaHQ9IjI3MyIgdmlld0JveD0iMCAwIDM0MSAyNzMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIG9wYWNpdHk9IjAuNTYzMzI0IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUwIDI3M0gyNTMuNzY2TDM0MSAxMzYuNUwyNTMuNzY2IDBINTBMMTM3LjIzNCAxMzYuNUw1MCAyNzNaIiBmaWxsPSIjQTEwRDE0Ii8+CjxwYXRoIG9wYWNpdHk9IjAuNTYzMzI0IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMjczSDI5LjY4ODRMMTE3IDEzNi41TDI5LjY4ODQgMEgwTDg3LjMxMTYgMTM2LjVMMCAyNzNaIiBmaWxsPSIjQTEwRDE0Ii8+Cjwvc3ZnPgo=);
 
+        @include max-break('850px') {
+            width: 512px;
+            right: 0;
+        }
+
+        @include max-break('768px') {
+            background-size: cover;
+            width: 408px;
+        }
+
+        @include max-break('670px') {
+            height: 480px;
+            width: 100%;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjI2MSIgdmlld0JveD0iMCAwIDMyMCAyNjEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIG9wYWNpdHk9IjAuNTYzMzI0IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAuNSA0NC41VjE1Ni43NzhMMTYzIDI2MC41TDMyNS41IDE1Ni43NzhMMzI1LjUgNDQuNUwxNjMgMTQ4LjIyMkwwLjUgNDQuNVoiIGZpbGw9IiNBMTBEMTQiLz4KPHBhdGggb3BhY2l0eT0iMC41NjMzMjQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAwVjM1LjI3MDlMMTYyLjUgMTM5TDMyNSAzNS4yNzA5VjBMMTYyLjUgMTAzLjcyOUwwIDBaIiBmaWxsPSIjQTEwRDE0Ii8+Cjwvc3ZnPgo=);
+        }
+
+        @include max-break('470px') {
+            height: 326px;
+            top: 40px;
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30%;
+        height: 100%;
+
+        @include max-break('768px') {
+            width: 60%;
+        }
+
+        @include max-break('670px') {
+            width: 100%;
+            height: 322px;
+            top: auto;
+            bottom: 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -1px;
+            left: -2px;
+            width: 102%;
+            height: 102%;
+            background: linear-gradient(
+                90deg,
+                rgba(57, 61, 67, 1) 9%,
+                rgba(57, 61, 67, 0.6867997198879552) 45%,
+                rgba(57, 61, 67, 1) 91%
+            );
+
+            @include max-break('670px') {
+                background: linear-gradient(180deg,#393d43 20%,rgba(57,61,67,.687) 45%,#393d43 150%);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__content {
@@ -35,10 +111,10 @@
     }
 
     &__title {
-        color: #FFF;
+        color: #fff;
         max-width: 1030px;
-        font-size: 60px;
-        line-height: 1.16;
+        position: relative;
+        z-index: 1;
 
         @include max-break('1470px') {
             max-width: 870px;
@@ -46,49 +122,36 @@
 
         @include max-break('1370px') {
             max-width: 700px;
-            font-size: 48px;
         }
 
         @include max-break('1280px') {
-            font-size: 42px;
             max-width: 615px;
         }
 
         @include max-break('1030px') {
-            font-size: 36px;
             max-width: 525px;
         }
 
         @include max-break('850px') {
-            font-size: 30px;
             max-width: 435px;
-        }
-
-        @include max-break('768px') {
             margin-bottom: 30px;
         }
 
-        @include max-break('480px') {
-            font-size: 26px;
-        }
-
-        @include max-break('375px') {
-            font-size: 24px;
+        @include max-break('670px') {
+            text-align: center;
+            padding-left: 0;
+            margin: 0 auto 252px auto;
         }
 
         &:after {
-            @include max-break('480px') {
-                top: 22px;
-            }
-
-            @include max-break('375px') {
-                top: 19px;
+            @include max-break('670px') {
+                display: none;
             }
         }
     }
 
     &__btn {
-        color: #FFF;
+        color: #fff;
         padding-left: 37px;
         padding-right: 37px;
 

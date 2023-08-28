@@ -9,8 +9,18 @@
         background-size: calc(min(500px, 100%)) auto;
     }
     @media screen and (max-width: 1124px) {
-        padding-top: 400px;
-        background-position: top left;
+        padding-bottom: 430px;
+        padding-top: 50px;
+        background-position: bottom left;
+    }
+
+    @media screen and (max-width: 415px) {
+        padding-bottom: 340px;
+        background-position: bottom center;
+    }
+
+    @media screen and (max-width: 330px) {
+        padding-bottom: 300px;
     }
 
     &--nopadding {
@@ -26,7 +36,7 @@
         align-items: center;
         @media screen and (max-width: 991px) {
             flex-direction: column;
-            gap: 40px;
+            gap: 0;
         }
     }
 
@@ -35,9 +45,6 @@
         height: auto;
     }
 
-    &__left {
-
-    }
 
     &__right {
         max-width: 665px;
@@ -51,11 +58,19 @@
         position: relative;
         margin-bottom: 28px;
         z-index: 2;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
     &__text {
         position: relative;
         margin-bottom: 40px;
         z-index: 2;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 28px;
+        }
     }
 
     &__line {

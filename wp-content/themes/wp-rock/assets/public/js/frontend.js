@@ -130,6 +130,7 @@ var titleMenuAction = function titleMenuAction() {
   var titleMenuLink = document.querySelectorAll('.site-header__menu .menu-title');
   titleMenuLink && titleMenuLink.forEach(function (link) {
     link.addEventListener('click', function (event) {
+      event.stopPropagation();
       link && link.classList.toggle('active');
     });
   });

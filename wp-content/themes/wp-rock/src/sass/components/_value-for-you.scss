@@ -3,12 +3,18 @@
     padding-bottom: 85px;
     position: relative;
     background: #393C40;
+    @media screen and (max-width: 991px) {
+        padding: 64px 0 75px;
+    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
         gap: 40px;
         @media screen and (max-width: 1240px) {
             flex-direction: column;
+        }
+        @media screen and (max-width: 768px) {
+            gap: 48px;
         }
     }
 
@@ -25,6 +31,9 @@
         @media screen and (max-width: 1240px) {
             grid-template-columns: 1fr 1fr;
         }
+        @media screen and (max-width: 768px) {
+            gap: 49px;
+        }
         @media screen and (max-width: 680px) {
             grid-template-columns: 1fr ;
         }
@@ -40,6 +49,9 @@
         position: relative;
         margin-bottom: 40px;
         z-index: 2;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 28px;
+        }
         * {
             color: #ffffff;
         }
@@ -79,6 +91,9 @@
             @media screen and (max-width: 1240px) {
                 height: 230px;
             }
+            @media screen and (max-width: 670px) {
+                height: 137px;
+            }
         }
         &__arrow {
             position: absolute;
@@ -103,6 +118,15 @@
             font-weight: 800;
             line-height: 118%;
             text-transform: uppercase;
+            @media screen and (max-width: 1024px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-top: 16px;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
 
         }
         &__description {

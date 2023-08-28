@@ -14,7 +14,7 @@ $text           = get_field_value( $group, 'text' );
 ?>
 
 <div class="info-block" >
-	<div class="container">
+	<div class="container info-block__container">
 		<div class="info-block__wrapper">
 			<div class="info-block__left">
 				<?php if ($image): ?>
@@ -29,7 +29,7 @@ $text           = get_field_value( $group, 'text' );
 						<?php echo esc_html( $title ); ?>
 					</h2>
 				<?php endif; ?>
-				
+
 				<?php if ( $text ) : ?>
 					<div class="info-block__text">
 						<?php echo $text; ?>
