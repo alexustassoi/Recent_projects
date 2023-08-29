@@ -10,11 +10,17 @@ $fields         = get_fields();
 $block_title    = get_field_value($fields, 'block_title');
 $items_repeater = get_field_value($fields, 'items_repeater');
 $bg_img         = get_field_value($fields, 'bg_img');
+$bg_img_mob         = get_field_value($fields, 'bg_img_mob');
 
 ?>
 
 <section class="opening-companies">
     <div class="opening-companies__container container">
+        <?php
+          echo ($bg_img_mob)
+          ? '<img class="mob" src="' . do_shortcode($bg_img_mob) . '" alt="Image">'
+          : '';
+        ?>
         <div class="opening-companies__col opening-companies__col-left">
             <?php
             echo ($bg_img)

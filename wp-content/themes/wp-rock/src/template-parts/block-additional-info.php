@@ -22,14 +22,14 @@ $main_img_class = ($is_main_img)
 
 <section class="additional-info <?php echo do_shortcode($main_img_class); ?>">
     <div class="additional-info__container container">
-        <div class="additional-info__left-side-with-image additional-info__col">
+        <div class="additional-info__left-side-with-image">
             <?php
             echo ($bg_img)
                 ? '<img width="500" height="387" class="additional-info__left-side-image" src="' . do_shortcode($bg_img) . '" alt="Image">'
                 : '';
             ?>
         </div>
-        <div class="additional-info__right-side-content additional-info__col">
+        <div class="additional-info__right-side-content">
             <?php
             echo ($block_title)
                 ? '<h2 class="additional-info__title">' . do_shortcode($block_title) . '</h2>'

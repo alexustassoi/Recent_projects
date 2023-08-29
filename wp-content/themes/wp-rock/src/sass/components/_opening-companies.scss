@@ -1,11 +1,31 @@
 .opening-companies {
     background: #292B2E;
+    position: relative;
+    overflow: hidden;
 
     &__container {
         display: flex;
 
         @include max-break('850px') {
             flex-direction: column;
+        }
+
+        @include max-break('570px') {
+            padding-top: 66px;
+            padding-bottom: 60px;
+        }
+
+        img {
+            &.mob {
+                display: none;
+
+                @include max-break('570px') {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
         }
     }
 
@@ -45,6 +65,12 @@
             justify-content: flex-start;
         }
 
+        @include max-break('570px') {
+            left: 0;
+            transform: none;
+            justify-content: flex-end;
+        }
+
         img {
             display: block;
             max-width: none;
@@ -56,12 +82,13 @@
             @include max-break('850px') {
                 width: 74%;
             }
+
+            @include max-break('570px') {
+                display: none;
+            }
         }
     }
 
-    &__items {
-
-    }
 
     &__title {
         color: #FFF;
@@ -80,7 +107,9 @@
         }
 
         @include max-break('570px') {
-            left: 16px;
+            position: relative;
+            top: 0;
+            left: 0;
         }
     }
 

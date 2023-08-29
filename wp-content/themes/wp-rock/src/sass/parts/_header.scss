@@ -231,6 +231,13 @@
         .site-header__socials {
             display: none;
         }
+
+        .site-header__call-to-action {
+            @include max-break('1024px') {
+                height: 38px;
+                width: 38px;
+            }
+        }
     }
 
     &.active {
@@ -872,7 +879,6 @@
                 @include max-break('470px') {
                     padding: 6px;
                 }
-
             }
         }
     }

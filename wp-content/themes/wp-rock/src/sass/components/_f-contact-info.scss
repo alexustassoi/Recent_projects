@@ -6,9 +6,6 @@
         padding-top: 45px;
     }
 
-    &__container {
-
-    }
 
     &__content {
         padding-left: 101px;
@@ -160,7 +157,6 @@
         font-weight: 800;
         line-height: 1.18;
         text-transform: uppercase;
-        max-width: 255px;
 
         @include max-break('1470px') {
             font-size: 22px;
@@ -327,6 +323,10 @@
             @include max-break('480px') {
                 margin-right: 0;
             }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
