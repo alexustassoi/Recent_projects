@@ -149,5 +149,34 @@ html {
             top: 18px;
             right: 18px;
         }
+        svg {
+            pointer-events: none;
+        }
+    }
+}
+
+.popup#contact,
+.popup#question {
+    .popup-wrapper-inner {
+        @media screen and (max-width: 670px) {
+            height: 100vh;
+            max-height: unset;
+            padding: 0;
+        }
+    }
+
+    .popup-container__form {
+        @media screen and (max-width: 670px) {
+            padding: 30px 10px;
+            border: 8px solid #F8F8F8;
+        }
+
+        .form-box__inputs-right {
+            @media screen and (max-width: 670px) {
+                margin-right: auto;
+                justify-content: flex-start;
+                width: auto;
+            }
+        }
     }
 }

@@ -260,6 +260,11 @@ body {
     padding-top: 50px;
     padding-bottom: 140px;
     max-width: 1280px;
+
+    @include max-break('670px') {
+        padding-bottom: 112px;
+    }
+
     &__title {
         margin-bottom: 40px;
     }

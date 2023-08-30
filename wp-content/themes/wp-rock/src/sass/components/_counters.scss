@@ -7,6 +7,9 @@
         @media screen and (max-width: 991px) {
             grid-template-columns: 1fr 1fr;
         }
+        @media screen and (max-width: 670px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item {
@@ -20,6 +23,9 @@
         position: relative;
         @media screen and (max-width: 991px) {
             padding-bottom: 40px;
+        }
+        @media screen and (max-width: 670px) {
+            margin-bottom: 18px;
         }
         &__icon {
             position: absolute;
@@ -41,9 +47,13 @@
             align-items: flex-end;
             position: relative;
             z-index: 2;
+            @media screen and (max-width: 470px) {
+                width: 60%;
+                align-items: center;
+            }
         }
         &__num {
-            color: #E41019;
+            color: #e41019;
             text-align: right;
             font-family: $Nexa;
             font-size: 50px;
@@ -51,17 +61,22 @@
             font-weight: 800;
             line-height: normal;
             @media screen and (max-width: 991px) {
-                font-size: 30px;
+                font-size: 40px;
             }
         }
         &__label {
-            color: #0E0E0F;
+            color: #0e0e0f;
             text-align: right;
             font-family: $SFProDisplay;
             font-size: 24px;
             font-style: normal;
             font-weight: 300;
             line-height: 125%;
+
+            @media screen and (max-width: 470px) {
+                align-self: flex-end;
+                font-size: 16px;
+            }
         }
     }
 }

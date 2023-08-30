@@ -1,8 +1,12 @@
 .our-certificate {
-    background: #393C40;
+    background: #393c40;
     padding-top: 80px;
     padding-bottom: 110px;
     overflow: hidden;
+    @media screen and (max-width: 670px) {
+        padding-top: 64px;
+        padding-bottom: 53px;
+    }
     &__icon {
         opacity: 0;
         z-index: 2;
@@ -30,10 +34,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: linear-gradient(180deg, #E41019 0%, #2D3034 100%);
+            background: linear-gradient(180deg, #e41019 0%, #2d3034 100%);
             transition: all 0.2s linear;
             opacity: 0.8;
-
         }
 
         &:hover {
@@ -62,7 +65,7 @@
         }
 
         .swiper-slide {
-            border: 1px solid #E41019;
+            border: 1px solid #e41019;
             padding: 15px;
             &.empty {
                 border: 0;
@@ -76,7 +79,7 @@
         }
 
         @media screen and (min-width: 768px) {
-            .swiper-slide-active + .swiper-slide  {
+            .swiper-slide-active + .swiper-slide {
                 opacity: 0.5;
             }
         }
@@ -85,7 +88,7 @@
             .swiper-slide-active + .swiper-slide + .swiper-slide {
                 opacity: 0.5;
             }
-            .swiper-slide-active + .swiper-slide  {
+            .swiper-slide-active + .swiper-slide {
                 opacity: 1;
             }
         }
@@ -110,6 +113,9 @@
         @media screen and (max-width: 768px) {
             margin-top: 30px;
         }
+        @media screen and (max-width: 670px) {
+            margin-top: 25px;
+        }
     }
 
     &__logos {
@@ -118,6 +124,10 @@
         flex-wrap: wrap;
         gap: 40px;
         margin-top: 78px;
+
+        @media screen and (max-width: 670px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
     &__logo {
         display: block;
@@ -136,13 +146,20 @@
 .slider-our-certificate__next {
     cursor: pointer;
 
+    svg {
+        @media screen and (max-width: 670px) {
+            width: 56px;
+            height: 56px;
+        }
+    }
+
     &:hover {
         path {
-            fill: #292B2E;
-            stroke: #292B2E;
+            fill: #292b2e;
+            stroke: #292b2e;
         }
         .circle {
-            fill: #F4BC20;
+            fill: #f4bc20;
         }
     }
 }

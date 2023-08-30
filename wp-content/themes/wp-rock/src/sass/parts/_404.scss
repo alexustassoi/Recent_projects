@@ -1,26 +1,24 @@
 .section-404 {
     padding-top: 285px;
     padding-bottom: 112px;
-    &__wrapper {
 
+    @media screen and (max-width: 670px) {
+        padding-top: 43px;
+        padding-bottom: 96px;
     }
+
     &__title {
         margin-bottom: 40px;
         color: #0E0E0F;
         text-align: center;
         font-family: $Nexa;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 140%;
         text-transform: uppercase;
         padding: 0;
         &:after {
             display: none;
         }
-        @media screen and (max-width: 991px) {
-            font-size: 36px;
-            margin-bottom: 20px;
+        @media screen and (max-width: 670px) {
+            margin-bottom: 18px;
         }
     }
     &__text {
@@ -28,6 +26,10 @@
         text-align: center;
         max-width: 1156px;
         margin: 0 auto;
+
+        @media screen and (max-width: 670px) {
+            margin-bottom: 55px;
+        }
     }
     &__miniature {
         display: flex;
@@ -41,6 +43,7 @@
         }
         @media screen and (max-width: 768px) {
             gap: 10px;
+            margin-bottom: 106px;
             svg {
                 height: 105px;
                 width: 95px;

@@ -3,6 +3,11 @@
     padding-bottom: 100px;
     position: relative;
     background: #F6F6F7;
+    overflow: hidden;
+    @media screen and (max-width: 670px) {
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
     &__bg {
         position: absolute;
         width: auto;
@@ -24,7 +29,9 @@
         }
     }
     &__title {
-
+        @media screen and (max-width: 670px) {
+            margin-bottom: 30px;
+        }
     }
     &__subtitle {
         color: #0E0E0F;
@@ -51,11 +58,19 @@
             right: 53px;
             top: 0;
             height: 206px;
+
+            @media screen and (max-width: 670px) {
+                height: 137px;
+            }
         }
         &__figure {
             height: 206px;
             position: relative;
             margin-bottom: 28px;
+
+            @media screen and (max-width: 670px) {
+                height: 137px;
+            }
         }
         &__image {
             width: 100%;

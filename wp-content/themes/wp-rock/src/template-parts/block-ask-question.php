@@ -27,7 +27,7 @@ $bg_img      = get_field_value($fields, 'bg_img');
                 : '';
 
             echo ($block_btn)
-                ? '<a href="' . do_shortcode($block_btn["url"]) . '" class="ask-question__btn primary">' . do_shortcode($block_btn["title"]) . '</a>'
+                ? '<a href="' . do_shortcode($block_btn["url"]) . '" class="ask-question__btn primary js-open-popup-activator">' . do_shortcode($block_btn["title"]) . '</a>'
                 : '';
             ?>
         </div>

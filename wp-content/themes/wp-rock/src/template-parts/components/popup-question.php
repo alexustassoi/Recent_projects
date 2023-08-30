@@ -13,7 +13,7 @@ if ( $title && $shortcode ) { ?>
 			</svg>
 		</div>
 		<div class="popup-wrapper-inner">
-			<button class="popup-close">
+			<button class="popup-close js-popup-close">
 				<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
 					      d="M17.9977 17.2301L0.816287 0L0.0187005 0.795334L17.2013 18.0266L0 35.2279L0.796461 36.0243L17.9966 18.8242L35.1804 36.0566L35.978 35.2613L18.7931 18.0277L36 0.820793L35.2035 0.0243332L17.9977 17.2301Z"

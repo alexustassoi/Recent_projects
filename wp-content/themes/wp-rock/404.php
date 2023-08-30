@@ -27,7 +27,7 @@ $link = get_field_value($global_options, 'link_404');
 			<p class="section-404__text">
 				<?php echo esc_html( $text ); ?>
 			</p>
-			
+
 			<div class="section-404__miniature">
 				<svg width="190" height="210" viewBox="0 0 190 210" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd"
@@ -57,4 +57,4 @@ $link = get_field_value($global_options, 'link_404');
 	</div>
 </section>
 <?php do_action( 'wp_rock_after_page_content' ); ?>
-<?php wp_footer(); ?>
+<?php get_footer(); ?>
