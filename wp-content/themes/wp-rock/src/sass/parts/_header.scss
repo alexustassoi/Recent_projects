@@ -461,11 +461,6 @@
                     height: 60px;
                 }
 
-                &.opened {
-                    &:after {
-                        display: block;
-                    }
-                }
 
                 > .sub-menu {
                     position: absolute;
@@ -556,16 +551,20 @@
                             color: inherit;
                             font-family: inherit;
                             transition: margin 0.3s;
+                            margin-bottom: 36px;
+
+                            @include max-break('1024px') {
+                                margin-bottom: 0;
+                            }
                         }
 
                         .sub-menu {
-                            text-transform: none;
-                            max-width: 223px;
-                            transition: max-height 0.3s;
-                            max-height: 0;
-                            overflow: hidden;
-
                             @include max-break('1024px') {
+                                text-transform: none;
+                                max-width: 223px;
+                                transition: max-height 0.3s;
+                                max-height: 0;
+                                overflow: hidden;
                                 max-width: 100%;
                             }
 
@@ -581,6 +580,7 @@
 
                                 @include max-break('1024px') {
                                     color: #fff;
+                                    padding-left: 0;
                                 }
 
                                 @include max-break('768px') {
@@ -657,6 +657,10 @@
                 &.opened {
                     > .sub-menu {
                         display: flex;
+                    }
+
+                    &:after {
+                        display: block;
                     }
                 }
             }
