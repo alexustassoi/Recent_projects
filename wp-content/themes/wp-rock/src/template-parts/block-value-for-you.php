@@ -27,23 +27,23 @@ $posts = get_field_value( $group, 'posts' );
 						<?php echo esc_html( $title ); ?>
 					</h2>
 				<?php endif; ?>
-				
+
 				<?php if ( $text ) : ?>
 					<div class="for-you__text">
 						<?php echo $text; ?>
 					</div>
 				<?php endif; ?>
-				
+
 				<?php if ( is_array( $link ) ) :
 					$array_link = array(
 						'url'    => $link[ 'url' ],
 						'target' => $link[ 'target' ],
 						'title'  => $link[ 'title' ],
-						'style'  => 'white',
+						'style'  => 'white for-you__btn',
 					);
 					echo esc_html( get_template_part( 'src/template-parts/components/button-with-arrow', null, $array_link ) );
 				endif; ?>
-			
+
 			</div>
 			<div class="for-you__right">
 				<?php if ( is_array( $posts ) ): ?>

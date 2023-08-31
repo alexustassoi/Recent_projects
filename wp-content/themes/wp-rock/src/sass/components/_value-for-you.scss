@@ -2,7 +2,7 @@
     padding-top: 75px;
     padding-bottom: 85px;
     position: relative;
-    background: #393C40;
+    background: #393c40;
     @media screen and (max-width: 991px) {
         padding: 64px 0 75px;
     }
@@ -27,7 +27,7 @@
     &__right {
         display: grid;
         grid-template-columns: 344px 344px;
-        gap: 54px 36px ;
+        gap: 54px 36px;
         @media screen and (max-width: 1240px) {
             grid-template-columns: 1fr 1fr;
         }
@@ -35,7 +35,7 @@
             gap: 49px;
         }
         @media screen and (max-width: 680px) {
-            grid-template-columns: 1fr ;
+            grid-template-columns: 1fr;
         }
     }
     &__title {
@@ -58,8 +58,7 @@
     }
 
     &__line {
-        height: calc(100% + 160px );
-        z-index: 1;
+        height: calc(100% + 160px);
         width: auto;
         position: absolute;
         top: -75px;
@@ -111,7 +110,7 @@
         &__title {
             margin-top: 33px;
             margin-bottom: 17px;
-            color: #FFF;
+            color: #fff;
             font-family: $Nexa;
             font-size: 24px;
             font-style: normal;
@@ -127,10 +126,14 @@
                 margin-bottom: 10px;
                 font-size: 14px;
             }
-
         }
         &__description {
-            color: #FFF;
+            color: #fff;
         }
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 1;
     }
 }

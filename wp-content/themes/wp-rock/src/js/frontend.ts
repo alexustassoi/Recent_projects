@@ -35,7 +35,7 @@ function ready() {
     });
 
     const siteHeader = document.querySelector('#site-header');
-    const addActiveItems = document.querySelectorAll('.js-toggle-active-menu') as NodeList;
+    const form = document.querySelectorAll('form') as NodeList;
 
     Sliders.InitSwiperIndustry();
     Sliders.initSwipers();
@@ -59,6 +59,13 @@ function ready() {
             default:
                 break;
         }
+    });
+
+    window.document.addEventListener('wpcf7mailsent', (): void => {
+        setTimeout(() => {
+            // @ts-ignore
+            window.location.href = var_from_php.thanks ?? var_from_php.site_url;
+        }, 2000);
     });
 
     window.document.addEventListener('scroll', (): void => {

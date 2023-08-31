@@ -53,15 +53,15 @@
             background-position: 0 50%;
         }
 
-        &:after {
-            z-index: -1;
-            right: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.2079;
-            background: linear-gradient(119deg, #2d3034 0%, #e41019 100%);
-        }
+        // &:after {
+        //     z-index: -1;
+        //     right: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     opacity: 0.2079;
+        //     background: linear-gradient(119deg, #2d3034 0%, #e41019 100%);
+        // }
     }
 
     &__container {

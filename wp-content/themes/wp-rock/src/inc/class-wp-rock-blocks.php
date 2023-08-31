@@ -227,6 +227,12 @@ class WP_Rock_Blocks {
 	        'template' => 'src/template-parts/block-social-responsibility.php',
 	        'post_types' => array( 'post', 'page' ),
         ),
+        'thank-you' => array(
+	        'title' => 'Block thank you',
+	        'description' => '',
+	        'template' => 'src/template-parts/block-thank-you.php',
+	        'post_types' => array( 'post', 'page' ),
+        ),
     );
     /**
      * List of Allowed blocks

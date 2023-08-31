@@ -110,6 +110,38 @@
             "translations": "copy_once"
         },
         {
+            "key": "field_64f0a4dc5d38a",
+            "label": "Thank you",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64f0a459c3cb4",
+            "label": "Link thank you page",
+            "name": "link_thank_you_page",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "translations": "copy_once"
+        },
+        {
             "key": "field_642ec4a8f6aff",
             "label": "Footer",
             "name": "",
@@ -813,5 +845,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692362656
+    "modified": 1693494079
 }

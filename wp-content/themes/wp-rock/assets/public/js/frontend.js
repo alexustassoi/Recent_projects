@@ -11208,7 +11208,7 @@ function ready() {
     hideScrollbar: false
   });
   var siteHeader = document.querySelector('#site-header');
-  var addActiveItems = document.querySelectorAll('.js-toggle-active-menu');
+  var form = document.querySelectorAll('form');
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].InitSwiperIndustry();
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].initSwipers();
   _components_swiper_init__WEBPACK_IMPORTED_MODULE_4__["default"].InitSwiperCertificates();
@@ -11228,6 +11228,12 @@ function ready() {
       default:
         break;
     }
+  });
+  window.document.addEventListener('wpcf7mailsent', function () {
+    setTimeout(function () {
+      var _a;
+      window.location.href = (_a = var_from_php.thanks) !== null && _a !== void 0 ? _a : var_from_php.site_url;
+    }, 2000);
   });
   window.document.addEventListener('scroll', function () {
     var operationType = window.scrollY > 100 ? 'add' : 'remove';
